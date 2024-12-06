@@ -1,0 +1,15 @@
+npm i -g root 설치
+
+npm i -g vue
+
+C:\web_class\vue_class>vue -V
+@vue/cli 5.0.8
+
+C:\web_class\vue_class>vue create first_vue
+
+dir/ w
+
+cd first_vue
+
+
+code . -r
