@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="./js/jquery-3.7.1.min.js"></script> -->
+    <title>Document</title>
+    <script>
+      $(function () {
+        $("#container .bbs dl dt").click(function () {
+          $("#container .bbs dl dt").removeClass("on");
+          $(this).addClass("on");
+          $("#container .bbs dl dd").addClass("hidden"); // addClass('hidden') 추가
+          $(this).next().removeClass("hidden"); //형제요소 removeClass('hidden') 클래스 제거
+        });
+
+        // $(".open_btn").click(function(){
+        //   $(".modal").fadeIn()
+        //   return false 방법1
+        // })
+        // $(".close_btn").click(function(){
+        //   $(".modal").fadeOut()
+        //   return false
+        // })
+        $(".open_btn").click(function(e){
+          e.preventDefault(); //방법2
+          $(".modal").fadeIn()
+        })
+        $(".close_btn").click(function(e){
+          e.preventDefault();
+          $(".modal").fadeOut()
+        })
+      });
+
+      //p  mouseenter : bg yellow
+      //p mouseleave : bg pink
+      //p  click : bg skyblue
+      //p dbclick : bg -red
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        font: 12px "돋움", dotum, sans-serif;
+      }
+      .inner {
+        width: 1200px;
+        margin: 0 auto;
+        outline: 1px dotted red;
+      }
+      header {
+        background: #eee;
+      }
+      header .inner {
+        height: 100px;
+      }
+      #slide {
+        height: 300px;
+      }
+      #container {
+        height: 200px;
+      }
+      #container .bbs {
+        float: left;
+        width: calc(100% / 3);
+        height: 200px;
+        outline: 1px dotted blue;
+      }
+      #container .bbs dl {
+        width: 400px;
+        height: 200px;
+        position: relative;
+      }
+      #container .bbs dl dt {
+        float: left;
+        height: 50px;
+        font-weight: bold;
+        font-size: 14px;
+        text-align: center;
+        line-height: 50px;
+        padding: 0 20px;
+        outline: 1px dotted blue;
+      }
+      #container .bbs dl dt.on {
+        background: pink;
+      }
+      #container .bbs dl dd {
+        width: 400px;
+        height: 150px;
+        background: pink;
+        position: absolute;
+        top: 50px;
+        left: 0;
+      }
+      #container .bbs dl dd.hidden {
+        display: none;
+      }
+      #container .bbs .open_btn {
+        display: inline-block;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background:#000;
+        color: #fff;
+        padding: 10px;
+        cursor: pointer;
+      }
+      #container .banner {
+        float: left;
+        width: calc(100% / 3);
+        height: 200px;
+        outline: 1px dotted blue;
+      }
+
+      #container .goto {
+        float: left;
+        width: calc(100% / 3);
+        height: 200px;
+        outline: 1px dotted blue;
+      }
+      footer {
+        background: #eee;
+      }
+      footer .inner {
+        height: 100px;
+      }
+      /* modal layerpopup */
+      .modal {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 9999;
+        /*background: rgba(0, 0, 0, 0.5);*/
+        display: none;
+      }
+      #popup {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        background: #fff;
+        padding: 20px;
+      }
+      .popup_title {
+        padding: 10px;
+        background: #000;
+        color: #fff;
+      }
+      .popup_content {
+        padding: 10px;
+        outline: 1px dotted green;
+      }
+      .close_btn {
+        text-align: right;
+      }
+      .close_btn a {
+          display: inline-block;
+          padding: 10px;
+          background: #000;
+          color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 모달 레이아웃팝업 -->
+    <div class="modal">
+      <div id="popup">
+        <h2 class="popup_title">제목</h2>
+        <div class="popup_content">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Perspiciatis ratione quam voluptas, corrupti, praesentium ad unde
+            porro delectus tempora molestiae quo magni eos adipisci minima
+            magnam officia alias? Ratione, corrupti!
+          </p>
+        </div>
+        <div class="close_btn">
+          <a href="#">닫기</a>
+        </div>
+      </div>
+    </div>
+    <!-- 레이아웃 -->
+    <header>
+      <div class="inner"></div>
+    </header>
+    <div id="slide" class="inner"></div>
+    <div id="container" class="inner">
+      <div class="bbs">
+        <dl>
+          <dt class="on">공지사항</dt>
+          <dd>공지사항 내용
+              <a class="open_btn">팝업 띄우기</a>
+          </dd>
+          <dt>갤러리</dt>
+          <dd class="hidden">갤러리 내용</dd>
+          <dt>뉴스</dt>
+          <dd class="hidden">뉴스 내용</dd>
+        </dl>
+      </div>
+      <div class="banner"></div>
+      <div class="goto"></div>
+    </div>
+    <footer>
+      <div class="inner"></div>
+    </footer>
+  </body>
+</html>

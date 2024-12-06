@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포지션</title>
+    <style>
+      /* reset */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font: 12px "돋움", dotum, sans-serif;
+        color: #333;
+      }
+      hr {
+        margin: 50px 0;
+      }
+      #wrap {
+        width: 1000px;
+        height: 650px;
+        outline: 1px dotted red;
+      }
+      #wrap header {
+        float: left;
+        width: 200px;
+        height: 650px;
+      }
+      #wrap header h1 {
+        height: 40px;
+        padding: 30px 0;
+      }
+      header h1 a {
+        display: block;
+        height: 40px;
+      }
+      header nav {
+      }
+      /* 1depth (주메뉴) */
+      header nav > ul {
+      }
+      header nav > ul > li {
+      }
+      header nav > ul > li > a {
+        display: block;
+        height: 50px;
+        font-weight: bold;
+        line-height: 50px;
+        font-size: 16px;
+        text-align: center;
+      }
+      header nav > ul > li:hover > a {
+        color: green;
+      }
+      /* 2depth (부메뉴) */
+      header nav > ul > li > ul {
+        display: none;
+        background: #ccc;
+      }
+      header nav > ul > li:hover > ul {
+        display: block;
+      }
+      header nav > ul > li > ul li {
+        border-bottom: 1px dashed #fff;
+      }
+      header nav > ul > li > ul li:last-child {
+        border: none;
+      }
+      header nav > ul > li > ul li a {
+        display: block;
+        padding: 10px 20px;
+      }
+      header nav > ul > li > ul li a:hover {
+        background: green;
+      }
+      #wrap #container {
+        float: left;
+        width: 800px;
+        height: 650px;
+        outline: 1px dotted blue;
+      }
+      #container #slide {
+        position: relative;
+        height: 350px;
+        outline: 1px;
+      }
+      #container #slide p img {
+        vertical-align: top;
+      }
+      #container #slide p .btn {
+        position: absolute;
+        top: 50%;
+        padding: 0 20px;
+        margin-top: -15px;
+        line-height: 30px;
+        width: 50px;
+        height: 30px;
+      }
+      #container #slide p .prev {
+        left: 10px;
+        text-align: center;
+        border: 2px solid lightcyan;
+      }
+      #container #slide p .next {
+        text-align: center;
+        border: 2px solid lightcyan;
+        right: 10px;
+      }
+      #container #contents {
+        height: 200px;
+        outline: 1px dotted blue;
+      }
+      #container footer {
+        height: 100px;
+        outline: 1px dotted blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <h1>
+          <a href="#"><img src="./img/logo.png" alt="LOGO" /></a>
+        </h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">MENU01</a>
+              <ul>
+                <li><a href="#">SUB1-1</a></li>
+                <li><a href="#">SUB1-2</a></li>
+                <li><a href="#">SUB1-3</a></li>
+                <li><a href="#">SUB1-4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">MENU02</a>
+              <ul>
+                <li><a href="#">SUB2-1</a></li>
+                <li><a href="#">SUB2-2</a></li>
+                <li><a href="#">SUB2-3</a></li>
+                <li><a href="#">SUB2-4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">MENU03</a>
+              <ul>
+                <li><a href="#">SUB3-1</a></li>
+                <li><a href="#">SUB3-2</a></li>
+                <li><a href="#">SUB3-3</a></li>
+                <li><a href="#">SUB3-4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">MENU04</a>
+              <ul>
+                <li><a href="#">SUB4-1</a></li>
+                <li><a href="#">SUB4-2</a></li>
+                <li><a href="#">SUB4-3</a></li>
+                <li><a href="#">SUB4-4</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div id="container">
+        <div id="slide">
+          <p>
+            <a href="#" class="btn prev" onclick="return prevGallery()">PREV</a>
+            <img src="./img/img01.png" alt="" id="gallery" />
+            <a href="#" class="btn next" onclick="return nextGallery()">NEXT</a>
+          </p>
+        </div>
+        <div id="contents"></div>
+        <footer></footer>
+      </div>
+    </div>
+    <script>
+      let num = 1;
+      function nextGallery() {
+        num++;
+        if (num > 7)    num = 1; // num = 1;  false 값
+        document.getElementById("gallery").src = "img/img0" + num + ".png";
+        return false; // a의 기능을 막아줌
+      }
+      function prevGallery() {
+        num--;
+        if (num < 1) num = 7; // num = 7;  false 값
+        document.getElementById("gallery").src = "img/img0" + num + ".png";
+        return false; // a의 기능을 막아줌
+      }
+    </script>
+  </body>
+</html>

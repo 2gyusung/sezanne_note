@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-moblie</title>
+  </head>
+  <style>
+    /* .container {
+      width: 1280px;
+      margin: 0 auto;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid black;
+    }
+    .input_wrapper {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 15px;
+    }
+    .title {
+      border: 1px solid black;
+      margin: 10px;
+      padding: 15px;
+    }
+    .item_wrapper {
+      padding: 15px;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .item {
+      outline: 1px solid black;
+      padding: 15px;
+    }
+    button {
+      background: transparent;
+      padding: 8px;
+    }
+    footer {
+      border-top: 1px solid black;
+      margin: 15px;
+      padding: 15px;
+    } */
+    @media screen and (max-width: 767px) {
+      .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid black;
+      }
+      .input_wrapper {
+        display: none;
+      }
+      .title {
+        margin: 10px 0;
+        border: 1px solid black;
+        padding: 10px;
+      }
+      .item_wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      .item {
+        margin: 10px 0;
+        border: 1px solid black;
+        padding: 10px;
+      }
+      button {
+      background: transparent;
+      padding: 8px;
+    }
+    footer {
+      border-top: 1px solid black;
+      margin: 15px;
+      padding: 15px;
+    }     
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Project</h1>
+        <div class="input_wrapper">
+          <input type="text" placeholder="email" />
+          <input type="text" placeholder="password" />
+          <button>Sign</button>
+        </div>
+      </header>
+      <div class="title">
+        <span>Hello, World!</span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo tenetur,
+          deleniti ab velit officiis repellat nisi magnam doloremque
+          reprehenderit? Vitae officiis esse recusandae numquam vero fuga
+          maiores vel ratione dolorem?
+        </p>
+        <button>Learn More</button>
+      </div>
+      <div class="item_wrapper">
+        <div class="item">
+          <p>heading</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+            dignissimos, praesentium veniam saepe similique nemo laboriosam hic
+            veritatis exercitationem nobis laudantium! Modi, repellat
+            consectetur. Odit ducimus facere aliquid quo excepturi!
+          </p>
+          <button>Learn More</button>
+        </div>
+        <div class="item">
+          <p>heading</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+            dignissimos, praesentium veniam saepe similique nemo laboriosam hic
+            veritatis exercitationem nobis laudantium! Modi, repellat
+            consectetur. Odit ducimus facere aliquid quo excepturi!
+          </p>
+          <button>Learn More</button>
+        </div>
+        <div class="item">
+          <p>heading</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+            dignissimos, praesentium veniam saepe similique nemo laboriosam hic
+            veritatis exercitationem nobis laudantium! Modi, repellat
+            consectetur. Odit ducimus facere aliquid quo excepturi!
+          </p>
+          <button>Learn More</button>
+        </div>
+      </div>
+      <footer>Company</footer>
+    </div>
+  </body>
+</html>

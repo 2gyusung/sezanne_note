@@ -1,0 +1,17 @@
+dist - 미리보기 폴더
+.cache - 결과 메모리 자동으로 생성
+
+
+build - 최종 작업 환경 결과물
+depoly - 사이트에 주소 ,배포
+compile - 고급 언어 -> 저급 언어 변환
+
+
+code . r vscode 들어가기
+
+
+npm i  입력 시 설치  > packge.json devdependencies 모듈설치
+	                 dependencies  모듈설치
+
+
+npm run dev 실행 

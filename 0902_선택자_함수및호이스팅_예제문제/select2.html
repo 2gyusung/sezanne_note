@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #desc { /*100*/
+      color: silver;
+    }
+    .main-content p { /*10+1 = 11*/
+      color: red !important;
+    }
+    p { /*1*/
+      color: blue;
+    }
+    p { /*1*/
+      color: green;
+    }
+    </style>
+</head>
+<body>
+  <h1>CSS 우선순위</h1>
+<section class="main-content">
+  <h2>section title</h2>
+  <p id="desc" style="color: aqua;">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique necessitatibus adipisci 
+    rem saepe provident non dolor suscipit vitae id repellendus, ipsam aut ut ex, 
+    temporibus quos praesentium neque? Facere, veniam?
+  </p>
+  <p style="color: yellow;">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique necessitatibus adipisci 
+    rem saepe provident non dolor suscipit vitae id repellendus, ipsam aut ut ex, 
+    temporibus quos praesentium neque? Facere, veniam?
+  </p>
+  <section>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique necessitatibus adipisci 
+      rem saepe provident non dolor suscipit vitae id repellendus, ipsam aut ut ex, 
+      temporibus quos praesentium neque? Facere, veniam?
+    </p>
+    </section>
+</section>
+</body>
+</html>

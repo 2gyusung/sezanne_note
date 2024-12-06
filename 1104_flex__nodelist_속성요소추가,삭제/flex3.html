@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      display: flex;
+      height: 400px;
+      padding: 20px;
+      border: 5px solid yellowgreen;
+      color: #fff;
+      font-size: 20px;
+      text-align: center;
+      /* flex-wrap: wrap; */
+      align-items: center;
+    }
+    .item {
+      /* flex: 확대비율 축소 기본너비 */
+      /* flex: 1 1 auto; flex : auto */
+      padding: 20px;
+      /* flex:  1 1 0; flex : 1 */
+
+      /* flex:0 0 ~ */
+      flex: 0 0 150px;
+    }
+    .itemA {
+      align-self: flex-start;
+      background: crimson;
+    }
+    .itemB {
+      background: skyblue;
+    }
+    .itemC {
+      background: green;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="item itemA">A</div>
+      <div class="item itemB">B <br />flex layout</div>
+      <div class="item itemC">C</div>
+    </div>
+  </body>
+</html>

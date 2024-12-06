@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>레이아웃 연습</title>  
+  <style>    
+    /* reset */
+    * {margin: 0; padding: 0;}
+    li {list-style-type: none;}
+    a {text-decoration: none; color: inherit;}
+    body {font:12px "돋움",dotum,sans-serif; color: #333;}
+    h1 {margin: 1rem 0; text-align: center;}
+    hr {margin: 50px 0;}
+    /* 기본 가로형 레이아웃 */
+    #wrap1 {
+      width: 1200px;
+      margin: 0 auto;
+      outline: 1px dotted red;
+    }
+    /* header Area */
+    #header1 {
+      height: 100px;
+      outline: 1px dotted red;
+      background: yellow;
+    }
+    #header1 .logo1 {
+      float: left;
+      width: 200px;
+      height: 100px;
+      outline: 1px dotted blue;
+    }
+    #header1 .nav1 {
+      float: left;
+      width: 1000px;
+      height: 100px;
+      outline: 1px dotted blue;
+    }
+    /* slide Area */
+    #slide1 {
+      height: 300px;
+      outline: 1px dotted red;
+    }
+
+    /* container Area */
+    #container1 {
+      height: 200px;
+      outline: 1px dotted red;
+      background: yellow;
+    }
+    #container1 .bbs1 {
+      float: left;
+      width: 400px;
+      height: 200px;
+      outline: 1px dotted blue;
+    }
+    #container1 .banner1 {
+      float: left;
+      width: 400px;
+      height: 200px;
+      outline: 1px dotted blue;
+    }
+    #container1 .goto1 {
+      float: left;
+      width: 400px;
+      height: 200px;
+      outline: 1px dotted blue;
+    }
+
+    /* footer Aerea */
+    #footer1 {
+      height: 100px;
+      background: orange;
+      outline: 1px dotted red;
+    }
+    #footer1 .btmLogo1 {
+      float: left;
+      width: 200px;
+      height: 100px;
+      outline: 1px dotted blue;
+    }
+    #footer1 .copyright1 {
+      float: left;
+      width: 800px;
+      height: 100px;
+      outline: 1px dotted blue;
+    }
+    #footer1 .sns1 {
+      float: left;
+      width: 200px;
+      height: 100px;
+      outline: 1px dotted blue;
+    }
+
+    #layout2 .inner {
+      width: 1200px; 
+      margin: 0 auto; 
+      outline: 1px dotted blue;
+    }
+    #layout2 .header2 {
+      height: 100px;
+      background: #ccc;
+    }
+    #layout2 .header2 .inner {
+      height: 100px;
+    }
+    #layout2 .slide2 {
+      height: 300px;
+    }
+    #layout2 .container2 {
+      height: 200px;
+    }
+    #layout2 .footer2 {background: #ccc;}
+    #layout2 .footer2 .inner {height: 100px;}
+
+    #layout3 .wrap3 {
+      width: 1000px;
+      height: 650px;
+      background: pink;
+      outline: 1px dotted red;
+    }
+    #layout3 .wrap3 .header3 {
+      float: left;
+      width: 200px;
+      height: 650px;
+      outline: 1px dotted blue;
+    }
+    #layout3 .wrap3 .header3 .logo3 {
+      height: 100px;
+      outline: 1px dotted red;
+    }
+    #layout3 .wrap3 .header3 .nav3 {
+      height: 550px;
+      outline: 1px dotted red;
+    }
+    #layout3 .wrap3 .container3 {
+      float: left;
+      width: 800px;
+      height: 650px;
+      outline: 1px dotted blue;
+    }
+    #layout3 .wrap3 .container3 .slide3 {
+      height: 350px;
+      outline: 1px dotted blue;
+    }
+    #layout3 .wrap3 .container3 .contents3 {
+      height: 200px;
+      outline: 1px dotted blue;
+    }
+    #layout3 .wrap3 .container3 .footer3 {
+      height: 100px;
+      outline: 1px dotted blue;
+    }
+  </style>
+</head>
+<body>
+  <div id="layout1">
+    <h1>기본 가로형 레이아웃</h1>
+    <div id="wrap1">
+      <div id="header1">
+        <div class="logo1">로고</div>
+        <div class="nav1">메뉴</div>
+      </div>
+      <div id="slide1">슬라이드</div>
+      <div id="container1">
+        <div class="bbs1">공지사항/갤러리</div>
+        <div class="banner1">배너</div>
+        <div class="goto1">바로가기</div>
+      </div>
+      <div id="footer1">
+        <div class="btmLogo1">Logo</div>
+        <div class="copyright1">copyright</div>
+        <div class="sns1">SNS</div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div id="layout2">
+    <h1>확장된 가로형 레이아웃</h1>
+    <div class="header2">
+      <div class="inner">1</div>
+    </div>
+    <div class="slide2 inner">2</div>
+    <div class="container2 inner">3</div>
+    <div class="footer2">
+      <div class="inner">4</div>
+    </div>
+  </div>
+  <hr>
+  <div id="layout3">
+    <h1>세로형 레이아웃</h1>
+    <div class="wrap3">
+      <div class="header3">
+        <div class="logo3">LOGO</div>
+        <div class="nav3">NAV</div>
+      </div>
+      <div class="container3">
+        <div class="slide3">slide</div>
+        <div class="contents3">3-2</div>
+        <div class="footer3">3-3</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

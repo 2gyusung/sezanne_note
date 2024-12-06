@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {margin: 0; padding: 0;}
+    li {list-style: none;}
+    a {text-decoration: none; color: inherit;}
+
+    :root {
+      --light-blue:#4db1ec;
+      --blue:#1665cc;
+      --purple:#b473bf;
+      --pink:#ffb2c1;
+      --orange:#ff9f67;
+      --yellow:#ffd673;
+      --light-green:#a2e29b;
+      --green:#00a2af;
+    }
+
+    html {
+      /* scroll-behavior: smooth; */
+    }
+    /* .wrap {width: 1200px; outline: 1px dotted red;} */
+    header {background: #000; color: #fff;}
+    header .inner {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 100px;
+      max-width: 1200px; 
+      height: 100px;
+      margin: 0 auto; 
+      outline: 1px dotted red;
+    }
+    header h1 {/* background: yellow; */}
+    header nav {/* align-self: flex-end; */ flex: 1; /* width: 800px; */ /* background: pink; */}
+    header .menuBtn {
+      position: absolute;
+      right: -100%;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 10px;
+      border: none;
+      background: none;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    header nav ul {
+      display: flex;
+      /* justify-content: space-evenly; */
+    }
+    header nav ul li {      
+      flex: 1; text-align: center; 
+      outline: 1px dotted red;
+    }
+    header nav ul li a {
+      display: block;
+      padding: 10px 20px;
+    }
+      
+    @media (max-width:767px) {      
+      header .menuBtn {        
+        right: 10px;
+      }
+      header nav ul {
+        position: absolute; 
+        top: 100px;
+        right: -100%;
+        flex-direction: column;
+        width: 100%;
+        background: #000;
+        transition: .5s;
+      }
+      header nav ul.open-menu {
+        right: 0;
+      }
+    }
+    #hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #4db1ec;
+      background-image: url(./images/hero.jpg), url(./images/water.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-blend-mode: screen;
+      animation: bg-color 24s infinite;
+    }
+    #hero h1 {
+      font-size: 6rem;
+      text-align: center;
+      /* mix-blend-mode: overlay; */
+    }
+    #hero .hero-date {
+      margin-bottom: 1rem;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+      font-size: 3rem;
+      text-align: center;
+    }
+    @keyframes bg-color {
+      0% {background-color: var(--light-blue);}
+      12.5% {background-color: var(--blue);}
+      25% {background-color: var(--purple);}
+      37.5% {background-color: var(--pink);}
+      50% {background-color: var(--orange);}
+      62.5% {background-color: var(--yellow);}
+      75% {background-color: var(--light-green);}
+      87.5% {background-color: var(--green);}
+      100% {background-color: var(--light-blue);}
+    }
+
+    #news {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 50px 0;
+      padding: 7rem 0;
+      background-image: linear-gradient(var(--light-green), var(--green));
+      box-sizing: border-box;
+      /* clip-path */
+      /* clip-path: polygon(꼭지점 A의 X축 위치 꼭지점 A의 Y축 위치, 꼭지점 B의 X축 위치 꼭지점 B의 Y축 위치, ...); */
+      /* clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); */
+      clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+    }
+    #news h2 {
+      /* background: #0db; */
+      width: 120px;
+      padding: 1rem 2rem;
+      margin-bottom: 1rem;
+      background: rgba(255,255,255,.3);
+      font-size: 1.3rem;
+      color: #fff;
+      clip-path: polygon(0 0, 115px 0, 100% 50%, 115px 100%, 0 100%);
+    }
+    #about {
+      background: #0db;
+      height: 100vh;
+      /* clip-path */
+      /* clip-path: ellipse(가로반경 세로반경 at 중심의 X축 위치 중심의 Y축 위치); */
+      -webkit-clip-path: ellipse(80% 100% at 50% 0);
+      clip-path: ellipse(80% 100% at 50% 0);
+
+      /* clip-path: circle(반지름 at 중심의 X축 위치 중심의 Y축 위치); */
+      /* clip-path: circle(50% at 50% 50%); */
+    }
+    #about h2 {
+      background-image: linear-gradient(var(--yellow), var(--orange));
+      -wekit-background-clip:text;
+      background-clip:text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    #ticket {
+      outline: 1px dotted red;
+      height: 100vh;
+    }
+    #ticket figure {
+      background: yellow;
+      width: 100%;
+      height: 100%;
+    }
+    #ticket img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .3s;
+    }
+    #ticket img:hover {
+      /* filter:필터종류(필터적용강도); */
+      /* filter:grayscale(100); */
+      /* filter:blur(3px); */
+      /* filter:brightness(50%); */
+      /* filter:contrast(20%); */
+      /* filter:drop-shadow(5px 10px 3px #856845); */
+      /* filter:hue-rotate(30deg); */
+      /* filter:invert(100%); */
+      /* filter:saturate(30%); */
+      /* filter:sepia(100%); */
+      filter:grayscale(50%) drop-shadow(3px 3px 5px rgba(0,0,0,.8));
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="inner">
+      <h1><a href="#">WCB Conference</a></h1>
+      <nav>
+        <button class="menuBtn">Menu</button>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#">Speakers</a></li>
+          <li><a href="#">Ticket</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section id="hero">
+    <div class="wrap">
+      <h1>WCB Conference</h1>
+      <p class="hero-date">2024.11.29 14:00 - 16:00</p>
+      <p>
+        온라인으로 개최되는 웹사이트 제작 설명회, WCB Conference. 
+        이번에는 최신 CSS 기술과 디자인 트렌드를 중심으로 소개합니다. 
+        참가비는 무료! 누구든 환영합니다. 
+      </p>
+    </div>
+  </section>
+  <section id="news">
+    <div class="wrap">
+      <h2>News</h2>
+      <table class="news-table">
+        <tr>
+          <td class="news-date">2020년 10월 16일</td>
+          <td class="news-content">참가신청을 시작합니다.</td>
+        </tr>
+        <tr>
+          <td class="news-date">2020년 10월 16일</td>
+          <td class="news-content">참가신청을 시작합니다.</td>
+        </tr>
+        <tr>
+          <td class="news-date">2020년 10월 16일</td>
+          <td class="news-content">참가신청을 시작합니다.</td>
+        </tr>
+        <tr>
+          <td class="news-date">2020년 10월 16일</td>
+          <td class="news-content">참가신청을 시작합니다.</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+  <section id="about">
+    <div class="wrap">
+      <h2>About</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea accusamus repellat consequatur, voluptate architecto eum quos eos, qui deserunt porro suscipit aspernatur earum ducimus veritatis minus necessitatibus cum, vero quidem.
+      </p>
+    </div>
+  </section>
+  <section id="ticket">
+    <figure>
+      <img src="./images/water.jpg" alt="">
+    </figure>
+  </section>
+  <script>
+    const btn = document.querySelector('.menuBtn');
+    const menu = document.querySelector('header nav ul');
+    btn.addEventListener('click', ()=>{
+      menu.classList.toggle('open-menu');
+    })
+  </script>
+</body>
+</html>

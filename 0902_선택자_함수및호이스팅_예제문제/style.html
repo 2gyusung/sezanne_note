@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스타일</title>
+
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&display=swap');
+  @font-face {
+    font-family: 'NG';
+    src:url(./Nanum_Gothic/NanumGothic-ExtraBold.ttf) format('truetype');
+  }
+
+    /*문자 관련 스타일*/
+    /* font-family 글꼴
+    font-size 글자 크기
+    font-weight 글자 굵기
+    font-style 기울임 여부
+    font-variant 대소문자 여부
+    line-height 줄 간격
+    color 글자 색상 */
+    /* font : [font-weight , font-style , font-variant][*font-size/line-height][*font-family] */
+
+
+p {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-variant: small-caps; /*소문자 > 대문자로 변환*/
+  line-height: 1.6; /**/
+  font: 900 italic small-caps 12px/1.6 "Noto Sans KR", sans-serif;
+  font-size: 18px;
+}
+.font2{
+  font-family: "NG";
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+
+}
+.txt {
+  font-family: "Nanum Pen Script", cursive;
+}
+h1 {
+    height: 100px; 
+    background-color: yellowgreen; 
+    line-height: 100px; /*글자 간격*/
+  }
+  </style>
+</head>
+<body>
+  <p>
+    일회용 mask의 기본적인 기능으로는<br>
+    김서림 방지 기능,<br>
+    편안한 ear band 등이 있다.
+  </p>
+  <p class="font2">
+    일회용 mask의 기본적인 기능으로는<br>
+    김서림 방지 기능,<br>
+    편안한 ear band 등이 있다.
+  </p>
+  <h1>
+    Web Publisher!
+  </h1>
+  <hr>
+  <h2 class="txt">9월 한달도 화이팅~!</h2>
+  <h2 class="txt">9월 한달도 화이팅~!</h2>
+  <h2 class="txt">9월 한달도 화이팅~!</h2>
+  <h2 class="txt">9월 한달도 화이팅~!</h2>
+  <h2 class="txt">9월 한달도 화이팅~!</h2>
+  <h2 class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+     Quam placeat aliquam molestias explicabo omnis, optio voluptate, 
+     eius perferendis soluta deleniti modi! Dolor quod sed cupiditate rerum cum autem molestiae possimus?</h2>
+     <p h2 class="txt">abcdefg 가나다라마바사 123456789</p>
+     <p>abcdefg 가나다라마바사 123456789</p>
+     <p>abcdefg 가나다라마바사 123456789</p>
+     <p>abcdefg 가나다라마바사 123456789</p>
+</body>
+</html>

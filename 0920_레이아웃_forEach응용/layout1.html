@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>layout1</title>
+  <style>
+    /* reset */
+    * {margin: 0; padding: 0;}
+    li {list-style-type: none;}
+    a {text-decoration: none; color:  inherit;}
+    small {font-size: 12px;}
+    body {font:12px '돋움',dotum,sans-serif; color: #333;}
+    /* 레이아웃 */
+    .wrap {width: 1200px; margin: 0 auto; outline: 1px dotted red;}
+    .header {height: 100px; outline: 1px dotted red;}
+    .header .logo {
+      float: left; 
+      width: 200px; 
+      height: 100px; 
+      text-align: center;
+      line-height: 100px;
+      outline: 1px dotted blue;
+    }
+    .header .logo a {}
+    .header .nav {float: left; width: 1000px; height: 100px;}
+    .header .nav ul {float: right; width: 800px; margin: 25px 0; }
+    .header .nav ul li {float: left; width: 25%; height: 50px; outline: 1px dotted blue;}
+    .header .nav ul li a {display: block;  outline: 1px dotted blue; height: 100%; text-align: center; line-height: 50px; font-weight: bold; font-size: 16px;}
+    .container {/* height: 500px; */ outline: 1px dotted red; }
+    .header .nav ul li:hover a{ 
+      color: gray;
+    }
+    .container::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .container .sideMenu {float: left; width: 200px; /*height: 500px;*/ outline: 1px dotted blue; background: #ccc;}
+    .container .sideMenu ul {padding: 10px; outline: 1px dotted red;}
+    .container .sideMenu ul li {outline: 1px dotted blue;}
+    .container .sideMenu ul li a {display: block; padding: 10px 0; text-align: center; background: #ccc;}
+    .container .sideMenu ul li a:hover {background: green; color: #ccc;}
+    .container .contents {float: left; width: 1000px; /*height: 500px;*/ box-sizing: border-box; padding: 50px 50px 100px; outline: 1px dotted blue; background: #ddd; background: url(./img/pngtree-cute-little-bear-fly-net-png-image_2934534.jpg) no-repeat right 50px bottom 50px;}
+    .container .contents h2 {border-bottom: 2px solid #ccc; margin-bottom: 20px; text-transform: capitalize; /*글자 첫글자 대문자*/}
+    .container .contents p {margin: 10px 0; line-height: 1.8; }
+    .footer {height: 100px; outline: 1px dotted red;}
+    .footer p{ line-height: 100px;text-align: center;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <h1 class="logo"><a href="#">CEZANNE</a></h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="#">MENU01</a></li>
+          <li><a href="#">MENU02</a></li>
+          <li><a href="#">MENU03</a></li>
+          <li><a href="#">MENU04</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="sideMenu">
+        <ul>
+          <li><a href="#">SUBMENU1</a></li>
+          <li><a href="#">SUBMENU2</a></li>
+          <li><a href="#">SUBMENU3</a></li>
+          <li><a href="#">SUBMENU4</a></li>
+        </ul>
+      </div>
+      <div class="contents">
+        <h2>title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum recusandae distinctio, 
+          blanditiis cumque incidunt accusantium corrupti quae expedita sed,
+           culpa quidem a nam itaque provident officiis dolores error ullam nisi?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum recusandae distinctio, 
+          blanditiis cumque incidunt accusantium corrupti quae expedita sed,
+           culpa quidem a nam itaque provident officiis dolores error ullam nisi?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum recusandae distinctio, 
+          blanditiis cumque incidunt accusantium corrupti quae expedita sed,
+           culpa quidem a nam itaque provident officiis dolores error ullam nisi?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum recusandae distinctio, 
+          blanditiis cumque incidunt accusantium corrupti quae expedita sed,
+           culpa quidem a nam itaque provident officiis dolores error ullam nisi?</p>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>
+        <small>&copy; 2024 cezanne. All rights reserved.</small>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

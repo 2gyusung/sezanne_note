@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+p{
+    background-color: yellowgreen;
+}
+.accent {
+    width: 200px;
+    height: 200px;
+    color: crimson;
+} 
+.bold {
+    font-weight: bold;
+}
+.ltalic{
+    font-style: italic;
+}

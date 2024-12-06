@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #wrap {
+      width: 1200px;
+      margin: 0 auto;
+      outline: 1px dotted red;
+    }
+    header {
+      height: 100px;
+      outline: 1px dotted red;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      width: 200px;
+      outline: 1px dotted blue;
+    }
+    header nav {
+      width: 800px;
+      outline: 1px dotted blue;
+      align-self: flex-end;
+      width: 800px;
+      height: 50px;
+    }
+    #slide {
+      height: 300px;
+      outline: 1px dotted red;
+    }
+    #container {
+      height: 200px;
+      outline: 1px dotted red;
+      display: flex;
+    }
+    #container .notice {
+      flex: 1;
+      outline: 1px dotted blue;
+    }
+    #container .gallery {
+      outline: 1px dotted blue;
+      flex: 1;
+    }
+    #container .banner {
+      flex: 1;
+      outline: 1px dotted blue;
+    }
+    footer {
+      height: 100px;
+      outline: 1px dotted red;
+    }
+  </style>
+  <body>
+    <div id="wrap">
+      <header>
+        <h1>logo</h1>
+        <nav>menu</nav>
+      </header>
+      <div id="slide"></div>
+      <div id="container">
+        <div class="notice">notice</div>
+        <div class="gallery">gallery</div>
+        <div class="banner">banner</div>
+      </div>
+      <footer></footer>
+    </div>
+  </body>
+</html>

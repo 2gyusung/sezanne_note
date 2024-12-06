@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>selector</title>
+    <style>
+      /* 전체 선택자 */
+      * {
+        color: green;
+      }
+      /* 태그선택자 */
+      h1 {
+        color: blue;
+      }
+      /* 아이디선택자 */
+      #logo {
+        background-color: gray;
+      }
+      .small {
+        font-size: 14px;
+      }
+      .highlight-color {
+        background-color: lemonchiffon;
+      }
+      .bold {
+        font-weight: bold;
+      }
+      #effect1 {
+        font-size: 14px;
+      }
+      #effect2 {
+        font-size: 14px;
+        color: cornflowerblue;
+      }
+      #effect3 {
+        font-size: 14px;
+        color: cornflowerblue;
+        font-weight: bold;
+      }
+      /* <!-- 자손선택자 (A B) --> */
+      header h1 {
+        background-color: #000;
+        color: #fff;
+      }
+      /* 자식선택자 (A>B) */
+      /* nav ul li a {background: yellow;
+                  text-decoration: none;
+                  
+                } */
+      nav>ul>li>a {
+        outline: 1px dotted red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="logo">heading</h1>
+    <h2 class="small">heading</h2>
+    <p>
+      <span class="bold">Lorem ipsum</span> dolor sit amet consectetur
+      adipisicing elit. Doloremque possimus explicabo quisquam deleniti, impedit
+      provident repellat dignissimos facilis. Nulla impedit libero culpa
+      voluptas neque magnam amet aliquid eos voluptates dolore?
+    </p>
+    <p class="small">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+      possimus explicabo quisquam deleniti, impedit provident repellat
+      dignissimos facilis. Nulla impedit libero culpa voluptas neque magnam amet
+      aliquid eos voluptates dolore?
+    </p>
+    <p class="small highlight-color">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+      possimus explicabo quisquam deleniti, impedit provident repellat
+      dignissimos facilis. Nulla impedit libero culpa voluptas neque magnam amet
+      aliquid eos voluptates dolore?
+    </p>
+    <p class="small highlight-color bold">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+      possimus explicabo quisquam deleniti, impedit provident repellat
+      dignissimos facilis. Nulla impedit libero culpa voluptas neque magnam amet
+      aliquid eos voluptates dolore?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+      possimus explicabo quisquam deleniti, impedit provident repellat
+      dignissimos facilis. Nulla impedit libero culpa voluptas neque magnam amet
+      aliquid eos voluptates dolore?
+    </p>
+    <hr/>
+    <p id="effect1">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas possimus
+      voluptate excepturi officia, similique odio tempore repellat alias amet
+      minima at. Sunt asperiores fugit sint architecto adipisci. Dolorem,
+      aspernatur sequi?
+    </p>
+    <p id="effect2">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas possimus
+      voluptate excepturi officia, similique odio tempore repellat alias amet
+      minima at. Sunt asperiores fugit sint architecto adipisci. Dolorem,
+      aspernatur sequi?
+    </p>
+    <p id="effect3" class="small highlight-color bold">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas possimus
+      voluptate excepturi officia, similique odio tempore repellat alias amet
+      minima at. Sunt asperiores fugit sint architecto adipisci. Dolorem,
+      aspernatur sequi?
+    </p>
+    <h3>내부링크</h3>
+    <p><a href="./selector.html#effect1">외부링크(#effect1)</a></p>
+    <hr />
+    <header>
+      <h1>LOGO</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">Menu01</a>
+            <ul>
+              <li><a href="#">Sub1</a></li>
+              <li><a href="#">Sub2</a></li>
+              <li><a href="#">Sub3</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Menu02</a></li>
+          <li><a href="#">Menu03</a></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>

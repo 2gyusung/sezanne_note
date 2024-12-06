@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <style>
+      hr {
+        margin: 50px 0;
+      }
+      #ex02 .box {
+        width: 120px;
+        height: 30px;
+        margin-top: 10px;
+        background: yellow;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("#ex01 .btn").click(function () {
+          $("#show").text("안녕하세요");
+        });
+        $("#ex02 .btn1").click(function () {
+          $("#ex02 .show").text("클릭했어요!~");
+        });
+        $("#ex02 .btn2").dblclick(function () {
+          $("#ex02 .show").text("db클릭했어요!~");
+        });
+        $("#ex02 .box").mouseenter(function () {
+          $("#ex02 .show").text("마우스포인터들어옴");
+        });
+        $("#ex02 .box").mouseleave(function () {
+          $("#ex02 .show").text("마우스포인터떠나감");
+        });
+        $("#ex03 p:eq(0) input").keydown(function () {
+          $(this).css("background", "yellow");
+        });
+        $("#ex03 p:eq(0) input").keyup(function () {
+          $(this).css("background", "pink");
+        });
+        $("#ex03 p:eq(1) input").keypress(function () {
+          //키보드 누르면
+          $(this).css("background", "skyblue");
+        });
+        $("#ex04 input").focus(function () {
+          $(this).css("background", "yellow");
+        });
+        $("#ex04 input").blur(function () {
+          $(this).css("background", "pink");
+        });
+        $("#ex04 select").change(function () {
+          $("#ex04 .show").text("선택 박스 값 바뀜");
+        });
+        $(window).resize(function () {
+          $("#ex05 span:eq(0)").text(window.innerWidth);
+          $("#ex05 span:eq(1)").text(window.innerHeight);
+        });
+        $(window).scroll(function(){
+          $("#ex06 .show").text('스크롤바가 이동')
+        })
+      });
+    </script>
+  </head>
+  <body>
+    <div id="ex01">
+      <button class="btn">클릭!</button>
+      <p id="show"></p>
+    </div>
+    <div id="ex02">
+      <button class="btn1">클릭!</button>
+      <button class="btn2">더블 클릭!</button>
+      <div class="box">div 요소</div>
+      <p class="show"></p>
+    </div>
+    <hr />
+    <div id="ex03">
+      <p>아이디 : <input type="text" /></p>
+      <p>비밀번호 : <input type="password" /></p>
+    </div>
+    <div id="ex04">
+      <p>아이디 : <input type="text" /></p>
+      <p class="show"></p>
+      <select>
+        <option>2020</option>
+        <option>2021</option>
+        <option>2022</option>
+        <option>2023</option>
+        <option>2024</option>
+      </select>
+    </div>
+    <hr />
+    <div id="ex05">
+      <p>브라우저 창 크기 : <span></span> <span></span></p>
+    </div>
+    <hr>
+    <div id="ex06">
+      <div style="width: 2500px; background: yellow; overflow: auto;">
+        희망은 가난한 사람의 빵<br>
+        발 없는 말이 천리간다<br>
+        피는 물보다 진한당<br>
+      </div>
+      <p class="show"></p>
+    </div>
+  </body>
+</html>

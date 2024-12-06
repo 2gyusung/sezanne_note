@@ -1,0 +1,39 @@
+환경설정 
+
+1 노드js 설치
+
+2 cmd 창 열어서 컴퓨터 이름 한글 확인 영문으로 교체
+
+3 node -v 버전 확인 
+
+4 npm -v  버전 확인
+
+
+1-1 nvm instail 검색 (웹 사이트에서)
+
+1-2 nvm setup.zip 파일 다운로드 및 설치
+
+1-3 cmd 창 nvm -v 버전 확인
+
+1-4 nvm ls 목록 확인
+
+----------------------------------
+
+2-1 새로운 버전 설치
+nvm install 버전 번호 (20. 16. 0)
+
+2-2 사용버전 전환
+nvm use 20.16.0
+
+-------------------------------
+명령인식 오류 시 3-1
+
+3-1
+2-1 윈도우 검색 powershell > 관리자 권한 실행
+
+2-2 권한 설정 Get-execationpolicy 입력하면
+	restricted(제한적 환경) 나온다.
+	Set-execationpolicy remotesigned 엔터 후 y
+
+2-1
+

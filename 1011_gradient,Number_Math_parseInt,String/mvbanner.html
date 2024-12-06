@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>움직이는 배너</title>
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    body {
+      padding: 50px;
+      background: #eee;
+    }
+    a.banner{ 
+      position: relative;
+      display: block;
+      width: 728px;
+      height: 176px;
+      border: 1px solid #555;
+      background: url(./images/banner-arrow.png)no-repeat -100px 140px,
+      url(./images/banner-photo.png)no-repeat -40px 220px,
+      url(./images/banner-09.png)no-repeat -20px ,-380px,
+      url(./images/banner-bg.png)no-repeat 0 0;
+      transition: background-position .2s .2s ease-in;
+    }
+    a.banner:hover {
+      background-position: 20px 140px, -40px 20px, -20px -90px, 0 0;
+      
+    }
+    a.banner .banner-logo {
+      position: absolute;
+      top: 20px;
+      left: 270px;
+      transition: all .4s ease-out .3s; /*변화되는 시간 ,움직이는 방향 ,지연시간*/
+
+    }
+    a.banner:hover .banner-logo {
+      left: 540px;
+
+    }
+    a.banner .banner-desc {
+      position: absolute;
+      top: 35px;
+      left: 170px;
+      font:39px/0.9 "Nanum Pen Script", cursive; /*글자 크기 , 자간 , 글꼴*/
+      color: #4ec1cd;
+      opacity: 0;
+      transition:.4s ease-out .3s;
+     
+    }
+    a.banner:hover .banner-desc {
+      opacity: 1;
+    }
+    a.banner .banner-desc strong {
+      font-size: 23px;
+    }
+
+  </style>
+  <body>
+    <a class="banner" href="http://djcezanne.co.kr/" target="_blank">
+      <img class="banner-logo" src="./images/banner-logo.png" alt="" width="167" height="134" />
+      <p class="banner-desc">
+        오픈 지식 강의, 비디오 캐스트<br />
+        디자인 이야기가 오가는 세상<br />
+        <strong>- 아무9닷컴</strong>
+      </p>
+    </a>
+  </body>
+</html>

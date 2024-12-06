@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+#style1 {
+}
+
+#style1 span {
+  display: block;
+  width: 50%;
+  background-color: green;
+  color: #fff;
+}
+
+#style1 .box {
+  display: inline;
+  width: 50%;
+  background-color: #3498db;
+  color: #fff;
+}
+
+#style1 ul.menu {
+}
+
+#style1 ul.menu li {
+  display: inline-block;
+  background: #ebebeb;
+  width: 150px;
+  height: 40px;
+  
+  list-style: none; /* list-style-position: inside; list position 위치 변경 */
+  padding: 10px;
+  /* margin: 10px; */
+  outline: 1px dotted red;
+  line-height: 40px;
+  text-align: center; /*블록 요소에만 적용이 가능하다*/
+}
+
+#style1 img {
+  width: 200px;
+  height: auto;
+}
+
+#style1 ul.portfolio {
+  width: 100%;
+  padding: 0;
+  display: table;
+  outline: 1px dotted black;
+}
+
+#style1 ul.portfolio li {
+  display: table-cell;
+  /* width: 33.3333%; */
+  width: calc(100% / 3);
+  background: #ebebeb;
+  list-style: none;
+}
+
+#style1 header {
+  background-color: #ddd;
+}
+#style1 header h2 {
+  display: none;
+}
+#style1 header h3 {
+  visibility: hidden;
+}
+#style1 header:hover h3 {
+  visibility: visible; /**/
+}
+#style1 header h4 {
+  opacity: 0.5;
+}
+#style1 header h4:hover {
+  opacity: 1;
+}
+#style1 .op {
+}
+#style1 .op span {
+  background-color: yellow;
+  color: #333;
+}
+#style1 .op1 {
+  opacity: 0.5;
+}
+#style1 .op2 {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#style2 {
+}
+#style2 div {
+  width: 400px;
+  border: 1px solid #000;
+}
+#style2 div p {
+  width: 450px;
+}
+#style2 .hidden {
+  overflow: hidden;
+}
+#style2 .scroll {
+  overflow: scroll;
+}
+#style2 .xaxis{
+  overflow: hidden;
+}
+#style2 .yaxis{
+  height: 60px;
+  overflow-y: hidden;
+}

@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* 기본 글자 서식 */
+body {
+  font: 12px '돋움',dotum, sans-serif;
+  color: #333;
+}
+.clearFix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#wrap {
+  width: 1200px;
+  margin: 0 auto;
+  outline: 1px dotted red;
+}
+/* header */
+header .logo {
+  float: left;
+  width: 600px;
+}
+header .nav {
+  outline: 1px dotted blue;
+  float: left;
+  width: 600px;
+}
+header .nav div {
+  float: left;
+  margin: 15px;
+}
+#container {
+  float: left;
+  width: 200px;
+  height: 650px;
+  outline: 1px dotted red;
+}
+#container .contents {
+  float: left;
+  width: 780px;
+  height: 650px;
+  outline: 1px dotted red;
+}
+
+#footer .copyright  {
+  height: 50px;
+  outline: 1px dotted blue;
+
+}

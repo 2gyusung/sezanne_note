@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <script>
+      $(function () {
+        // $('선택요소').click(function(){})
+        $("#ex01 button").on("click", function () {
+          $("#ex01 p").addClass("yellow");
+        });
+        $("#ex02").on("mouseenter", function () {
+          $(this).css("background-color", "yellow");
+        });
+        $("#ex02").on("mouseleave", function () {
+          $(this).css("background-color", "pink");
+        });
+        $("#ex02").on("click", function () {
+          $(this).css("background-color", "skyblue");
+        });
+        $("#ex02").on("dblclick", function () {
+          $(this).css("background-color", "red");
+        });
+        // 함수에 여러 기능 담기
+        $("#ex02 p").on({
+          mouseenter: function () {
+            $(this).css("background-color", "yellow");
+          },
+          mouseleave: function () {
+            $(this).css("background-color", "pink");
+          },
+          click: function () {
+            $(this).css("background-color", "skyblue");
+          },
+          dblclick: function () {
+            $(this).css("background-color", "red");
+          },
+        });
+        $("#ex03 .btn1").click(function () {
+          // $('#ex03 p').hide();
+          $("#ex03 p").hide("slow");
+        });
+        $("#ex03 .btn2").click(function () {
+          $("#ex03 p").show();
+          $("#ex03 p").show(1000);
+        });
+        $("#ex03 .btn3").click(function () {
+          $("#ex03 p").toggle();
+        });
+
+        $("#ex04 .btn1").click(function () {
+          $("#ex04 p").fadeIn();
+        });
+        $("#ex04 .btn2").click(function () {
+          $("#ex04 p").fadeOut();
+        });
+        $("#ex05 .btn1").click(function () {
+          $("#ex05 p").slideUp();
+        });
+        $("#ex05 .btn2").click(function () {
+          $("#ex05 p").slideDown();
+        });
+        $("#ex06 .btn1").click(function () {
+          $("#ex06 div").animate(
+            {
+              left: "300px",
+              width: "200px",
+              height: "200px",
+              opacity: 0.5,
+            },
+            3000
+          );
+        });
+
+        $("#ex06 .btn2").click(function () {
+          $("#ex06 div").animate({
+            left: "0px",
+            width: "100px",
+            height: "100px",
+            opacity: 1,
+          });
+        });
+
+        $("#ex07 .btn1").click(function () {
+          $("#ex07 div").animate({
+            width: "300px",
+            height: "300px",
+            opacity: 1,
+          },3000);
+        });
+        $("#ex07 .btn2").click(function () {
+          $("#ex07 div").stop();
+        });
+      });
+
+      //p  mouseenter : bg yellow
+      //p mouseleave : bg pink
+      //p  click : bg skyblue
+      //p dbclick : bg -red
+    </script>
+    <style>
+      hr {
+        margin: 50px 0;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+      #ex06 div,
+      #ex07 div {
+        width: 100px;
+        height: 100px;
+        background: pink;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ex01">
+      <p>티끌모아 태산이다</p>
+      <button>클릭!</button>
+    </div>
+    <div id="ex02">
+      <p style="border: 1px solid #000">발 없는 말이 천리간다</p>
+    </div>
+    <div id="ex03">
+      <button class="btn1">hide()</button>
+      <button class="btn2">show</button>
+      <button class="btn3">toggle()</button>
+      <p style="background: yellow">어려울 때 친구가 진정한 친구이다</p>
+    </div>
+    <hr />
+    <div id="ex04">
+      <button class="btn1">FadeOut()</button>
+      <button class="btn2">FadeIn()</button>
+      <p style="background: skyblue">책과 친구는 적고, 좋아야 한다.</p>
+    </div>
+    <hr />
+    <div id="ex05">
+      <button class="btn1">SlideUp()</button>
+      <button class="btn2">SlideDown()</button>
+      <p style="background: skyblue">인내가 세상을 정복한다</p>
+      <p style="background: skyblue">인내가 세상을 정복한다</p>
+      <p style="background: skyblue">인내가 세상을 정복한다</p>
+    </div>
+    <hr />
+    <div id="ex06">
+      <p>
+        <button class="btn1">Ani</button>
+        <button class="btn2">Reset</button>
+      </p>
+      <div></div>
+    </div>
+    <div id="ex07">
+      <p>
+        <button class="btn1">Ani</button>
+        <button class="btn2">Stop</button>
+      </p>
+      <div></div>
+    </div>
+    <hr />
+  </body>
+</html>

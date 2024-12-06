@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./mov/movie1.mp4" alt="구글" title="구글쓰">
+    <hr>
+    <h3>비디오파일</h3>
+    <video src="./mov/movie1.mp4" width="400" controls loop autoplay muted></video> <!--controls : 영상 재생 버튼 , loop : 영상 무한 반복 , autoplay muted : 자동 재생-->
+    <video width="400"  controls loop autoplay muted>
+        <source src="./mov/movie1.mp4" type="video/mp4">
+    </video>
+    <video width="400" poster="./img/다운로드 (1).png" controls> <!--" poster="./img/다운로드 (1).png" : 유튜브 썸네일-->
+        <source src="./mov/movie1.mp4" type="video/mp4">
+    </video>
+    <audio controls>
+        <source src="mov/sound1.mp3" type="audio/mp3"><!--audio 관련 코드-->
+    </audio>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/3cCIEb9WUTg" 
+    title="2024 파리올림픽 남자 축구 결승ㅣ프랑스 vs 스페인 [습츠_파리올림픽]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!--유튜브-->
+    <!-- https://caniuse.com/?search=video 버젼 확인 사이트-->
+</body>
+</html>

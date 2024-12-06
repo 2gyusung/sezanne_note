@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tag</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!--내부 스타일 방식-->
+    <style>
+        /* 선택자 : {선언}
+        p{
+            background-color: yellowgreen;
+        }
+        .accent {
+            color: crimson;
+        } */
+        </style>
+        <!-- 내부형 -->
+        <script>
+            console.log('내부형 스크립트입니다.');
+            
+        </script>
+</head>
+<body>
+    <h1 onclick="alert('웹표준 마크업');">웹표준 마크업</h1>
+    <!--인라인 스타일 방식-->
+    <!--<p style ="color : crimson;></p>-->
+    <p class="accent">1. 시멘틱 마크업</p>
+    <p>2. 퇴출된 태그 <span class="accent">사용</span> 자제</p>
+    <p>3. 구조언어(HTML), 표현언어(CSS), 동작언어(SCRIPT) <span class="accent">분리</span></p>
+    <p>문단 중 일부를 <span class="ltalic">강조</span>하고자 할 떄 사용하는<span class="bold">태그들</span></p>
+    <hr>
+    <p>
+        <abbr title="HyperText Markup Language">HTML</abbr> 은 제목과 단락 목록등과 같은 본문을 위한 구조적 의미를 나타낸다.</abbr>
+    </p>
+    <p><dfn title="텍스트 대신에 그 자리에 이미지를 보여지도록 하는  기법">IR 기법</dfn>을 사용하면 검색에 용이합니다.</p>
+    <hr>
+    <blockquote cite="https://www.wa.or.kr/">
+        <p>
+            월드 와이드 웹을 창시한 팀 버너스리는 웹이란 장애에 구애없이 모든 사람들이 손쉽게 정보를 공유할 수 있는 공간이라고 정의하였으며, 
+            웹 콘텐츠를 제작할 때에는 <q>장애에 구애됨이 없이 누구나 접근</q>할 수 있도록
+            제작하여야 한다고 했다
+        </p>
+        <cite>팀 버너스 리</cite>
+        <q cite="www.naver.com">장애에 구애됨이 없이 누구나 접근</q>
+    </blockquote>
+    <hr>
+    <h1 style="color: blue; font-size: 12px; font-weight: normal;">CSS문법</h1>
+    <!-- 외부형 -->
+    <script src="./main.js"></script>
+</body>
+</html>

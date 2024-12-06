@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>서브 아이콕스</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Bagel Fat One", system-ui;
+        font-weight: 400;
+        font-style: normal;
+      }
+      li {
+        list-style-type: none;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      small {
+        font-size: 12px;
+      }
+      body {
+        font: 12px "돋움", dotum, sans-serif;
+        color: #333;
+      }
+      /* 레이아웃 */
+      .wrap {
+        width: 1200px;
+        margin: 0 auto;
+        border-bottom: 2px solid black;
+        background-color: #f8e1f6;
+      }
+      /* header */
+      .header {
+        height: 100px;
+      }
+      .header .logo {
+        float: left;
+        width: 200px;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+      }
+      .header .nav {
+        float: left;
+        width: 1000px;
+        height: 100px;
+      }
+      .header .nav ul {
+        float: right;
+        width: 800px;
+        margin: 25px 0;
+      }
+      .header .nav ul li {
+        float: left;
+        width: 25%;
+        height: 50px;
+      }
+      .header .nav ul li a {
+        display: block;
+        text-align: center;
+        line-height: 50px;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      /*공통서식  */
+      .inner {
+        width: 1200px;
+        margin: 0 auto;
+        outline: 1px dotted blue;
+      }
+      /*contents*/
+      #slide {
+        height: 300px;
+        outline: 1px dotted red;
+      }
+      .div1 {
+        float: left;
+        width: 250px;
+        height: 300px;
+        outline: 1px dotted blue;
+      }
+      .div2 {
+        float: left;
+        width: 950px;
+        height: 300px;
+        outline: 1px dotted goldenrod;
+      }
+      .txt {
+        text-align: center;
+        line-height: 150px;
+      }
+      .subTxt {
+        text-align: center;
+        line-height: 50px;
+      }
+      .list {
+        text-align: center;
+        padding: 15px;
+        font-size: 15px;
+      }
+      .list a:hover {
+        color: cornflowerblue;
+        transition:   s;
+      }
+      /* footer */
+      .footer {
+        height: 100px;
+        outline: 1px dotted red;
+      }
+      .footer p {
+        line-height: 100px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <h1 class="logo"><a href="./test.html">아이콕스</a></h1>
+        <nav class="nav">
+          <ul>
+            <li><a href="#">아이콕스</a></li>
+            <li><a href="#">도서소개</a></li>
+            <li><a href="#">Cox커뮤니티</a></li>
+            <li><a href="#">Cox자료실</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div id="slide" class="inner">
+        <div class="div1">
+          <h1 class="txt">iCOX커뮤니티</h1>
+          <ul class="list">
+            <li><a href="#">와글와글IT</a></li>
+            <li><a href="#">C스쿨</a></li>
+            <li><a href="#">JAVA스쿨</a></li>
+          </ul>
+        </div>
+        <div class="div2">
+          <h1 class="txt">가운데 컨텐츠</h1>
+          <p class="subTxt">내용</p>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>
+          <small
+            >서울시 양천구 목동 123-12 현대타워 1234호 연락처 : 02-1234-1234>
+            &copy; iCox. All rights reserved.</small
+          ><br />
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

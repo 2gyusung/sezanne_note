@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <title>페이지효과</title>
+    <script>
+      $(function () {
+        let now_img, next_img;
+        setInterval(() => {
+          now_img = $("#slide ul li").eq(0);
+          next_img = $("#slide ul li").eq(1);
+          next_img
+            .addClass("active")
+            .css("opacity", 0)
+            .animate({ opacity: 1 }, 300, function () {
+              $("#slide ul").append(now_img);
+              now_img.removeClass('active')
+            });
+        }, 8000);
+      });
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      body {
+        font: 12px "돋움", dotum, sans-serif;
+        color: #333;
+      }
+      #wrap {
+        width: 1200px;
+        margin: 0 auto;
+        outline: 1px dotted red;
+      }
+      header {
+        height: 100px;
+        outline: 1px dotted red;
+      }
+      #slide {
+        height: 300px;
+        outline: 1px dotted red;
+      }
+      #slide ul {
+        position: relative;
+        height: 300px;
+        outline: 1px dotted red;
+        width: 1200px;
+        height: 300px;
+      }
+      #slide ul li {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1200px;
+        height: 300px;
+        outline: 1px dotted red;
+      }
+      #slide ul li.active {
+        z-index: 1;
+      }
+      #slide ul li a {
+        display: block;
+        outline: 1px dotted red;
+        width: 1200px;
+        height: 300px;
+      }
+      #container {
+        height: 200px;
+        outline: 1px dotted red;
+      }
+      footer {
+        height: 100px;
+        outline: 1px dotted red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header></header>
+      <div id="slide">
+        <ul>
+          <li class="active">
+            <a href="#"><img src="./img/Untitled-1.png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./img/Untitled-2.png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./img/Untitled-3.png" alt="" /></a>
+          </li>
+        </ul>
+      </div>
+      <div id="container"></div>
+      <footer></footer>
+    </div>
+  </body>
+</html>

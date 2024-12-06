@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* reset */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        font: 12px "돋움", dotum, sans-serif;
+        color: #333;
+      }
+      hr {
+        margin: 50px 0;
+      }
+      .clearFix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      /* position */
+      .wrapper {
+        max-width: 600px;
+        margin: 60px auto 200px;
+        background: #eee;
+      }
+      .wrapper .content {
+        float: left;
+        width: 350px;
+        padding: 0 15px;
+        box-sizing: border-box;
+      }
+      .wrapper .content h1 {
+        margin-bottom: 1rem;
+      }
+      .wrapper .sidebar {
+        position: sticky;
+        top: 0;
+        float: right;
+        width: 170px;
+        padding: 20px;
+        box-sizing: border-box;
+        background: #434a54;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper clearFix">
+      <div class="content">
+        <h1>scroll down!</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+          repellendus quaerat sint iste numquam, architecto, nesciunt dolorem et
+          recusandae natus velit, rem deserunt ad animi nisi perspiciatis a
+          ipsum obcaecati?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+          repellendus quaerat sint iste numquam, architecto, nesciunt dolorem et
+          recusandae natus velit, rem deserunt ad animi nisi perspiciatis a
+          ipsum obcaecati?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+          repellendus quaerat sint iste numquam, architecto, nesciunt dolorem et
+          recusandae natus velit, rem deserunt ad animi nisi perspiciatis a
+          ipsum obcaecati?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+          repellendus quaerat sint iste numquam, architecto, nesciunt dolorem et
+          recusandae natus velit, rem deserunt ad animi nisi perspiciatis a
+          ipsum obcaecati?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+          repellendus quaerat sint iste numquam, architecto, nesciunt dolorem et
+          recusandae natus velit, rem deserunt ad animi nisi perspiciatis a
+          ipsum obcaecati?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+          repellendus quaerat sint iste numquam, architecto, nesciunt dolorem et
+          recusandae natus velit, rem deserunt ad animi nisi perspiciatis a
+          ipsum obcaecati?
+        </p>
+      </div>
+      <div class="sidebar">
+        <h3>sidebar</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum quia
+          doloremque aliquid facere debitis dolor laudantium similique deleniti
+          error molestiae itaque dolorum, harum deserunt suscipit est unde
+          architecto iusto veniam?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

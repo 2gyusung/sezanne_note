@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* 기본 글자 서식 */
+body {
+  font: 12px "돋움", dotum, sans-serif;
+  color: #333;
+}
+/* 공통 서식 */
+.inner {
+  width: 1200px;
+  margin: 0 auto;
+  outline: 1px dotted blue;
+}
+/* 레이아웃 */
+#header {
+  height: 100px;
+  background: #ccc;
+  outline: 1px dotted red;
+}
+#header .inner {
+  height: 100px;
+}
+#slide {
+  height: 300px;
+  outline: 1px dotted red;
+  
+}
+#container {
+  height: 200px;
+  outline: 1px dotted red;
+  
+}
+#footer {
+  height: 100px;
+  background: #ccc;
+  outline: 1px dotted red;
+
+}
+#footer .inner {
+  height: 100px;
+}

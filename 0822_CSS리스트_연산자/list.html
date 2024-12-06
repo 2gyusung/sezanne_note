@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>목록</title>
+  <style>
+    .menu {
+        height: 50px;
+    }
+    .menu>li {
+      float: left;
+      margin: 10px;
+      list-style-type: none;
+      margin-left: 20px;
+    }
+    .list>li {
+    
+
+      list-style-type: none;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- ul>li*4>ListItem -->
+   <!-- ul>li*4>{ListItem} -->
+    <!-- ul>li*4>{ListItem$} -->
+  <h1>목록태그</h1>
+  <h2>Undered List</h2>
+  <ul>
+    <li>List Item1</li>
+    <li>List Item2</li>
+    <li>List Item3</li>
+    <li>List Item4</li>
+  </ul>
+  <ul>
+    <li>ListItem1</li>
+    <li>ListItem2</li>
+    <li>ListItem3</li>
+    <li>ListItem4</li>
+  </ul>
+  <h2>Ordered List</h2>
+  <ol>
+    <li>ListItem1</li>
+    <li>ListItem2</li>
+    <li>ListItem3</li>
+    <li>ListItem4</li>
+  </ol>
+  <!-- dl>dt+dd*3 -->
+  <h2>Defunition List</h2>
+  <dl>
+    <dt>Definition term</dt>
+    <dd>Defintion desscription</dd>
+    <dd>Defintion desscription</dd>
+    <dd>Defintion desscription</dd>
+    <dd>Defintion desscription</dd>
+  </dl>
+  <h2>t서브메뉴구조</h2>
+  <ul>
+    <li><a href="#">About us</a>
+        <ul>
+          <li><a href="#">CEO greeting</a></li>
+          <li><a href="#">History</a>
+            <ul>
+              <li><a href="#">3depth SUB MENU</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Vision</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Works</a></li>
+    <li><a href="#">Serviecs</a></li>
+    <li><a href="#">Location</a></li>
+  </ul>
+  <hr>
+  <h2>비순차적 목록</h2>
+  <h1>주메뉴</h1>
+  <ul class="menu">
+    <li><a href="#">기업소개</a></li>
+    <li><a href="#">사업영역</a></li>
+    <li><a href="#">고객센터</a></li>
+    <li><a href="#">기업소개</a></li>
+    <li><a href="#">홍보자료</a></li>
+  </ul>
+  <h2>비순차적 목록</h2>
+  <h1>주메뉴</h1>
+  <ul class="">
+    <li><a href="#">기업소개</a>
+      
+          <ul><li><a href="#">CEO</a></li>
+            <li><a href="#">연혁</a></li> 
+            <li><a href="#">조직도</a></li>  
+            <li><a href="#">연혁</a></li> 
+          </ul>
+    </li>
+    <li><a href="#">제품소개</a>
+      <ul><li><a href="#">KP계열</a></li>
+        <li><a href="#">연혁</a></li> 
+        <li><a href="#">조직도</a></li>  
+        <li><a href="#">연혁</a></li> 
+      </ul></li>
+    <li><a href="#">고객센터</a></li>
+    <li><a href="#">기업소개</a></li>
+    <li><a href="#">홍보자료</a></li>
+  </ul>
+  <hr>
+  <h2>정의형목록</h2>
+    <dt>웹 표준 수업과목
+      <dd>XHTML</dd>
+      <dd>HTML5</dd>
+      <dd>CSS</dd>
+      <dd>CSS3</dd>
+      <dd>JavaScript</dd>
+    </dt>
+    <dl>
+      <dt>많이 보는 메뉴</dt>
+      <dd><a href="#">음악</a></dd>
+      <dd><a href="#">음악</a></dd>
+      <dd><a href="#">음악</a></dd>
+      <dd><a href="#">음악</a></dd>
+    </dl>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    header *:not(h1) {
+      color: green;
+    }
+    ul {
+      border: 1px solid #000;
+      padding: 20px;
+    }
+    /* ul li {
+      border-bottom: 1px solid #000;
+    }
+    ul li:last-child {
+      background-color: #ccc;
+      border: none;
+    } */
+     ul li:not(:last-child) {
+      border-bottom: 1px solid #000;
+     }
+     h1 {
+      background-color: yellow ;background-color: #eee;
+     }
+     header h1 {
+      background-color: #ccc;
+     }
+     h1 {
+      background-color: orange;
+     }
+
+  </style>
+</head>
+<body>
+    <h1>부정선택자</h1>
+    <header>
+      <h1>logo</h1>
+      <h2>main title</h2>
+      <p>brief Description</p>
+      <a href="#">read more</a>
+    </header>
+    <ul>
+      <li>list item</li>
+      <li>list item</li>
+      <li>list item</li>
+      <li>list item</li>
+    </ul>
+</body>
+</html>

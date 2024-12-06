@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./grid-guide.css" />
+    <title>Document</title>
+    <style>
+      hr {
+        margin: 50px 0;
+      }
+      @media (min-width: 768px) {
+        /*모바일 우선*/
+        body {
+          background: yellow;
+        }
+        #ex01::after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+        .box2 {
+          float: left;
+          width: 30%;
+        }
+        .box3 {
+          float: left;
+          width: 70%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ex01">
+      <div class="box1">Box1</div>
+      <div class="boxA">
+        <div class="box2">Box2</div>
+        <div class="box3">Box3</div>
+      </div>
+      <div class="box4">Box4</div>
+    </div>
+  </body>
+</html>

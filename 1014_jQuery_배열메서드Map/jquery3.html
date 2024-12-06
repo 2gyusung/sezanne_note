@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>jquery</title>
+    <style>
+      span {
+        display: inline-block;
+        margin: 5px;
+      }
+    </style>
+    <!-- download 방식으로 라이브러리 연결 인터넷 연결 없어도 사용가능 -->
+    <script src="./js/jquery-3.7.1.min (1).js"></script>
+    <script>
+      $(document).ready(function () {
+        // console.log("jQuery 시작");
+        $("#m1 > span:first-child").css("border", "2px solid red");
+        $("#m1 > span:last-child").css("border", "2px solid red");
+        $("#m2 > span:first-of-type").css("border", "2px solid orange");
+        $("#m2 > span:last-of-type").css("border", "2px solid orange");
+        $("#m3 > span:nth-child(1)").css("border", "2px solid yellow");
+        $("#m3 > span:nth-last-child(1)").css("border", "2px solid yellow");
+        $("#m4 > span:nth-of-type(1)").css("border", "2px solid green");
+        $("#m4 > span:nth-last-of-type(1)").css("border", "2px solid green");
+        $("#m5 > span:only-child").css("border", "2px solid blue"); //span 여러 개 있을 시 작동 안됨
+        $("#m6 > span:only-of-type").css("border", "2px solid navy");
+        // 폼필터 선택자
+        $("input:text").css("background", "red");
+        $("input:password").css("background", "orange");
+        $(":button").css("background", "yellow");
+        $("input:checked + label").css("background", "green");
+        $("option:selected").css("color", "blue");
+        $("textarea:disabled").css('background', 'pink')
+      });
+    </script>
+  </head>
+  <body>
+    <div id="m1">
+      <span>내용1_1</span>
+      <span>내용1_2</span>
+      <span>내용1_3</span>
+    </div>
+    <div id="m2">
+      <strong>내용2_1</strong>
+      <span>내용2_2</span>
+      <strong>내용2_3</strong>
+      <span>내용2_4</span>
+    </div>
+    <div id="m3">
+      <span>내용3_1</span>
+      <span>내용3_2</span>
+      <span>내용3_3</span>
+    </div>
+    <div id="m4">
+      <strong>내용4_1</strong>
+      <span>내용4_2</span>
+      <strong>내용4_3</strong>
+      <span>내용4_4</span>
+      <strong>내용4_5</strong>
+      <span>내용4_6</span>
+    </div>
+    <div id="m5">
+      <span>내용5_1</span>
+    </div>
+    <div id="m6">
+      <strong>내용6_1</strong>
+      <span>내용6_2</span>
+    </div>
+    <hr style="margin: 50px 0" />
+    <div><input type="text" /></div>
+    <div><input type="password" /></div>
+    <div><button>확인</button></div>
+    <div>
+      <input type="checkbox" id="css" checked /> <label for="css">CSS</label>
+    </div>
+    <div>
+      <select>
+        <option>과목</option>
+        <option>javascript</option>
+        <option selected>jQuery</option>
+      </select>
+      <textarea cols="20" rows="5" disabled>javascript</textarea>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gradient</title>
+  <style>
+    /* reset */
+    * {margin: 0;padding: 0;}
+    li {list-style: none;}
+    a {text-decoration: none; color: inherit;}
+    hr {margin: 50px 0;}
+    
+    p {
+      display: inline-block;
+      width: 20%;
+      margin: 10px;
+      padding: 60px;
+      background: red;
+
+      /* background: linear-gradient(red, yellow, green); */
+      /* background: linear-gradient(to top, red, yellow, green); */
+      /* background: linear-gradient(to right, red, yellow, green); */
+      /* background: linear-gradient(to bottom right, red, yellow, green); */
+      /* background: linear-gradient(270deg, red, yellow, green); */
+      /* background:yellow linear-gradient(to right, rgba(0,0,255,0), rgba(0,0,255,1)); */
+      /* background:repeating-linear-gradient(red, yellow 10%, green 20%); */
+      /* background-image: radial-gradient(red, yellow, green); */
+      /* background-image: radial-gradient(red 5%, yellow 15%, green 60%); */
+      /* background-image: radial-gradient(circle, red, yellow, green); */
+      /* background-image: repeating-radial-gradient(red, yellow 25%, green 50%); */
+    }
+    .g1 {background: linear-gradient(red, yellow, green);}
+    .g2 {background: linear-gradient(to right, red, yellow, indigo);}
+    .g3 {background: linear-gradient(to bottom right, red, yellow, green);}
+    .g4 {background: linear-gradient(200deg, blue, red);}
+    .g5 {background:yellow linear-gradient(to right, rgba(0,0,255,0), rgba(0,0,255,1));}
+    .g6 {background:repeating-linear-gradient(brown, yellow 10%, green 20%);}
+    .g7 {background-image: radial-gradient(red, yellow, green);}
+    .g8 {background-image: radial-gradient(red 5%, yellow 15%, green 60%);}
+    .g9 {background-image: radial-gradient(circle, red, yellow, green); }
+    .g10 {background-image: repeating-radial-gradient(red, yellow 15%, green 30%);}
+
+    button {
+      margin: 50px;
+      padding: 10px 20px;
+      background: none; 
+      border: none;
+      color: #fff;
+      transition: .5s;
+    }
+    #btn1 {background: linear-gradient(skyblue 50%, rgb(144, 144, 239) 50%);}
+    #btn2 {background: linear-gradient(skyblue 50%, rgb(144, 144, 239) 50%, purple);}
+
+    button:hover {border-radius: 10px; color: yellow;}
+  </style>
+</head>
+<body>
+  <p class="g1">Lorem ipsum dolor sit amet.</p>
+  <p class="g2">Lorem ipsum dolor sit amet.</p>
+  <p class="g3">Lorem ipsum dolor sit amet.</p>
+  <p class="g4">Lorem ipsum dolor sit amet.</p>
+  <p class="g5">Lorem ipsum dolor sit amet.</p>
+  <p class="g6">Lorem ipsum dolor sit amet.</p>
+  <p class="g7">Lorem ipsum dolor sit amet.</p>
+  <p class="g8">Lorem ipsum dolor sit amet.</p>
+  <p class="g9">Lorem ipsum dolor sit amet.</p>
+  <p class="g10">Lorem ipsum dolor sit amet.</p>
+  <hr>
+  <button id="btn1">Click</button>
+  <button id="btn2">Click</button>
+</body>
+</html>

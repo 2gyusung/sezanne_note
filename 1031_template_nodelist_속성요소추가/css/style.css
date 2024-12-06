@@ -1,0 +1,183 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Orbitron:wght@400..900&display=swap");
+
+/*  Reset CSS  */
+* {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+a {
+  outline: 0;
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  border: 0;
+}
+body {
+  color: #555;
+  font-family: "Orbitron", sans-serif;
+}
+
+/* <!-- 전체 프레임 --> */
+
+#wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 1400px;
+  min-height: 780px;
+  height: 100%;
+  background-image: url(../img/bg_morning.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  transition: 2s;
+}
+/* 로고 */
+#wrap h1 {
+  width: 90px;
+  height: 80px;
+  position: fixed;
+  left: 60px;
+  top: 30px;
+  background-image: url(../img/logo_b.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  /* outline: 1px dotted red; */
+}
+#wrap h1 a {
+  height: 100%;
+  display: block;
+  text-indent: -999px; /*로고 글자 밖으로 보내는 것*/
+  /* outline: 5px dotted blue; */
+}
+
+/* 주메뉴 */
+#gnb {
+  position: fixed;
+  top: 50px;
+  right: 200px;
+  outline: 1px dotted red;
+}
+#gnb li {
+  float: left;
+  margin-left: 30px;
+}
+#gnb li a {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+}
+/* sns 버튼 */
+#sns {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+}
+#sns li {
+  float: left;
+  margin-left: 20px;
+}
+#sns li i {
+  font-size: 18px;
+  color: #555;
+  transition: 2s;
+}
+#sns li:hover i {
+  transform: scale(1.4);
+}
+/* 텍스트 박스 */
+article {
+  outline: 1px dotted red;
+  position: absolute;
+  top: 350px;
+  left: 150px;
+  width: 450px;
+}
+article p {
+  font-size: 50px;
+  color: #666;
+}
+
+article p strong {
+  color: #111;
+}
+article em {
+  font-size: 14px;
+  font-style: normal;
+  color: #333;
+}
+/* 모바일 영역 */
+figure {
+  position: absolute;
+  top: 200px;
+  right: -300px;
+  width: 1226px;
+  height: 809px;
+  background: url(../img/phone_morning.png);
+  outline: 1px dotted red;
+}
+figure p {
+  position: absolute;
+  top: 100px;
+  left: 137px;
+  width: 540px;
+  height: 307px;
+  outline: 1px dotted red;
+  padding-left: 50px;
+  font-size: 60px;
+  font-weight: bold;
+  color: #333;
+  line-height: 4.6;
+  box-sizing: border-box;
+}
+figure p span {
+  position: relative;
+  z-index: 5;
+}
+/*테마 버튼 */
+nav {
+  position: fixed;
+  bottom: 70px;
+  /* left : 6%; */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 88%;
+  /* outline: 1px dotted red; */
+}
+nav ul {
+  overflow: hidden;
+  /* background: yellow; */
+}
+nav ul li {
+  /* outline: 1px dotted red; */
+  float: left;
+  width: 25%;
+}
+nav ul li a {
+  display: block;
+  width: 98%;
+  height: 35px;
+  margin: 0 auto;
+  padding-left: 30px;
+  background: #fff;
+  color: #111;
+  font-weight: bold;
+  line-height: 3;
+  font-size: 12px;
+  box-sizing: border-box;
+  transition: 2s;
+}
+nav ul li:hover a {
+  background: #111;
+  color: #ddd;
+  opacity: 0.9;
+}

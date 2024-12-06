@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 타입 선택자 */
+    p {
+      color: green;
+    }
+    /* 자손(하위) 선택자  A B*/
+    .abox p{
+      color: orange;
+    }
+    /* 자식 선택자 : A > B */
+    .abox>p {
+      color: skyblue;
+    }
+    /* 인접 형제 선택자 : A + B */
+    .abox + p {
+      text-decoration: underline;
+    }
+    /* 일반 형제 선택자 A ~ B */
+    .abox ul~p {
+      background: #ccc;
+    }
+    /* 그룹 선택자 */
+    .abox, .abox ul li {
+      border: 1px dotted red;
+    }
+    .container * {
+      color: #000;
+      width: 600px;
+      margin: 0 auto;
+    }
+    .bg__wrapper{
+      background-color: orange;
+    }
+    .container h1+p>span {
+      color: red;
+    }
+    .container ul .bamboo {
+      background-color: beige;
+    }
+  </style>
+</head>
+<body>
+  <div class="abox">
+    <p>7월의 여행지</p>
+    <ul>
+      <li><p>1주차 여행지</p></li>
+      <li><p>1주차 여행지</p></li>
+    </ul>
+    <p>8월의 여행지</p>
+    <p>8월의 여행지</p>
+    <p>8월의 여행지</p>
+  </div>
+  <p>내년의 여행지</p>
+  <p>내후년의 여행지</p>
+</body>
+<div class="container">
+  <h1>건강해지는 차</h1>
+  <p>머리와 피부에 좋은 차는 어떤 것들일까. <span>차의 종류</span>에 대해 알아보도록 합시다</p>
+  <ul>
+    <li class="bg__wrapper"><h2>대나무차</h2><span>15,000원</span>
+    <p>얼굴에 물을 주는 효과가 있다.</p></li>
+    <li class="bg__wrapper"><h2>대나무차</h2><span>15,000원</span>
+      <p>얼굴에 물을 주는 효과가 있다.</p></li>
+      <li class="bg__wrapper"><h2>대나무차</h2><span>15,000원</span>
+        <p>얼굴에 물을 주는 효과가 있다.</p></li>
+  </ul>
+</div>
+</html>

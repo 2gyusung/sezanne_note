@@ -1,0 +1,6 @@
+/* reset */
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none; color: inherit;}
+address {font-style: normal;}
+small {font-size: 12px;}

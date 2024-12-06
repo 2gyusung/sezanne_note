@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <title>유동형 위로슬라이드</title>
+    <script>
+      $(function () {
+        setInterval(function () {
+          $("#slide ul").animate(
+            {
+              top: "-400px" /*사진 4장이라서 -400으로 지정함*/,
+            },
+            600,
+            function () {
+              $("#slide ul").append($("#slide ul li").eq(0));
+              $("#slide ul").css("top", 0);
+            }
+          );
+        }, 3000);
+      });
+
+      //p  mouseenter : bg yellow
+      //p mouseleave : bg pink
+      //p  click : bg skyblue
+      //p dbclick : bg -red
+    </script>
+    <style>
+      hr {
+        margin: 50px 0;
+      }
+      /* reset */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        font: 12px "돋움", dotum, sans-serif;
+        color: #333;
+      }
+      header {
+        height: 100px;
+        outline: 1px dotted red;
+        background: #ccc;
+      }
+      #innerHeader {
+        margin: 0 auto;
+        width: 1200px;
+        height: 100px;
+        outline: 1px dotted red;
+      }
+      #slide {
+        width: 1200px;
+        height: 300px;
+        margin: 0 auto;
+        outline: 1px dotted red;
+        background-color: #eee;
+        /* overflow: hidden; */
+      }
+      #slide ul {
+        position: relative;
+        width: 1200px;
+        height: 900px;
+      }
+      #slide ul li {
+        float: left;
+        width: 1200px;
+        height: 300px;
+      }
+      #slide ul li a {
+        display: block;
+        width: 1200px;
+        height: 300px;
+      }
+      #slide ul li.sd1 a {
+        background: url(./img/Untitled-1.png) no-repeat;
+      }
+      #slide ul li.sd2 a {
+        background: url(./img/Untitled-2.png) no-repeat;
+      }
+      #slide ul li.sd3 a {
+        background: url(./img/Untitled-3.png) no-repeat;
+      }
+      #slide ul li.sd4 a {
+        background: url(./img/Untitled-3.png) no-repeat;
+      }
+      #container {
+        width: 1200px;
+        height: 200px;
+        margin: 0 auto;
+        background-color: #eee;
+        outline: 1px dotted red;
+      }
+      footer {
+        height: 100px;
+        outline: 1px dotted red;
+        background-color: #eee;
+      }
+      #innerFooter {
+        width: 1200px;
+        height: 100px;
+        margin: 0 auto;
+        outline: 1px dotted red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="innerHeader"></div>
+    </header>
+    <div id="slide">
+      <ul>
+        <li class="sd1">
+          <a href="#">1</a>
+        </li>
+        <li class="sd2">
+          <a href="#">2</a>
+        </li>
+        <li class="sd3">
+          <a href="#">3</a>
+        </li>
+        <li class="sd4">
+          <a href="#">4</a>
+        </li>
+      </ul>
+    </div>
+    <div id="container"></div>
+    <footer>
+      <div id="innerFooter"></div>
+    </footer>
+  </body>
+</html>

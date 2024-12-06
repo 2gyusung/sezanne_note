@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bxslider</title>
+  <link href="./jquery.bxslider.css" rel="stylesheet" />
+</head>
+<body>
+<ul class="bxslider">
+  <li><img src="./img/Untitled-1.png" /></li>
+  <li><img src="./img/Untitled-2.png" /></li>
+  <li><img src="./img/Untitled-3.png" /></li>
+</ul>
+<!-- jQuery library -->
+<script src="./js/jquery-3.1.1.min.js"></script>
+<!-- bxSlider Javascript file -->
+<script src="./js/jquery.bxslider.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.bxslider').bxSlider({
+			mode: 'horizontal',
+			moveSlides: 1,
+			slideMargin: 40,
+			infiniteLoop: true,
+			slideWidth: 660,
+			minSlides: 3,
+			maxSlides: 3,
+			speed: 800,
+		});
+	});
+</script>
+</body>
+</html>

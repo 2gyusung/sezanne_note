@@ -1,0 +1,370 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 기본색 */
+:root {
+  --main-color: #5d9ab2;
+  --accent-color: #bf6a7a;
+  --dark-color: #2b5566;
+  --text-bright-color: #fff;
+  --icon-color: #fff;
+  --icon-bk-color: #ddd;
+  --large-width: 1000px;
+}
+
+/* 기본설정 */
+
+body {
+  font-family: "맑음고딕", "apple sd gothic neo", sans-serif;
+  font-size: 16px;
+}
+
+/* 콘텐츠 A  : 히어로 이미지 */
+
+.conA {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0.1)),
+    url(../img/fruits.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  min-height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* color :#fff; */
+  color: var(--text-bright-color);
+  text-align: center;
+}
+.conA img {
+  width: 20%;
+}
+.conA h1 {
+  margin-bottom: 10px;
+  font-size: 15vw;
+  /* vw 단위로 변경 */
+  /* vw : 화면 너비 100vw로 하는 단위. */
+  /* 1vw 화면 너비의 100분 1 */
+  /* 화면 너비 : 320px 일 때 , 폰트 크기 : 48px; */
+  /* 1vw = 3.2px */
+  /* ?vw = 48px */
+  /* 1:x=3.2:48 */
+  /* 3.2x = 48 */
+  /*  x = 48/3.2 */
+  /*  x = 15vw */
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.2em;
+  margin-left: 0.2em;
+}
+
+.conA p {
+  font-size: 18px;
+}
+
+.conA a {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 6px;
+  background: var(--accent-color);
+  border: 1px solid currentColor; /*currentColor 현재 글 색상을 따라간다*/
+  font-size: 14px;
+}
+.conA a:hover {
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2)
+  );
+}
+/* 콘텐츠B : 개요(아이콘 + 글자) */
+
+.conB {
+}
+.conB .container {
+  padding: 80px 0 20px;
+}
+.conB .text {
+  text-align: center;
+  padding: 0 20px 60px;
+  /* outline: 1px dotted red; */
+}
+.conB .icon {
+  display: inline-block;
+  width: 2em; /*em 본인 사이즈*/
+  height: 2em;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  line-height: 2;
+  text-align: center;
+  background: var(--icon-bk-color);
+  color: var(--icon-color);
+  font-size: 40px;
+}
+.conB h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.conB p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.8;
+  opacity: 0.8;
+}
+.conB a {
+  color: var(--main-color);
+}
+.conB a:hover {
+  text-decoration: underline;
+}
+/* 콘텐츠B : 개요(이미지 + 글자) */
+.conC {
+  background: var(--main-color);
+  color: var(--text-bright-color);
+}
+.conC .photo {
+  min-height: 200px;
+  background-image: url(../img/note.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+}
+.conC h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.conC p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.8;
+  opacity: 0.8;
+}
+
+.conC a {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 6px;
+  background: var(--accent-color);
+  border: 1px solid currentColor; /*currentColor 현재 글 색상을 따라간다*/
+  font-size: 14px;
+}
+.conC .text {
+  padding: 20px;
+}
+.conC a:hover {
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2)
+  );
+}
+/* conD */
+.conD {
+}
+.conD .container {
+  padding-top: 2px;
+}
+.conD .photo {
+  min-height: 200px;
+  background-image: url(../img/life.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+}
+.conD h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.conD p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.8;
+  opacity: 0.8;
+}
+
+.conD a {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px 30px;
+  box-shadow: 0 0 0 1px #888;
+  border-radius: 6px;
+  background: var(--accent-color);
+  color: var(--text-bright-color);
+  border: 1px solid currentColor; /*currentColor 현재 글 색상을 따라간다*/
+  font-size: 14px;
+}
+.conD .text {
+  padding: 20px;
+}
+.conD a:hover {
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2)
+  );
+}
+/* footer */
+footer {
+  background: var(--dark-color);
+  color: var(--text-bright-color);
+}
+footer .container {
+  padding: 40px 20px;
+}
+
+/* 푸터 a  : 사이트 정보*/
+.footA {
+  margin-bottom: 30px;
+}
+.footA h2 {
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.2em;
+}
+.footA p {
+}
+.footA a {
+  display: block;
+}
+/* footerB :footer menu */
+.fooB {
+}
+.fooB div {
+  margin-bottom: 20px;
+}
+.fooB h3 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid currentColor;
+  font-size: 14px;
+}
+.fooB ul {
+}
+.fooB a {
+  display: block;
+  padding: 5px;
+  font-size: 12px;
+  /* outline: 1px dotted yellow; */
+}
+.fooB a:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+/* fooC : 저작권 */
+.fooC {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+.fooC small {
+  font-size: 12px;
+}
+/* fooD : sns */
+.fooD {
+  margin-top: 20px;
+}
+.fooD ul {
+  display: flex;
+}
+.fooD a {
+  margin-right: 8  px;
+  display: block;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  line-height: 2;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  font-size: 16px;
+}
+.fooD a:hover {
+  background: rgba(0, 0, 0, .3);
+}
+
+@media screen and (min-width: 768px) {
+  .conA h1 {
+    font-size: 115px;
+    /* 768px : 15vw
+      1vw = 7.68px
+      15vw = 7.68 X 15 =115.2
+    */
+  }
+  .conA p {
+    font-size: 24px;
+  }
+  .conB .container {
+    display: flex;
+    max-width: var(--large-width);
+    margin: 0 auto;
+  }
+  .conB .text {
+    flex: 1;
+    outline: 1px solid rebeccapurple;
+  }
+
+  .conC .container {
+    display: flex;
+    max-width: var(--large-width);
+    margin: 0 auto;
+  }
+  .conC .photo {
+    flex: 3;
+  }
+  .conC .text {
+    flex: 2;
+    padding: 50px;
+  }
+
+  .conD .container {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: var(--large-width);
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+  .conD .photo {
+    flex: 0 0 400px; /* flex-grow: 1; flex-shrink: 1; flex-basis: auto; */
+  }
+  .conD .text {
+    flex: 1;
+    padding: 50px;
+  }
+  footer .container {
+    display: flex;
+    flex: wrap;
+    max-width: var(--large-width);
+    margin: 0 auto;
+  }
+  .footA {
+    flex: 0 0 40%;
+  }
+  .fooB {
+    display: flex;
+    flex: 0 0 60%; /* flex-grow: 1; flex-shrink: 1; flex-basis: auto; */
+  }
+  .fooB {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .fooB div {
+    flex: 1;
+    /* outline: 1px dotted red; */
+  }
+  .fooB div:not(:first-child) {
+    margin-left: 40px;
+  }
+  .fooC {
+    flex: 0 0 100%; /* flex-grow: 1; flex-shrink: 1; flex-basis: auto; */
+  }
+}

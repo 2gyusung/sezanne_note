@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* 기본글자 서식 */
+body {
+  font: 12px "돋움", dotum, sans-serif;
+  color: #333;
+}
+/* 레이아웃 */
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+  outline: 1px dotted red;
+}
+/* header */
+.wrap .header {
+  height: 100px; /**/
+  outline: 1px dotted red;
+}
+.wrap .header .logo {
+  width: 200px;
+  height: 100px;
+  outline: 1px dotted blue;
+  float: left;
+  
+}
+.wrap .header .nav {
+  width: 1000px;
+  height: 100px;
+  outline: 1px dotted blue;
+  float: left;
+
+}
+/* slide */
+.wrap .slide {
+  height: 300px;
+  outline: 1px dotted red;
+}
+/* container */
+.wrap .container {
+  height: 200px;
+  outline: 1px dotted red;
+}
+.wrap .container .notice {
+  outline: 1px dotted blue;
+  float: left;
+  width: 400px;
+  height: 200px;
+  
+}
+.wrap .container .gallery {
+  outline: 1px dotted blue;
+  height: 200px;
+  float: left;
+  width: 400px;
+  
+}
+.wrap .container .banner {
+  outline: 1px dotted blue;
+  height: 200px;
+  float: left;
+  width: 400px;
+
+}
+/* footer */
+.wrap .footer 
+{
+  height: 100px;
+  outline: 1px dotted red;
+}
+.wrap .footer .btmLogo {
+  float: left;
+  width: 200px;
+  height: 100px;
+  outline: 1px dotted blue;
+}
+.wrap .footer .footerWrap {
+  float: left;
+  height: 100px;
+  width: 1000px;
+  outline: 1px dotted blue;
+  
+}
+.wrap .footer .footerWrap .btmNav{
+  height: 50px;
+  outline: 1px dotted blue;
+}
+.wrap .footer .footerWrap .btmNav{
+  height: 50px;
+  outline: 1px dotted blue;
+}

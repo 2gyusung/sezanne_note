@@ -1,0 +1,321 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Orbitron:wght@400..900&display=swap");
+
+/*  Reset CSS  */
+* {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+a {
+  outline: 0;
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  border: 0;
+}
+body {
+  color: #555;
+  font-family: "Orbitron", sans-serif;
+}
+
+/* <!-- 전체 프레임 --> */
+
+#wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 1400px;
+  min-height: 780px;
+  height: 100%;
+  background-image: url(../img/bg_morning.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  transition: 2s;
+}
+/* 로고 */
+#wrap h1 {
+  width: 90px;
+  height: 80px;
+  position: fixed;
+  left: 60px;
+  top: 30px;
+  background-image: url(../img/logo_b.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  /* outline: 1px dotted red; */
+}
+#wrap h1 a {
+  height: 100%;
+  display: block;
+  text-indent: -999px; /*로고 글자 밖으로 보내는 것*/
+  /* outline: 5px dotted blue; */
+}
+
+/* 주메뉴 */
+#gnb {
+  position: fixed;
+  top: 50px;
+  right: 200px;
+  outline: 1px dotted red;
+}
+#gnb li {
+  float: left;
+  margin-left: 30px;
+}
+#gnb li a {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+}
+/* sns 버튼 */
+#sns {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+}
+#sns li {
+  float: left;
+  margin-left: 20px;
+}
+#sns li i {
+  font-size: 18px;
+  color: #555;
+  transition: 2s;
+}
+#sns li:hover i {
+  transform: scale(1.4);
+}
+/* 텍스트 박스 */
+article {
+  outline: 1px dotted red;
+  position: absolute;
+  top: 350px;
+  left: 150px;
+  width: 450px;
+}
+article p {
+  font-size: 50px;
+  color: #666;
+}
+
+article p strong {
+  color: #111;
+}
+article em {
+  font-size: 14px;
+  font-style: normal;
+  color: #333;
+}
+/* 모바일 영역 */
+figure {
+  position: absolute;
+  top: 200px;
+  right: -300px;
+  width: 1226px;
+  height: 809px;
+  background: url(../img/phone_morning.png);
+  outline: 1px dotted red;
+}
+figure p {
+  position: absolute;
+  top: 100px;
+  left: 137px;
+  width: 540px;
+  height: 307px;
+  outline: 1px dotted red;
+  padding-left: 50px;
+  font-size: 60px;
+  font-weight: bold;
+  color: #333;
+  line-height: 4.6;
+  box-sizing: border-box;
+}
+figure p span {
+  position: relative;
+  z-index: 5;
+}
+/*테마 버튼 */
+nav {
+  position: fixed;
+  bottom: 70px;
+  /* left : 6%; */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 88%;
+  /* outline: 1px dotted red; */
+}
+nav ul {
+  overflow: hidden;
+  /* background: yellow; */
+}
+nav ul li {
+  /* outline: 1px dotted red; */
+  float: left;
+  width: 25%;
+}
+nav ul li a {
+  display: block;
+  width: 98%;
+  height: 35px;
+  margin: 0 auto;
+  padding-left: 30px;
+  background: #fff;
+  color: #111;
+  font-weight: bold;
+  line-height: 3;
+  font-size: 12px;
+  box-sizing: border-box;
+  transition: 2s;
+}
+nav ul li:hover a,
+nav ul li.on a {
+  background: #111;
+  color: #ddd;
+  opacity: 0.9;
+}
+/* 배경구름 */
+#wrap > img:nth-of-type(1) {
+  position: absolute;
+  top: 0;
+  left: -1146;
+  animation: ani1 110s linear infinite;
+  opacity: 0.8;
+}
+#wrap > img:nth-of-type(2) {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  outline: 1px solid red;
+  animation: ani2 100s linear infinite;
+}
+/* 모바일 구름  */
+figure p img.cl1 {
+  position: absolute;
+  top: 30px;
+  left: -600px;
+  z-index: 4;
+  width: 600px;
+  height: auto;
+  animation: ani3 110s linear infinite;
+}
+figure p img.cl2 {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  z-index: 4;
+  width: 700;
+  height: auto;
+  animation: ani4 100s linear infinite;
+}
+
+/*아침 테마*/
+#wrap.morning {background-image:url(../img/bg_morning.jpg);}
+#wrap.morning h1 {background-image:url(../img/logo_b.png);}
+#wrap.morning #gnb a {color:#555;}
+#wrap.morning #sns i {color:#555;}
+#wrap.morning figure {background-image:url(../img/phone_morning.png);}
+#wrap.morning article p {color:#666;}
+#wrap.morning article p strong {color:#111;}
+#wrap.morning article em {color:#333;}
+#wrap.morning figure p {color:#333;}
+#wrap.morning>img:nth-of-type(1) {opacity:1;}
+#wrap.morning>img:nth-of-type(2) {opacity:1;} 
+
+/*오후 테마*/
+#wrap.afternoon {background-image:url(../img/bg_afternoon.jpg);}
+#wrap.afternoon h1 {background-image:url(../img/logo_b.png);}
+#wrap.afternoon #gnb a {color:#555;}
+#wrap.afternoon #sns i {color:#555;}
+#wrap.afternoon figure {background-image:url(../img/phone_afternoon.png);}
+#wrap.afternoon article p {color:#666;}
+#wrap.afternoon article p strong {color:#111;}
+#wrap.afternoon article em {color:#333;}
+#wrap.afternoon figure p {color:#333;}
+#wrap.afternoon>img:nth-of-type(1) {opacity:1;}
+#wrap.afternoon>img:nth-of-type(2) {opacity:1;} 
+
+/*저녁 테마*/
+#wrap.evening {background-image:url(../img/bg_evening.jpg);}
+#wrap.evening h1 {background-image:url(../img/logo_w.png);}
+#wrap.evening #gnb a {color:#fff;}
+#wrap.evening #sns i {color:#fff;}
+#wrap.evening figure {background-image:url(../img/phone_evening.png);}
+#wrap.evening article p {color:#444;}
+#wrap.evening article p strong {color:#fff;}
+#wrap.evening article em {color:#333;}
+#wrap.evening figure p {color:#fff;}
+#wrap.evening>img:nth-of-type(1) {opacity:0.6;}
+#wrap.evening>img:nth-of-type(2) {opacity:0.6;} 
+
+/*밤 테마*/
+#wrap.night {background-image:url(../img/bg_night.jpg);}
+#wrap.night h1 {background-image:url(../img/logo_w.png);}
+#wrap.night #gnb a {color:#fff;}
+#wrap.night #sns i {color:#fff;}
+#wrap.night figure {background-image:url(../img/phone_night.png);}
+#wrap.night article p {color:#bbb;}
+#wrap.night article p strong {color:#fff;}
+#wrap.night article em {color:#888;}
+#wrap.night figure p { color:#fff;}
+#wrap.night>img:nth-of-type(1) {opacity:0.1;}
+#wrap.night>img:nth-of-type(2) {opacity:0.1;}
+#wrap.night figure p img.cl1 {opacity:0.4;}
+#wrap.night figure p img.cl2 {opacity:0.4;}
+/* 구름 모션 */
+@keyframes ani1 {
+  0% {
+    left: -1146px;
+  }
+  100% {
+    left: 1950px;
+  }
+}
+@keyframes ani2 {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 1950px;
+    opacity: 0;
+  }
+  50.001% {
+    left: -1840px;
+    opacity: .8;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes ani3 {
+  0% {
+    left: -600px;
+  }
+  100% {
+    left: 540px;
+  }
+}
+@keyframes ani4 {
+  0% {
+    left: -600px;
+  }
+  50% {
+    left: 540px;
+    opacity: 0;
+  }
+  50.001% {
+    left: -700px;
+    opacity: 1;
+  }
+  100% {
+    left: 0;
+  }
+}

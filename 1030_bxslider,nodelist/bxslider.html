@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bxslider</title>
+  <link href="./css/jquery.bxslider.css" rel="stylesheet" />
+  <style>
+    .bx-wrapper img {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+<ul class="bxslider">
+  <li><img src="./images/Untitled-1.png" /></li>
+  <li><img src="./images/Untitled-2.png" /></li>
+  <li><img src="./images/Untitled-3.png" /></li>
+  <li><img src="./images/Untitled-3.png" /></li>
+  <li><img src="./images/Untitled-3.png" /></li>
+  <li><img src="./images/Untitled-3.png" /></li>
+</ul>
+<!-- jQuery library -->
+<script src="./js/jquery-3.1.1.min.js"></script>
+<!-- bxSlider Javascript file -->
+<script src="./js/jquery.bxslider.js"></script>
+<script>
+	// $(document).ready(function(){
+	// 	$('.bxslider').bxSlider({
+	// 		// mode: 'horizontal',
+	// 		mode: 'vertical',
+	// 		moveSlides: 1,
+	// 		slideMargin: 40,
+	// 		infiniteLoop: true,
+	// 		slideWidth: 660,
+	// 		minSlides: 1,
+	// 		maxSlides: 1,
+	// 		speed: 800,
+	// 	});
+	// });
+  $('.bxslider').bxSlider({
+    auto: true,
+    // autoControls: true,
+    // stopAutoOnClick: true,
+    pager: true,
+    // slideWidth: 600
+  });
+</script>
+</body>
+</html>

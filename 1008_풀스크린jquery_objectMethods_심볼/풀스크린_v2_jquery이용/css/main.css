@@ -1,0 +1,82 @@
+@charset "utf-8";
+@import url(./reset.css);
+
+/* 기본글자서식 */
+body {
+  font: 12px "돋움", dotum, sans-serif;
+  color: #333;
+}
+/* 공통서식 */
+.inner {
+  max-width: 1200px;
+  width: 90%;
+  /* min-width: 450px; */
+  margin: 0 auto;
+  /* outline: 1px dotted red; */
+}
+.clearFix::before,
+.clearFix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+body {
+  /* background: url(../img/img1.jpg) no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat; */
+  /* height: 100%; */
+  background: url(../img/img1.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+header {
+  background: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  width: 100%;
+}
+header .inner {
+  padding: 20px 0;
+}
+#container {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+#container p {
+  text-align: center;
+  margin-top: 300px;
+  margin-bottom: 100px;
+}
+#container p a {
+  width: 150px;
+  height: 50px;
+  display: inline-block;
+  line-height: 50px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #fff;
+  color: #eee;
+  font-weight: bold;
+}
+#container p a:hover {
+  background: #fff;
+  color: black;
+}
+#container section {
+  height: 500px;
+  background: #fff;
+  outline: 1px dotted red;
+}
+#container section:nth-of-type(2) {
+  background: url(../img/img2.jpg) no-repeat center/cover fixed;
+}
+footer {
+  /* position: fixed;
+  bottom: 0;
+  left: 50%;
+  /* width: 100%; */
+  /* transform: translateX(-50%); */ 
+  margin-left: -600px;
+  border-top: 1px solid #ccc;
+  padding: 20px 0;
+  text-align: right;
+}

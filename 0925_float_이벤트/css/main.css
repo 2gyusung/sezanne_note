@@ -1,0 +1,99 @@
+@charset "utf-8";
+@import url(./reset.css);
+
+/* 공통서식 */
+.inner {
+  width: 1200px;
+  margin: 0 auto;
+  /* outline: 1px solid blue; */
+}
+.hidden {
+  display: none;
+}
+.clearFix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body {
+  font-size: 12px "돋움", dotum, sans-serif;
+  color: #333;
+}
+
+.hidden {
+  display: none;
+}
+.clearFix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#newsWrap {
+  width: 821px;
+  height: 428px;
+  margin: 0 auto;
+}
+#newsWrap img {
+  vertical-align: top;
+}
+#newsWrap .newsContents {
+  height: 369px;
+  outline: 1px dotted red;
+  padding: 18px 9px;
+  box-sizing: border-box;
+}
+#newsWrap .newsContents .title {
+  height: 25px;
+  margin-bottom: 18px;
+  outline: 1px dotted red;
+  line-height: 22px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#newsWrap .newsContents .news {
+  height: 50px;
+  text-align: center;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  padding: 0 9px;
+  line-height: 50px;
+  background: #f6f7f9;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#newsWrap .newsContents ul {
+}
+#newsWrap .newsContents ul li {
+  float: left;
+}
+#newsWrap .newsContents ul li a {
+}
+#newsWrap .newsMove {
+  height: 70px;
+  text-align: center;
+  outline: 1px dotted red;
+}
+#newsWrap .newsMove ul {
+  width: 821px;
+  float: left;
+  text-align: center;
+}
+#newsWrap .newsMove ul li {
+  display: inline-block;
+  margin: 8px;
+}
+#newsWrap .newsMove  ul li a {
+  text-align: center;
+  color: skyblue;
+  display: block;
+  padding: 20px;
+  border-radius: 400px;
+}
+
+
+#newsWrap .newsMove ul li:hover a {
+  background: rgb(247, 243, 243);
+  color: skyblue;
+  transition: 2s;
+  font-weight: bold;
+  box-shadow: rgba(8, 155, 212, 0.856) 0px 5px 15px;
+}

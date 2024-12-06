@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* table {
+      width: 100%;
+      border: 1px solid #000;
+      border-collapse: collapse;
+
+    }
+    table th , table td {
+      border: 1px solid #000;
+    }
+    table caption {
+      caption-side: bottom ;
+      background-color: yellow;
+      font-size: 14px;
+    }
+    .col1 {
+      width: 20%;
+    }
+    .col2 , .col2 {
+      width: 25%;
+    }
+    .col4{
+      width: 30%;
+    }
+
+    /* table th {
+      background-color: #ccc;
+    } */
+    table tfoot th{
+      background-color: aliceblue;
+    }
+    table thead th{
+      background-color: skyblue;
+    }
+    table tbody th{
+      background-color: aquamarine;
+    }
+    /* table tfoot th {
+      background-color: aqua;
+    } */ */
+     #tbl1 {
+      text-align: center;
+       
+    }
+    #tbl1 th, #tbl1 td {
+      padding: 10px; /*안쪽 여백*/
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <h1>표 만들기</h1>
+  <h2>iheder</h2>
+  <p>id : 제목 셀에 이름 부여</p>
+  <p>headers : 제목 셀에 id 내용</p>
+  <table>
+    <caption>상품에 따른 월별 판매현황</caption>
+    <colgroup>
+      <col class="col1">
+      <col class="col2">
+      <col class="col3">
+      <col class="col4">
+    </colgroup>
+    <thead>
+      <tr>
+        <th rowspan="2" id="division">구분</th><!--줄 이 합치면-->
+        <th colspan="3" id="product">상품종류</th> <!--칸 이 합치면-->
+      </tr>
+      <tr>
+        <th headers="product" id="smartphone">스마트폰</th>
+        <th headers="product" id="tabletpc">태블릿PC</th> 
+        <th headers="product" id="pc">데스크탑</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th headers="division">1월</th>
+        <td headers="product smartphone">5만대</td>
+        <td headers="product tabletpc">3만대</td>
+        <td headers="product pc">1만대</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  <br>
+  <table>
+    <caption>상품에 따른 월별 판매현황</caption>
+    <colgroup>
+      <col class="col1">
+      <col class="col2">
+      <col class="col3">
+      <col class="col4">
+    </colgroup>
+    <thead>
+      <tr>
+        <th rowspan="2" scope="col">구분</th><!--줄 이 합치면-->
+        <th colspan="3" scope="colgroup">상품종류</th> <!--칸 이 합치면-->
+      </tr>
+      <tr>
+        <th scope="col">스마트폰</th>
+        <th scope="col">태블릿PC</th> 
+        <th scope="col">데스크탑</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1월</th>
+        <td>5만대</td>
+        <td>3만대</td>
+        <td>1만대</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <th scope="row">총계</th>
+      <td>10만대</td>
+      <td>10만대</td>
+      <td>10만대</td>
+    </tfoot>
+  </table>
+  <br>
+  <hr>
+  <table id="tbl1">
+    <caption></caption>
+    <colgroup>
+      <col class="col1">
+      <col class="col2">
+      <col class="col3">
+      <col class="col4">
+    </colgroup>
+    <thead>
+      <tr>
+          <th>출발</th>
+          <th>도착</th>
+          <th colspan="2">객실/요금</th>
+          <th>예약</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>서울(09:00)</td>
+        <td>부산(09:00)</td>
+        <td>일반</td>
+        <td>50,000원</td>
+        <td><button>예약신청</button></td>
+      </tr>
+      <tr>
+        <td>서울(09:00)</td>
+        <td>부산(09:00)</td>
+        <td>일반</td>
+        <td>50,000원</td>
+        <td><button>예약신청</button></td>
+      </tr>
+      <tr>
+        <td>서울(09:00)</td>
+        <td>부산(09:00)</td>
+        <td>일반</td>
+        <td>50,000원</td>
+        <td><button>예약신청</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  <h3>파일 다운로드</h3>
+  <p><a href="./20240826_if_selector_table_응용문제.zip">테이블 수업자료_20240826</a></p>
+  <p><a href="./test.hwp">한글 테스트 파일</a></p>
+  <p><a href="./test.hwp" download="테스트">한글 테스트 파일</a></p>
+  <p><a href="mailto: leegs005@naver.com"></a>E-mail</p>
+  <p><a href="tel: 01012345678"></a>E-mail</p>
+  <p><a href="sms: 01012345678"></a>E-mail</p>
+  <h3>내부링크</h3>
+  <p><a href="./selector.html#effect1">외부링크(#effect1)</a></p>
+</body>
+</html>

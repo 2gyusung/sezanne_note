@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+#style1{}
+#style1 h1 {
+  /* text-align: right; */
+  /* float: right;
+  outline: 1px dotted red;   */
+}
+#style1 span{
+  background: green;
+  width: 300px;
+  color: #fff;
+  float: left;
+}
+#style1 img {
+  float: left;
+  opacity: 0.5;
+}
+#style1 p {
+  background: yellow;
+}
+#style1 p.clear {
+  clear: both;
+}
+#style2 {}
+#style2 .portfolio_list {
+  width: 860px;
+  margin: 0 auto; /*가운데 정렬*/
+  padding: 10px;
+  outline: 1px dotted red;
+}
+#style2 .portfolio_list li {
+  list-style: none;
+  margin-right: 20px;
+  float: left;
+  outline: 3px solid black;
+}
+#style2 .portfolio_list li:last-child {
+  margin-right: 0;
+}
+#style2 .portfolio_list::after {
+  content: '';
+  display: block;
+  clear: both;
+}

@@ -1,0 +1,2 @@
+ctrl shift e 레이어
+ctrl e 밑에 꺼ㅏ만 레이어 결합

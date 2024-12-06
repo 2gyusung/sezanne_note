@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      hr {
+        margin: 50px 0;
+      }
+      /* 2차원 변형 */
+      /* :회전(rotate) , 확대/축소(scale), 이동(translate) , 찌그러뜨리기(skew) */
+      .transform {
+        margin: 50px;
+        padding: 20px;
+        outline: 1px dotted red;
+      }
+      .transform h1 {
+        width: 350px;
+        height: 70px;
+        margin-bottom: 20px;
+        border: 3px solid #ccc;
+        background: brown;
+      }
+      .transform .tra {
+        background: #ae5329;
+        transform: translate(20px,-30px); /*translate(20px, -30px); x 축과  y축*/
+      }
+      .transform .rot {
+        background: #cdb119;
+        transform: rotate(30deg); /*시계 방향 회전*/
+      }
+      .transform .sca {
+        background: #ebd00a;
+        transform: scale(1.2, 0.7); /*확대/축소(scale)*/
+      }
+      .transform .ske {
+        background: gold;
+        transform: skew(30deg, 20deg); /*찌그러뜨리기(skew)*/
+      }
+      /* transition*/
+      /* 속성전환 background , color , width , height , transformation 등의 속성들에 애니메이션을 적용 */
+      /* transition : property duration timingfunction */
+      .transition {
+        padding: 20px;
+        outline: 1px dotted red;
+      }
+      .transition h1,
+      .transition ul {
+        padding: 10px;
+      }
+      /* .transition ul {
+      } */
+      .transition ul li {
+      }
+      .transition ul li a {
+        display: block;
+        width: 300px;
+        height: 20px;
+        margin-bottom: 2px;
+        padding: 10px;
+        background: #abc;
+        color: #123456;
+        /* transition: width 1.2s; */
+        /* transition: width 1.2s ease, color .3s linear; */
+        transition: 1s;
+      }
+
+      .transition ul li a:hover {
+        width: 450px;
+        color: #c00;
+        /* transition: 1s; 마우스 뺄 때 움직임 없음 */
+      }
+          /* ex01 */
+      .ex01 {
+        padding: 50px ;
+        outline: 1px dotted red;
+      }
+      .ex01 figure {
+        display: inline-block;
+        padding: 50px;
+        border: 10px solid #eee;
+        box-shadow: 5px 5px 5px #ccc;
+        transition: .5s;
+      }
+      .ex01 figure img {
+      }
+      .ex01 figure:hover {
+        transform: rotate(5deg);
+      }
+      /* ex02 */
+      .ex02 {
+        padding: 50px ;
+        outline: 1px dotted red;
+      }
+      .ex02 figure {
+        display: inline-block;
+        padding: 50px;
+        border: 10px solid #eee;
+        box-shadow: 5px 5px 5px #ccc;
+    
+      }
+      .ex02 figure img {
+        transition: .5s;
+        
+      }
+      .ex02 figure:hover img  {
+        transform: scale(1.2);
+      }
+      .ex03 {
+        margin: 50px;
+        display: inline-block;
+        box-shadow: 5px 5px 5px #ccc;
+        padding: 50px;
+      }
+      .ex03 figure {
+        overflow: hidden;
+        transition: .5s;
+        border: 10px solid #eee;
+      }
+      .ex03 figure img {
+        
+      }
+      .ex03 figure:hover {
+        transform:scale(1.2); ;
+      }
+      .ex04 {
+        margin: 50px;
+        display: inline-block;
+        box-shadow: 5px 5px 5px #ccc;
+        padding: 50px;
+      }
+      .ex04 figure {
+        overflow: hidden;
+        transition: .5s;
+        border: 10px solid #eee;
+      }
+      .ex04 figure img {
+        
+      }
+      .ex04 figure:hover {
+        transform:scale(1.2) rotate(5deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="transform">
+      <h1>원래박스</h1>
+      <h1 class="tra">이동</h1>
+      <h1 class="rot">회전</h1>
+      <h1 class="sca">크기</h1>
+      <h1 class="ske">찌그러뜨림</h1>
+    </div>
+    <hr />
+    <div class="transition">
+      <h1>Moving Mainmenu</h1>
+      <ul class="menu">
+        <li><a href="#">COMPANY</a></li>
+        <li><a href="#">PRODUCT</a></li>
+        <li><a href="#">SERVICE</a></li>
+        <li><a href="#">CUSTOMER SUPPORT</a></li>
+        <li><a href="#">COMMUNITY</a></li>
+      </ul>
+    </div>
+    <hr />
+    <div class="ex01">
+      <h1>이미지 회전</h1>
+      <figure>
+        <img src="./img/img.png" alt="" />
+      </figure>
+    </div>
+    <div class="ex02">
+      <h1>이미지 박스 크기 변화1</h1>
+      <figure>
+        <img src="./img/img.png" alt="" />
+      </figure>
+    </div>
+    <div class="ex03">
+      <h1>이미지 박스 크기 변화2</h1>
+      <figure>
+        <img src="./img/img.png" alt="" />
+      </figure>
+    </div>
+    <div class="ex04">
+      <h1>이미지 박스 크기 변화4</h1>
+      <figure>
+        <img src="./img/img.png" alt="" />
+      </figure>
+    </div>
+  </body>
+</html>

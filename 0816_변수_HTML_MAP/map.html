@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지맵</title>
+</head>
+<style>
+/*클래스 선택자*/
+.wrap{
+    width: 800px;
+    outline: 1px dotted red;
+    margin: 0 auto;
+}
+img { 
+    vertical-align: bottom;
+    }
+.container{ 
+    margin-top: 15px;
+}
+</style>
+<body>
+    <img src="./img/map1.jpg" alt="이벤트" usemap="#event">
+    <map name="event" id="event">
+        <area shape="rect" coords="895,413,1069,413" href="#" alt=""> <!--이미지 커서 좌측 상단 우측 하단-->
+        <area shape="poly" coords="895,413,1069,413" href="#" alt=""> <!--이미지 커서 좌측 상단 우측 하단-->
+        <area shape="circle" coords="538,319,35" href="#" alt=""> <!--이미지 커서 좌측 상단 우측 하단-->
+        <!-- <area shape="" coords="" href="" alt=""> -->
+        <!-- <area shape="" coords="" href="" alt=""> -->
+    </map>
+    <img src="./img/map2.jpg" alt="이벤트" usemap="#event2">
+    <map name="event2" id="event2">
+        <area shape="rect" coords="524,473,595,497" href="#" alt="">
+        </map>
+        <hr>
+        <div class="wrap">
+            <img src="./images/map3_01.png" alt="">
+            <img src="./images/map3_02.png" alt="이벤트" usemap="#wrap">
+            <map name="wrap" id="wrap">
+                <area shape="rect" coords="345,530,456,559" href="#" alt="">
+            </map>
+            <img src="./images/map3_03.png" alt="이벤트" usemap="#wrap2">
+            <map name="wrap2" id="wrap2">
+                <area shape="rect" coords="223,268,334,300" href="#" alt="">
+                <map name="wrap2" id="wrap2">
+                    <area shape="rect" coords="264,268,576,299" href="#" alt="">
+            </map>
+            <img src="./images/map3_04.png" alt="">
+            <div class="container">
+                <img src="./images/map4_01.gif" alt="">
+                <img src="./images/map4_02.gif" alt="이벤트" usemap="#wrap2">
+                <map name="wrap2" id="wrap2">
+                    <area shape="rect" coords="336,405,458,436" href="#" alt="">
+                </map>
+                <img src="./images/map4_03.gif" alt="이벤트" usemap="#id">
+                <map name="wrap2" id="id">
+                    <area shape="rect" coords="223,268,33   4,300" href="#" alt="">
+                    <map name="wrap2" id="wrap2">
+                        <area shape="rect" coords="264,268,576,299" href="#" alt="">
+                </map>
+            </div>
+        </div>
+    </body>
+</html>

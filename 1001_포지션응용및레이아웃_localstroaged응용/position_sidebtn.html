@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>확장된 전체메뉴</title>
+    <style>
+      /* reset */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        font: 12px "돋움", dotum, sans-serif;
+        color: #333;
+      }
+      hr {
+        margin: 50px 0;
+      }
+      .slideWrap {
+        position: relative;
+        width: 600px;
+        height: 400px;
+        margin: 0 auto;
+        background: #ebebeb;
+      }
+      .slideWrap .btn {
+        position: absolute;
+        top: 50%;
+        margin-top: -25px;
+        display: inline-block;
+        padding: 0 20px;
+        background: #000;
+        color: #fff;
+        line-height: 50px;
+      }
+      .slideWrap .prev {
+        right: calc(100% + 20px);
+      }
+      .slideWrap .next {
+        left: calc(100% + 20px);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>position exercise</h1>
+    <div class="slideWrap">
+      <h2>slide contents</h2>
+      <a href="#" class="btn prev">PREV</a>
+      <a href="#" class="btn next">NEXT</a>
+    </div>
+  </body>
+</html>

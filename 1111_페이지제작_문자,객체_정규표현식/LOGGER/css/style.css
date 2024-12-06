@@ -1,0 +1,97 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 기본색 */
+:root {
+  --main-color: #5d9ab2;
+  --accent-color: #bf6a7a;
+  --dark-color: #2b5566;
+  --text-bright-color: #fff;
+}
+
+/* 기본설정 */
+
+body {
+  font-family: "맑음고딕", "apple sd gothic neo", sans-serif;
+  font-size: 16px;
+}
+
+/* 콘텐츠 A  : 히어로 이미지 */
+
+.conA {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0.1)),
+    url(../img/fruits.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  min-height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* color :#fff; */
+  color: var(--text-bright-color);
+  text-align: center;
+}
+.conA img {
+  width: 20%;
+}
+.conA h1 {
+  margin-bottom: 10px;
+  font-size: 15vw;
+  /* vw 단위로 변경 */
+  /* vw : 화면 너비 100vw로 하는 단위. */
+  /* 1vw 화면 너비의 100분 1 */
+  /* 화면 너비 : 320px 일 때 , 폰트 크기 : 48px; */
+  /* 1vw = 3.2px */
+  /* ?vw = 48px */
+  /* 1:x=3.2:48 */
+  /* 3.2x = 48 */
+  /*  x = 48/3.2 */
+  /*  x = 15vw */
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.2em;
+  margin-left: 0.2em;
+}
+/* 서체 : montserrat */
+.conA p {
+  font-size: 18px;
+}
+.conA a {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 6px;
+  background: var(--accent-color);
+  border: 1px solid currentColor; /*currentColor 현재 글 색상을 따라간다*/
+  font-size: 14px;
+}
+.conA a:hover {
+  background-image: linear-gradient(rgba(255, 255, 255,.2), rgba(255, 255, 255,.2))
+}
+
+@media screen and (min-width: 768px) {
+  .conA h1 {
+    font-size: 115px;
+    /* 768px : 15vw
+      1vw = 7.68px
+      15vw = 7.68 X 15 =115.2
+    */
+  }
+  .conA p {
+    font-size: 24px;
+  }
+}

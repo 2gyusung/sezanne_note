@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./grid-guide.css" />
+    <title>Document</title>
+    <style>
+      hr {
+        margin: 50px 0;
+      }
+      @media (min-width: 600px) {
+        /*모바일 우선*/
+        body {
+          background: yellow;
+        }
+        #ex01 .boxA::after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+        #ex01 .boxB {
+          float: left;
+          width: 100%;
+        }
+        #ex01 .boxB .box2 {
+          float: right;
+          width: 75%;
+        }
+        #ex01 .boxB .box3 {
+          float: right;
+          width: 25%;
+        }
+      }
+      @media (min-width: 768px) {
+        /*모바일 우선*/
+        body {
+          background: yellow;
+        }
+        #ex01 .boxA::after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+        #ex01 .boxB {
+          float: left;
+          width: 80%;
+        }
+        #ex01 .boxB .box2 {
+          float: right;
+          width: 75%;
+        }
+        #ex01 .boxB .box3 {
+          float: right;
+          width: 25%;
+        }
+        #ex01 .box4 {
+          float: right;
+          width: 20%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ex01">
+      <div class="box1">Box1</div>
+      <div class="boxA">
+        <div class="boxB">
+          <div class="box2">Box2</div>
+          <div class="box3">Box3</div>
+        </div>
+        <div class="box4">Box4</div>
+      </div>
+    </div>
+  </body>
+</html>

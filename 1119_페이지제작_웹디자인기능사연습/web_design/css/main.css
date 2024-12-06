@@ -1,0 +1,192 @@
+@charset "utf-8";
+
+/* reset */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: "Gulim", sans-serif;
+}
+.inner {
+  width: 1200px;
+  margin: 0 auto;
+  outline: 1px solid blueviolet;
+}
+header {
+  width: 100%;
+  background-color: royalblue;
+  height: 100px;
+}
+header .inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+header h1 {
+  width: 200px;
+  height: 100px;
+  padding-top: 30px;
+  box-sizing: border-box;
+  outline: 1px solid blue;
+}
+header h1 img {
+  width: 200px; /*이미지는 한쪽 방향만 입력 하며 양 방향 입력 시 깨진다*/
+}
+header nav {
+  width: 1000px;
+  height: 100px;
+}
+header nav .gnb {
+  display: flex;
+  justify-content: flex-end;
+}
+header nav .gnb > li {
+  position: relative;
+  width: 200px;
+  height: 400px;
+  text-align: center;
+}
+header nav .gnb > li a {
+}
+header nav .gnb > li > .lnb {
+}
+header nav .gnb > li > .lnb li {
+}
+header nav .gnb > li > .lnb li a {
+}
+.slide .inner {
+  overflow: hidden;
+}
+.slide {
+  height: 300px;
+  outline: 1px solid red;
+}
+.slide .slide__container {
+  width: 3600px;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.slide .slide__container li {
+  width: 1200px;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.slide .slide__container li h3 {
+  font-size: 32px;
+  font-weight: bold;
+}
+.slide .slide__container li p {
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 600px;
+  padding: 20px;
+  color: #333;
+}
+.slide .slide__container li button {
+  padding: 5px 20px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid gray;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.6);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.slide .slide__container li button:hover {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.9);
+}
+.slide .slide__container li.slide01 {
+  background-image: url(../images/01.jpg);
+}
+.slide .slide__container li.slide02 {
+  background-image: url(../images/02.jpg);
+}
+.slide .slide__container li.slide03 {
+  background-image: url(../images/03.jpg);
+}
+
+#popup {
+  display: none;
+  background: url(../images/bank.jpg) no-repeat center/cover;
+  width: 400px;
+  height: 500px;
+  box-sizing: border-box;
+  padding: 30px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 1s;
+}
+
+.popup__title h3 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 20px;
+}
+.popup__contents p {
+  font-size: 18px;
+  line-height: 1.5;
+  padding-top: 20px;
+  color: #fff;
+  text-shadow: 1px 1px 5px #696161;
+}
+#popup .popup__btn {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+
+#popup .popup__btn a {
+  padding: 7px 20px;
+  border: 1px solid #fff;
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+#popup.show {
+  display: block;
+  opacity: 1;
+}
+
+.banner {
+  width: 400px;
+  height: 200px;
+  background: url(../images/banner.jpg) no-repeat center/cover;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.banner p {
+  font-size: 24px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, .6);
+  padding: 10px;
+}
+.banner button {
+  padding: 5px 20px;
+}

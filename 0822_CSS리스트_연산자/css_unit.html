@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit</title>
+  <style>
+    :root {
+      font-size: 12px;
+    }
+    body {
+      font-size: 12px;
+    }
+    .parent {
+      width: 600px;
+      outline: 1px dotted red;
+    }
+    section p {
+      width: 30em;
+      font-size: 1.5em;
+      outline: 1px dotted red;
+    }
+    section>p>strong {
+      font-size: 1.5em;
+    }
+    aside>p>strong {
+      font-size: 1.5rem;
+    }
+    header {
+      width: 100vw;
+      background-color: silver;
+    }
+    .parent2{
+      width: 600px;
+      background-color: silver;
+    }
+    .child2 {
+      width: 50%;
+      background-color: green;
+    }
+    .child3{
+      width: 50vw;
+      background-color: green;
+    }
+    /* html, body , .parent3 {
+      height: 50%;
+    } */
+    .child4 {
+      background-color: orange;
+      height: 50vh;
+    }
+  </style>
+</head>
+<body>
+    <div class="parent">
+      <div class="child">Child Element</div> 
+    </div>
+    <hr>
+    <p>Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Cum, inventore atque animi unde doloribus 
+      neque facilis molestias laudantium 
+      blanditiis non modi suscipit eaque mollitia tempora ipsam enim maiores nam recusandae!
+    </p>
+    <section>
+      <h2>section title</h2>
+      <p>Lorem ipsum dolor sit amet <strong>consectetur</strong>, adipisicing elit. Sit facilis possimus repudiandae,
+         rerum minus aut ab! Eum, aperiam! Tenetur reiciendis minus a. Omnis officia,
+          aperiam provident quia aliquam perspiciatis voluptas?</p>
+    </section>
+    <hr>
+    <aside>
+      <h1>Aside title</h1>
+      <p>Lorem ipsum dolor sit amet <strong>consectetur</strong> adipisicing elit.  
+        Earum fuga consectetur cumque eos in autem quam esse officiis reiciendis dolore labore doloremque, soluta corrupti.
+         Natus repellat suscipit laboriosam asperiores aliquam?</p>
+    </aside>
+    <header>
+      <h1>LOGO</h1>
+    </header>
+    <div class="parent2">
+      <div class="child2">percent</div>
+      <div class="child3">vw</div>
+    </div>   
+    <div class="parent3">
+      <div class="child4">child</div>
+    </div>
+</body>
+</html>

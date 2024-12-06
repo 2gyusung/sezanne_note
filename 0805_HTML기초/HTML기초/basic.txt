@@ -1,0 +1,12 @@
+<html></html> : <여는></닫는> 요소
+
+
+<html dir="ltr" lang="ko">
+<head>
+<title>제목</title>
+ </head>
+  <body>
+	내용
+  </body>
+</html>
+

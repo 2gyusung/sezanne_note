@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포지션</title>
+    <style>
+      /* reset */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font: 12px "돋움", dotum, sans-serif;
+        color: #333;
+      }
+      hr {
+        margin: 50px 0;
+      }
+      #wrap {
+        width: 1000px;
+        height: 650px;
+        outline: 1px dotted red;
+      }
+      header {
+        float: left;
+        width: 200px;
+        height: 650px;
+        outline: 1px dotted blue;
+      }
+      header h1 {
+        line-height: 100px;
+        text-align: center;
+        height: 100px;
+        outline: 1px dotted blue;
+      }
+      header nav {
+        height: 550px;
+        outline: 1px dotted blue;
+      }
+      /* 1depth(주메뉴) */
+      header nav > ul {
+        /* position: relative; */
+      }
+      header nav > ul > li {
+        position: relative;
+        padding: 0 5px 5px;
+      }
+      header nav > ul > li > a {
+      }
+      header nav > ul > li > a {
+        display: block;
+        outline: 1px dotted gold;
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+        line-height: 50px;
+        background-color: gold;
+        color: #fff;
+        height: 50px;
+      }
+      header nav > ul > li:hover > a {
+        color: goldenrod;
+      }
+      /* 2depth(부메뉴) */
+      header nav > ul > li > ul {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        height: 220px;
+        width: 120px;
+        padding: 10px;
+        background: #eee;
+      }
+      header nav > ul > li:hover > ul {
+        display: block;
+      }
+      header nav > ul > li > ul li {
+      }
+      header nav > ul > li > ul li a {
+        display: block;
+        padding: 10px;
+        border-bottom: 1px dashed green;
+      }
+      header nav > ul > li > ul li a:hover {
+        background: yellow;
+        color: green;
+      }
+      #container {
+        float: left;
+        width: 800px;
+        height: 650px;
+        outline: 1px dotted blue;
+      }
+      #slide {
+        height: 350px;
+        outline: 1px dotted rgb(49, 49, 65);
+        padding: 141px 0;
+        box-sizing: border-box;
+      }
+      #bannerWrap {
+        position: relative;
+        width: 420px;
+        height: 68px;
+        /* background: #ccc; */
+        margin: 0 auto;
+      }
+      #bannerWrap .frame {
+        overflow: hidden;
+        width: 400px;
+      }
+      #bannerWrap .frame ul#bannerList {
+        position: relative;
+        width: 700px;
+      }
+      #bannerWrap .frame ul#bannerList li {
+        float: left;
+        width: 100px;
+      }
+      #bannerWrap .frame ul#bannerList li a {
+      }
+
+      #bannerWrap .frame ul#bannerList li a img {
+      }
+      #bannerWrap .leftBtn {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+      #bannerWrap .rightBtn {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+      }
+      #contents {
+        height: 200px;
+        outline: 1px dotted blue;
+      }
+      footer {
+        height: 100px;
+        outline: 1px dotted blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <h1><a href="#">LOGO</a></h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">MENU01</a>
+              <ul>
+                <li><a href="#">SUB1-1</a></li>
+                <li><a href="#">SUB1-2</a></li>
+                <li><a href="#">SUB1-3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">MENU02</a>
+              <ul>
+                <li><a href="#">SUB2-1</a></li>
+                <li><a href="#">SUB2-2</a></li>
+                <li><a href="#">SUB2-3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">MENU03</a>
+              <ul>
+                <li><a href="#">SUB3-1</a></li>
+                <li><a href="#">SUB3-2</a></li>
+                <li><a href="#">SUB3-3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">MENU04</a>
+              <ul>
+                <li><a href="#">SUB4-1</a></li>
+                <li><a href="#">SUB4-2</a></li>
+                <li><a href="#">SUB4-3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div id="container">
+        <div id="slide">
+          <div id="bannerWrap">
+            <div class="frame">
+              <ul id="bannerList">
+                <li>
+                  <a href="#"><img src="images/img1.png" alt="" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/img2.png" alt="" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/img3.png" alt="" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/img4.png" alt="" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/img05.png" alt="" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/img06.png" alt="" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/img07.png" alt="" /></a>
+                </li>
+              </ul>
+            </div>
+            <a href="#" class="leftBtn" onclick="return mvBanner('leftBtn')">
+              <img src="./images/left.png" alt="" />
+            </a>
+            <a href="#" class="rightBtn" onclick="return mvBanner('rightBtn')">
+              <img src="./images/rigth.png" alt="" />
+            </a>
+          </div>
+        </div>
+        <div id="contents">
+          <div class="notice"></div>
+          <div class="gallery"></div>
+          <div class="banner"></div>
+        </div>
+        <footer></footer>
+      </div>
+    </div>
+    <script>
+      let num = 0;
+      let colWidth = -400;
+      function mvBanner(whichBtn) {
+        // let myBannerList = document.getElementById('bannerList');
+        let myBannerList = document.querySelector('#bannerList');
+        if(whichBtn == 'leftBn') {
+          num--;
+          if(num<0) num=1;
+          console.log(num);
+          let xPos = num * colWidth;
+          myBannerList.style.left = xPos + "px";
+          
+        }else {
+          num++;         
+          if(num>1) num=0;
+          console.log(num);
+          let xPos = num * colWidth;
+          myBannerList.style.left = xPos + "px";
+        }
+        return false;
+
+      }
+
+    </script>
+  </body>
+</html>

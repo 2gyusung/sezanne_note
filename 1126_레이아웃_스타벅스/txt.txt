@@ -1,0 +1,4 @@
+item-swiper item-mySwiper-container
+
+
+npm i -D parcel-plugin-static-files-copy

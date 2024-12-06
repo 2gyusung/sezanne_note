@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <script>
+      $(function () {
+        $("#contents .bbs dl dt").click(function () {
+          $("#contents .bbs dl dt").removeClass("on");
+          $(this).addClass("on");
+          $("#contents .bbs dl dd").addClass("hidden");
+          $(this).next().removeClass("hidden");
+        });
+      });
+
+      //p  mouseenter : bg yellow
+      //p mouseleave : bg pink
+      //p  click : bg skyblue
+      //p dbclick : bg -red
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        font: 12px "돋움", dotum, sans-serif;
+      }
+      #wrap {
+        width: 1000px;
+        outline: 1px dotted red;
+      }
+      #wrap::after {
+        clear: both;
+        content: "";
+        display: block;
+      }
+      header {
+        float: left;
+        width: 200px;
+        height: 650px;
+        outline: 1px dotted blue;
+      }
+      header h1 {
+        height: 100px;
+        outline: 1px dotted red;
+      }
+      header nav {
+        height: 550px;
+        outline: 1px dotted red;
+      }
+      #container {
+        float: left;
+        width: 800px;
+        height: 650px;
+        outline: 1px dotted blue;
+      }
+      #slide {
+        height: 350px;
+        outline: 1px dotted red;
+      }
+      #contents {
+        height: 200px;
+        outline: 1px dotted red;
+      }
+      #contents .bbs {
+        float: left;
+        width: 400px;
+        height: 200px;
+        outline: 1px dotted blue;
+      }
+      #contents .bbs dl {
+        height: 200px;
+        height: 400px;
+        position: relative;
+      }
+      #contents .bbs dl dt {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 50px;
+        text-align: center;
+        float: left;
+        width: 50%;
+        height: 50px;
+        outline: 1px dotted blue;
+      }
+      #contents .bbs dl dt.on {
+        background: #eee;
+      }
+      #contents .bbs dl dd {
+        width: 400px;
+        height: 150px;
+        background: #eee;
+        position: absolute;
+        left: 0;
+        top: 50px;
+      }
+
+      #contents .bbs dl dd.hidden {
+        display: none;
+      }
+      /* notice */
+      #contents .bbs dl dd .notice {
+        height: 150px;
+        padding: 25px 0;
+        /* background: yellow; */
+        box-sizing: border-box;
+      }
+      #contents .bbs dl dd .notice li {
+        line-height: 20px;
+      }
+      #contents .bbs dl dd .notice li a {
+        display: block;
+      }
+      #contents .bbs dl dd .notice li a:hover {
+        color: green;
+        text-decoration: underline;
+      }
+
+      /* gallery */
+      #contents .bbs dl dd ul.gallery {
+        text-align: center;
+        padding: 25px 0;
+        background: yellow;
+      }
+      #contents .bbs dl dd ul.gallery li {
+        margin: 0 5px;
+        width: 100px;
+        height: 100px;
+        outline: 1px dotted green;
+        display: inline-block;
+      }
+      #contents .bbs dl dd ul.gallery li a {
+        display: block;
+        overflow: hidden;
+      }
+      #contents .bbs dl dd ul.gallery li img {
+        transition: 3s;
+      }
+      #contents .bbs dl dd ul.gallery li:hover a img {
+        transform: scale(1.5);
+        opacity: 0.5;
+      }
+      /* banner */
+      #contents .banner {
+        float: left;
+        width: 200px;
+        height: 200px;
+        outline: 1px dotted blue;
+      }
+      #contents .goto {
+        float: left;
+        width: 200px;
+        height: 200px;
+        outline: 1px dotted blue;
+      }
+
+      footer {
+        height: 100px;
+        outline: 1px dotted red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <h1></h1>
+        <nav></nav>
+      </header>
+      <div id="container">
+        <div id="slide"></div>
+        <div id="contents">
+          <div class="bbs">
+            <dl>
+              <dt class="on">공지사항</dt>
+              <dd>
+                <ul class="notice">
+                  <li><a href="#">공지사항입니다</a></li>
+                  <li><a href="#">공지사항입니다</a></li>
+                  <li><a href="#">공지사항입니다</a></li>
+                  <li><a href="#">공지사항입니다</a></li>
+                  <li><a href="#">공지사항입니다</a></li>
+                </ul>
+              </dd>
+              <dt>갤러리</dt>
+              <dd class="hidden">
+                <ul class="gallery">
+                  <li>
+                    <a href="#"
+                      ><img src="http://placehold.it/100x100" alt=""
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="http://placehold.it/100x100" alt=""
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="http://placehold.it/100x100" alt=""
+                    /></a>
+                  </li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+          <div class="banner"></div>
+          <div class="goto"></div>
+        </div>
+        <footer></footer>
+      </div>
+    </div>
+  </body>
+</html>

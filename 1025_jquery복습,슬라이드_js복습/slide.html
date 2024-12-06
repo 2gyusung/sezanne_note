@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <script>
+      $(function () {
+        // header .nav .main>li:hover>.sub
+        $("header .nav .main>li").hover(function(){
+          $(this).children('.sub').stop().slideDown()
+        }, function(){
+          $(this).children('.sub').stop().slideUp()
+        })
+
+        // 좌로 이동하는 슬라이드
+        setInterval(function(){
+          $("#slide ul").animate({
+              left: '-1200px'
+          },600,function(){
+            $("#slide ul").append($("#slide ul li").eq(0));
+            $("#slide ul").css('left',0)
+          })
+        },3000);
+        })
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      body {
+        font: 12px "돋움", dotum, sans-serif;
+        color: #333;
+      }
+      #wrap {
+        width: 1200px;
+        margin: 0 auto;
+        outline: 1px dotted red;
+      }
+      header {
+        height: 100px;
+        outline: 1px dotted red;
+      }
+      header .logo {
+        float: left;
+        width: 200px;
+        height: 100px;
+        outline: 1px dotted blue;
+      }
+      header .nav {
+        float: left;
+        width: 1000px;
+        height: 100px;
+        outline: 1px dotted yellow;
+      }
+      /* 1depth */
+      header .nav .main{
+        position: relative;
+        float: right;
+        width: 800px; 
+        height: 50px;
+        margin-top: 50px;
+        outline: 1px dotted black;
+      }
+      header .nav .main>li{
+        float: left;
+        width: 25%;
+        outline: 1px dotted orange;
+      }
+      header .nav .main>li>a{
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        outline: 1px dotted green;
+      }
+      header .nav .main>li:hover>a{color: green;}
+      /* 2depth */
+      header .nav .main>li>.sub{
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        z-index: 30;
+        background: rgba(255, 255, 255, .3);
+      }
+      /* header .nav .main>li:hover>.sub{
+        display: block;
+      } */
+      header .nav .main .sub{
+      }
+      header .nav .main>li>.sub{}
+      header .nav .main>li>.sub ul{
+        float: left;
+        width: 25%;
+        outline: 1px dotted orange;
+      }
+      header .nav .main>li>.sub ul li{}
+      header .nav .main>li>.sub ul li a{
+        display: block;
+        padding: 10px 20px;
+        outline: 1px dotted orange;
+      }
+      header .nav .main>li>.sub ul li a:hover {
+        background: green; 
+        color: yellow;
+      }
+      #slide {
+        overflow: hidden;
+        width: 1200px;
+        height: 300px;
+        outline: 1px dotted red;
+      }
+      #slide ul {
+        position: relative;
+        width: 3600px;
+        height: 300px;
+      }
+      #slide ul li {
+        float: left;
+        width: 1200px;
+        height: 300px;
+      }
+      #slide ul li a {
+        display: block;
+        width: 1200px;
+        height: 300px;
+      }
+      #container {
+        height: 200px;
+        outline: 1px dotted red;
+      }
+      footer {
+        height: 100px;
+        outline: 1px dotted red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <h1 class="logo"></h1>
+        <nav class="nav">
+          <ul class="main">
+            <li><a href="#">MENU01</a>
+            <div class="sub">
+              <ul>
+                <li><a href="#">SUB11</a></li>
+                <li><a href="#">SUB12</a></li>
+                <li><a href="#">SUB13</a></li>
+                <li><a href="#">SUB14</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">SUB11</a></li>
+                <li><a href="#">SUB12</a></li>
+                <li><a href="#">SUB13</a></li>
+                <li><a href="#">SUB14</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">SUB11</a></li>
+                <li><a href="#">SUB12</a></li>
+                <li><a href="#">SUB13</a></li>
+                <li><a href="#">SUB14</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">SUB11</a></li>
+                <li><a href="#">SUB12</a></li>
+                <li><a href="#">SUB13</a></li>
+                <li><a href="#">SUB14</a></li>
+              </ul>
+            </div>
+            </li>
+            <li><a href="#">MENU02</a>
+              <div class="sub">
+                <ul>
+                  <li><a href="#">SUB21</a></li>
+                  <li><a href="#">SUB22</a></li>
+                  <li><a href="#">SUB23</a></li>
+                  <li><a href="#">SUB24</a></li>
+                </ul>
+                <ul>
+                  <li><a href="#">SUB21</a></li>
+                  <li><a href="#">SUB22</a></li>
+                  <li><a href="#">SUB23</a></li>
+                  <li><a href="#">SUB24</a></li>
+                </ul>
+                <ul>
+                  <li><a href="#">SUB21</a></li>
+                  <li><a href="#">SUB22</a></li>
+                  <li><a href="#">SUB23</a></li>
+                  <li><a href="#">SUB24</a></li>
+                </ul>
+                <ul>
+                  <li><a href="#">SUB21</a></li>
+                  <li><a href="#">SUB22</a></li>
+                  <li><a href="#">SUB23</a></li>
+                  <li><a href="#">SUB24</a></li>
+                </ul>
+              </div></li>
+            <li><a href="#">MENU03</a>
+              <div class="sub">
+                <ul>
+                  <li><a href="#">SUB31</a></li>
+                  <li><a href="#">SUB32</a></li>
+                  <li><a href="#">SUB33</a></li>
+                  <li><a href="#">SUB34</a></li>
+                </ul>
+                <ul>
+                  <li><a href="#">SUB31</a></li>
+                  <li><a href="#">SUB32</a></li>
+                  <li><a href="#">SUB33</a></li>
+                  <li><a href="#">SUB34</a></li>
+                </ul>
+                <ul>
+                  <li><a href="#">SUB31</a></li>
+                  <li><a href="#">SUB32</a></li>
+                  <li><a href="#">SUB33</a></li>
+                  <li><a href="#">SUB34</a></li>
+                </ul>
+                <ul>
+                  <li><a href="#">SUB31</a></li>
+                  <li><a href="#">SUB32</a></li>
+                  <li><a href="#">SUB33</a></li>
+                  <li><a href="#">SUB34</a></li>
+                </ul>
+              </div></li></li>
+            <li><a href="#">MENU04</a>
+              <div class="sub">
+                <ul>
+                  <li><a href="#">SUB41</a></li>
+                  <li><a href="#">SUB42</a></li>
+                  <li><a href="#">SUB43</a></li>
+                  <li><a href="#">SUB44</a></li>
+                </ul>
+                <ul>
+                  <li><a href="#">SUB41</a></li>
+                  <li><a href="#">SUB42</a></li>
+                  <li><a href="#">SUB43</a></li>
+                  <li><a href="#">SUB44</a></li>
+                </ul>
+                <ul>
+                  <li><a href="#">SUB41</a></li>
+                  <li><a href="#">SUB42</a></li>
+                  <li><a href="#">SUB43</a></li>
+                  <li><a href="#">SUB44</a></li>
+                </ul>
+                <ul>
+                  <li><a href="#">SUB41</a></li>
+                  <li><a href="#">SUB42</a></li>
+                  <li><a href="#">SUB43</a></li>
+                  <li><a href="#">SUB44</a></li>
+                </ul>
+              </div>
+            </li>
+          </li>
+          </ul>
+        </nav> 
+      </header>
+      <div id="slide">
+        <ul>
+          <li><a href="#"><img src="./img/Untitled-1.png" alt=""></a></li>
+          <li><a href="#"><img src="./img/Untitled-2.png" alt=""></a></li>
+          <li><a href="#"><img src="./img/Untitled-3.png" alt=""></a></li>
+        </ul>
+      </div>
+      <div id="container"></div>
+      <footer></footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선택자</title>
+  <style>
+    .pseudo li:first-child,
+    .pseudo li:nth-child(3),
+    .pseudo li:last-child{
+      text-decoration: underline;
+    }
+    /* .pseudo li:nth-child(2n) { /*짝수 번째 지정*/
+      /* background-color: silver;
+    } */ */
+    /* .pseudo li:nth-child(2n + 1) { /*홀수 번째 지정*/
+      /* background-color: skyblue;
+    } */ */
+    .pseudo li:nth-child(even) { /*홀수 번째 지정*/
+      background-color: gray;
+    }
+    .pseudo li:nth-child(odd) { /*홀수 번째 지정*/
+      background-color: gray;
+    }
+    /* h2:nth-child(4) {
+      font-style: italic;
+    } */
+    /* h2:nth-of-type(1) {
+      font-style: italic;
+    }
+    h2:first-of-type {
+      background-color: sienna;
+    } */
+
+    /* input:checked+label { /*체크된 항목  색상변경*/
+      /* background-color: gray;
+    } */ */
+    button:disabled {
+      background-color: #999 ;
+      color: #ebebeb;
+    }
+    #policy:target {
+      background-color: green;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- ul>li*5{list item$} -->
+  <ul class="pseudo">
+    <li>list item1</li>
+    <li>list item2</li>
+    <li>list item3</li>
+    <li>list item4</li>
+    <li>list item5</li>
+  </ul>
+  <hr>
+  <h1>nth-of-type</h1>
+  <h2>heading</h2>
+  <h2>heading</h2>
+  <h2>heading</h2>
+  <hr>
+  <a href="#policy">약관보기</a>
+  <form action="#" method="post">
+    <input type="radio" name="newsletter" id="yes">
+    <label for="yes">Yes</label>
+    <input type="radio" name="newsletter" id="no">
+    <label for="no">No</label>
+    <hr>
+    <input type="checkbox" name="newsletter" id="agree">
+    <label for="agree">동의</label>
+    <hr>
+    <button disabled>전송</button>
+    <div id="policy">
+      <h2>약관안내</h2>
+    </div>
+  </form>
+</body>
+</html>

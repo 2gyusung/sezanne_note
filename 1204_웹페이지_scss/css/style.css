@@ -1,0 +1,311 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
+
+/* monoton */
+/*  Reset CSS  */
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: "Monoton", sans-serif; */
+  /* font-family: "Play", sans-serif; */
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+a {
+  outline: 0;
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  border: 0;
+}
+body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  color: #bbb;
+}
+.vid {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  outline: 1px dotted red;
+}
+.vid video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* min-width: 1600px; */
+}
+h1 {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  z-index: 10;
+}
+h1 a {
+  display: block;
+}
+h1 img {
+  width: 280px;
+  height: auto;
+}
+header {
+  position: fixed;
+  width: 700px;
+  height: 100%;
+  left: -420px;
+  top: 0;
+  background: linear-gradient(-45deg, #e6fc55, #b9fb05, #97e031);
+  transform: skewX(-40deg);
+}
+/* 1depth */
+#gnb {
+  position: absolute;
+  top: 150px;
+  right: 0;
+  width: 220px;
+  /* outline: 1px solid red; */
+}
+#gnb > li {
+  position: relative;
+}
+#gnb > li > a {
+  display: block;
+  width: 220px;
+  height: 50px;
+  font: bold 18px/3 play; /*weigh font-size line-height font-family*/
+  color: #222;
+  text-align: right;
+  padding-right: 40px;
+  box-sizing: border-box;
+  margin-bottom: 3px;
+}
+#gnb > li:hover > a,
+#gnb > li.on > a {
+  background: #111;
+  color: #fff;
+}
+#gnb em {
+  display: inline-block;
+  transform: skewX(40deg);
+}
+#gnb i {
+  margin-right: 20px;
+}
+/* 2depth */
+#gnb ul {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  /* outline: 1px solid red; */
+  opacity: 0;
+  transition: 0.4s;
+}
+#gnb ul li {
+}
+#gnb > li:hover ul {
+  left: 205px;
+  opacity: 0.8;
+}
+#gnb ul li a {
+  display: block;
+  width: 150px;
+  height: 40px;
+  margin-bottom: 3px;
+  padding-left: 50px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #b9fb05;
+  background: #222;
+  color: #fff;
+  font: bold 16px/2.5 arial;
+  transition: 0.5s;
+}
+#gnb ul li a:hover {
+  background: #b9fb05;
+  color: #333;
+}
+#gnb > li.on ul {
+  top: -10px;
+  opacity: 0.8;
+  left: 205px;
+}
+#gnb > li.on ul a {
+  background: #444;
+  opacity: 0.7;
+}
+#sns {
+  top: 60px;
+  right: 50px;
+  position: fixed;
+}
+#sns li {
+  float: left;
+  margin-left: 30px;
+}
+#sns .fa-brands {
+  font-size: 25px;
+  color: #b9fb05;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+#sns .fa-brands:hover {
+  opacity: 1;
+  transform: scale(1.4);
+}
+
+/* 텍스트 박스 */
+.txtBox {
+  position: fixed;
+  top: 200px;
+  right: 70px;
+  width: 340px;
+  height: 280px;
+  /* outline: 1px solid rebeccapurple; */
+}
+.txtBox .txt {
+  position: absolute;
+  top: 200px;
+  right: 0;
+  font-family: "Play", sans-serif;
+  font-size: 34px;
+  color: #bbb;
+  letter-spacing: -2px;
+}
+.txtBox .txt b {
+  font: bold 34px arial;
+  color: #b9fb05;
+  margin-left: 20px;
+}
+.txtBox .tit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: "Monoton", sans-serif;
+  font-size: 160px;
+  color: #b9fb05;
+  letter-spacing: -1px;
+}
+.txtBox .tit em {
+  font-size: 50px;
+  font-family: play;
+  color: #fff;
+}
+/* contents */
+#side {
+  position: fixed;
+  bottom: 0;
+  right: -800px;
+  width: 800px;
+  height: 100%;
+  background: #111;
+  opacity: 0.5;
+  transform: skewX(-40deg);
+  transition: 0.5s;
+}
+#side:hover {
+  right: -500px;
+  opacity: 0.8;
+}
+#side .con {
+  position: absolute;
+  bottom: 0;
+  left: 150px;
+  width: 400px;
+  height: 100%;
+  background: #000;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: 1s;
+}
+#side:hover .con {
+  left: 50px;
+}
+#side .con p {
+  position: absolute;
+  left: 50px;
+  width: 300px;
+  height: 100px;
+  /* outline: 1px dotted red; */
+}
+#side .con p:nth-child(1) {
+  bottom: 270px;
+  transform: translateX(200px);
+  transition: 0.4s;
+}
+#side .con p:nth-child(2) {
+  bottom: 160px;
+  transform: translateX(200px);
+  transition: 0.8s;
+}
+#side .con p:nth-child(3) {
+  bottom: 50px;
+  transform: translateX(200px);
+  transition: 1.2s;
+}
+#side:hover .con p {
+  transform: translateX(0);
+}
+#side .con p em {
+  transform: skewX(40deg);
+  display: inline-block;
+  font: bold 16px/1.7 arial;
+  color: #a0bd50;
+}
+#side .con p a {
+  display: block;
+}
+#side .con p img {
+  width: 300px;
+  height: 70px;
+  opacity: 0.3;
+  transition: 0.5s;
+}
+#side .con p img:hover {
+  opacity: 1;
+}
+/* 자동 롤링 버튼 */
+#side .btnContents {
+  position: absolute;
+  bottom: 40px;
+  left: 100px;
+  transform: skewX(40deg);
+  color: #b9fb05;
+}
+#side .btnContents i {
+  font-size: 60px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 1;
+}
+#side:hover .btnContents {
+  left: 1000px;
+}
+#side .btnContents i:nth-child(1) {
+  animation: ani 1.5s linear infinite 0s;
+}
+#side .btnContents i:nth-child(2) {
+  animation: ani 1.5s linear infinite .5s;
+}
+#side .btnContents i:nth-child(3) {
+  animation: ani 1.5s linear infinite 1s;
+}
+
+@keyframes ani {
+  0% {
+    right: 0;
+    opacity: 1;
+  }
+  100% {
+    right: 100px;
+    opacity: 0;
+    scale: 1.5;
+  }
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* reset */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        font: 12px "돋움", dotum, sans-serif;
+        color: #333;
+      }
+
+      hr {
+        margin: 50px 0;
+      }
+      .inner {
+        width: 1200px;
+        margin: 0 auto;
+        outline: 1px dotted red;
+      }
+      header {
+        background: #eee;
+      }
+      header .inner {
+        height: 100px;
+      }
+      header .logo {
+        float: left;
+        width: 200px;
+        height: 100px;
+        outline: 1px dotted red;
+      }
+      header nav {
+        float: left;
+        width: 1000px;
+        height: 100px;
+        outline: 1px dotted red;
+      }
+      /* 1depth(주메뉴) */
+      header nav > ul {  /*자식 선택시*/
+        width: 800px;
+        height: 50px;
+        margin-top: 50px;
+        margin-left: 200px;
+      }
+      header nav > ul > li {/*자식 선택시*/
+        position: relative;
+        outline: 1px dotted blue;
+        float: left;
+        width: 25%;
+      }
+      header nav > ul > li > a {/*자식 선택시*/
+        outline: 1px dotted green;
+        display: block;
+        height: 50px;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 50px;
+        text-align: center;
+      }
+      header nav > ul > li:hover > a {
+        color: green;
+      }
+      /* 2depth(부메뉴) */
+      header nav > ul > li > ul {/*자식 선택시*/
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 50px;
+        width: 100%;
+        background: beige;
+      }
+      header nav > ul > li:hover > ul { /*자식 선택시*/
+        display: block;
+        
+      }
+      header nav > ul > li > ul li { /*자식 선택시*/
+      }
+      header nav > ul > li > ul li a {/*자식 선택시*/
+        display: block;
+        outline: 1px dotted red;
+        padding: 10px 20px;
+        
+      }
+      header nav > ul > li > ul li a:hover {
+        background: green;
+  
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="inner">
+        <h1 class="logo"></h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">메뉴1</a>
+              <ul>
+                <li><a href="#">서브1-1</a></li>
+                <li><a href="#">서브2-1</a></li>
+                <li><a href="#">서브3-1</a></li>
+                <li><a href="#">서브4-1</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">메뉴2</a>
+              <ul>
+                <li><a href="#">서브1-2</a></li>
+                <li><a href="#">서브2-2</a></li>
+                <li><a href="#">서브3-2</a></li>
+                <li><a href="#">서브4-2</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">메뉴3</a>
+              <ul>
+                <li><a href="#">서브1-3</a></li>
+                <li><a href="#">서브2-3</a></li>
+                <li><a href="#">서브3-3</a></li>
+                <li><a href="#">서브4-3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">메뉴4</a>
+              <ul>
+                <li><a href="#">서브1-4</a></li>
+                <li><a href="#">서브2-4</a></li>
+                <li><a href="#">서브3-4</a></li>
+                <li><a href="#">서브4-4</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </body>
+</html>

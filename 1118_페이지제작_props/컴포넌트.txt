@@ -1,0 +1,3 @@
+main.js function 모듈(기능) <> index.html(root)으로 전달
+app.js comp 부모
+fruits.js comp 자식

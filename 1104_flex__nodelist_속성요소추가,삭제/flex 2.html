@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .parent {
+      display: flex;
+      width: 400px;
+      border: 1px solid #000;
+    }
+    .parent div {
+      width: 100px;
+      height: 50px;
+      padding: 10px;
+      background: #ebebeb;
+      border: 1px solid #000;
+      text-transform: uppercase;
+      box-sizing: border-box;
+    }
+    .parent .grow {
+      /*확대 비율*/
+      flex-grow: 0.5;
+    }
+    .shrink div {
+      width: 200px;
+    }
+    .shrink div:last-child {
+      flex-shrink: 2;
+    }
+    .parent .basis {
+      flex-basis: 180px;
+    }
+    .all div {
+      /* flex:grow shrik basis 순으로; */
+      /* flex: 1 1 0; */
+      flex: 1;
+      transition: .5s;
+    }
+    .all div:hover {
+      flex: 2;
+    }
+    .all div:nth-child(1) {
+      /* flex: 1 1 0; flex: 1; */
+    }
+    .all div:nth-child(2) {
+      /* flex: 1 1 0;  flex: 1; */
+    }
+    .all div:nth-child(3) {
+      /* flex: 2 1 0; flex: 2; */
+    }
+  </style>
+  <body>
+    <h1>flex</h1>
+    <h2>flex-grow</h2>
+    <div class="parent">
+      <div>box1</div>
+      <div>box2</div>
+      <div class="grow">box3</div>
+    </div>
+    <h2>flex-shrick</h2>
+    <div class="parent shrink">
+      <div>box1</div>
+      <!--1-->
+      <div>box2</div>
+      <!--1-->
+      <div>box3</div>
+      <!--2 비율로 나뉘어 진다-->
+    </div>
+    <h2>flex-basis</h2>
+    <div class="parent">
+      <div>box1</div>
+      <!--100-->
+      <div>box2</div>
+      <!--100-->
+      <div class="basis">box3</div>
+      <!--180-->
+    </div>
+    <h2>flex</h2>
+    <div class="parent all">
+      <div>box1</div>
+      <div>box2</div>
+      <div>box3</div>
+    </div>
+  </body>
+</html>

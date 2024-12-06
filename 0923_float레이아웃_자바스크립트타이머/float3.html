@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .clearFix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      li {
+        list-style-type: none;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      body {
+        font: 12px "돋움", dotum, sans-serif;
+        color: #333;
+      }
+      #wrap {
+        background: #cfc;
+      }
+      #wrap header {
+        background: crimson;
+      }
+      #wrap header h1 {
+        float: left;
+      }
+      #wrap header h1 a {
+      }
+      #wrap header ul.gnb {
+        float: left;
+        background: yellow;
+      }
+      #wrap header ul.gnb li {
+        float: left;
+      }
+      #wrap header ul.gnb li a {
+      }
+      #wrap #container {
+        overflow: auto;
+        background: greenyellow;
+        height: 300px;
+      }
+      #wrap #container ul.lnb {
+        float: left;
+        width: 20%;
+      }
+      #wrap #container .content_area {
+        float: left;
+        width: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header class="clearFix">
+        <h1><a href="#">LogoType</a></h1>
+        <ul class="gnb">
+          <li><a href="#">MENU1</a></li>
+          <li><a href="#">MENU2</a></li>
+          <li><a href="#">MENU3</a></li>
+          <li><a href="#">MENU4</a></li>
+        </ul>
+      </header>
+      <div id="container">
+        <ul class="lnb">
+          <li><a href="#">MENU1</a></li>
+          <li><a href="#">MENU2</a></li>
+          <li><a href="#">MENU3</a></li>
+          <li><a href="#">MENU4</a></li>
+        </ul>
+        <div class="content_area">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
+            possimus aperiam incidunt, optio sequi quasi enim quod reiciendis
+            qui. Illum quas sequi cupiditate ducimus culpa amet quia. At, vel
+            maiores!
+          </p>
+        </div>
+      </div>
+      <footer>
+        <p>copyright</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>float</title>
+  </head>
+  <style>
+    .container {
+      width: 1200px;
+      margin: 0 auto;
+    }
+    header {
+      float: left;
+      width: 1200px;
+      height: 100px;
+      border-bottom: 1px solid black;
+    }
+    header h1 {
+      float: left;
+      width: 200px;
+      height: 100px;
+      line-height: 60px;
+    }
+    .input_wrapper {
+      text-align: right;
+      float: left;
+      width: 1000px;
+      height: 100px;
+      line-height: 120px;
+    }
+    .input_wrapper {
+      line-height: 120px;
+    }
+    .title {
+      margin-top: 10px;
+      float: left;
+      width: 1200px;
+      height: 200px;
+      border: 1px solid black;
+    }
+    .title span {
+      line-height: 50px;
+    }
+    .title p {
+      line-height: 20px;
+    }
+
+    .item_wrapper {
+      float: left;
+      width: 1200px;
+      border-bottom: 1px solid black;
+    }
+    .div1 {
+      float: left;
+      width: 400px;
+      height: 300px;
+    }
+    .div2 {
+      float: left;
+      width: 400px;
+      height: 300px;
+    }
+    .div3 {
+      float: left;
+      width: 400px;
+      height: 300px;
+    }
+    footer {
+      float: left;
+      width: 1200px;
+      height: 300px;
+    }
+    button {
+      padding: 8px;
+      background: transparent;
+      border-radius: 5px;
+    }
+    @media screen and (max-width: 767px) {
+      .container {
+        margin: 0 auto;
+      }
+      .input_wrapper {
+        display: none;
+      }
+      .title {
+        margin-top: 10px;
+        border: 1px solid black;
+      }
+      .title span {
+        height: 100px;
+      }
+      .item_wrapper {
+        border-bottom: 1px solid black;
+        margin: 15px 0;
+      }
+      .div1,
+      .div2,
+      .div3 {
+        float: left;
+        width: 100%;
+        height: 100%;
+        line-height: 30px;
+        border: 1px solid black;
+        padding: 10px;
+      }
+      footer {
+        border-top: 1px solid black;
+        margin-top: 30px;
+        width: 100%;
+        height: 100%;
+     
+      }
+    }
+  </style>
+
+  <body>
+    <div class="container clear">
+      <header class="header" id="inner">
+        <h1>Project</h1>
+        <div class="input_wrapper">
+          <input type="text" placeholder="email" />
+          <input type="text" placeholder="password" />
+          <button>Sign</button>
+        </div>
+      </header>
+      <div class="title">
+        <span>Hello, World!</span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo tenetur,
+          deleniti ab velit officiis repellat nisi magnam doloremque
+          reprehenderit? Vitae officiis esse recusandae numquam vero fuga
+          maiores vel ratione dolorem?
+        </p>
+        <button>Learn More</button>
+      </div>
+      <div class="item_wrapper">
+        <div class="div1">
+          <h2>Heading</h2>
+          <p class="txt">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+            tenetur, deleniti ab velit officiis repellat nisi magnam doloremque
+            reprehenderit? Vitae officiis esse recusandae numquam vero fuga
+            maiores vel ratione dolorem?
+          </p>
+          <p class="subTxt"><button>Learn More</button></p>
+        </div>
+        <div class="div2">
+          <h2>Heading</h2>
+          <p class="txt">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+            tenetur, deleniti ab velit officiis repellat nisi magnam doloremque
+            reprehenderit? Vitae officiis esse recusandae numquam vero fuga
+            maiores vel ratione dolorem?
+          </p>
+          <p class="subTxt"><button>Learn More</button></p>
+        </div>
+        <div class="div3">
+          <h2>Heading</h2>
+          <p class="txt">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+            tenetur, deleniti ab velit officiis repellat nisi magnam doloremque
+            reprehenderit? Vitae officiis esse recusandae numquam vero fuga
+            maiores vel ratione dolorem?
+          </p>
+          <p class="subTxt"><button>Learn More</button></p>
+        </div>
+      </div>
+      <footer>Company</footer>
+    </div>
+  </body>
+</html>

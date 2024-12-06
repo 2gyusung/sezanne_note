@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <style>
+      hr {
+        margin: 50px 0;
+      }
+      .red {
+        background: red;
+        color: #fff;
+      }
+      .blue {
+        background: blue;
+        color: #fff;
+      }
+      .pink {
+        background: pink;
+        color: #fff;
+      }
+      .green {
+        background: green;
+        color: #fff;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("#ex01 button").click(function () {
+          $("#ex01 p").css("background", "yellow");
+        });
+        $("#ex02 .btn1").click(function () {
+          let content = $("#ex02 .box").text();
+          alert(content);
+        });
+        $("#ex02 .btn2").click(function () {
+          let content = $("#ex02 .box").html();
+          alert(content);
+        });
+        $("#ex03 .btn").click(function () {
+          let content = $("#name").val();
+          alert(content);
+        });
+        $("#ex04 .btn").click(function () {
+          let url = $("#naver").attr("href");
+          alert(url);
+        });
+        $("#ex05 .btn1").click(function () {
+          $("#ex05 .p1").text("안녕핫게여");
+        });
+        $("#ex05 .btn2").click(function () {
+          $("#ex05 .p2").text("<h3>안녕하세요</h3>"); //문자열로
+        });
+        $("#ex05 .btn3").click(function () {
+          $("#ex05 .p3").html("<h3>안녕하세요</h3>"); //태그로 출력
+        });
+        $("#ex05 .btn4").click(function () {
+          $("#phone").val("010-1234-5678");
+        });
+        $("#ex06 .btn").click(function () {
+          $("p img").attr("src", "./img/img02.png");
+        });
+        $("#ex07 .btn").click(function () {
+          $("#ex07 .box").append("<p style='color:pink'>안녕하세요</p>") //뒤에
+        });
+        $("#ex08 .btn").click(function () {
+          $("#list").prepend("<li>안녕하세요</li>")//앞에
+        });
+        $("#ex09 .btn1").click(function () {
+          $("#para").before("<p>안녕하세요</p>")//밑에서 밑으로
+        });
+        $("#ex09 .btn2").click(function () {
+          $("#para").after("<p>안녕하세요</p>")//밑에서 위로
+        });
+        $("#ex10 .btn").click(function () {
+          $("#ex10 box").empty()//하위 요소 삭제
+          $("#ex10 box").remove()//하위 요소 삭제
+        });
+        $("#ex11 .btn1").click(function () {
+          $('#ex11 h2').addClass("red")
+        });
+        $("#ex11 .btn2").click(function () {
+          $('#ex11 p').addClass("blue")
+        });
+        $("#ex12 .btn").click(function () {
+          $('#ex12 h2').removeClass("pink")
+        });
+        $("#ex13 .btn").click(function () {
+          $('#ex13 h2').css("background", "yellow")
+        });
+        $("#ex14 .btn").click(function () {
+          let color = $('#ex14 h2').css('background-color')
+          let size = $('#ex14 h2').css('font-size')
+          alert(color + "\n" +size);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="ex01">
+      <p>단락입니다</p>
+      <button>배경 색상 변경하기</button>
+    </div>
+    <hr />
+    <div id="ex02">
+      <div class="box">
+        <h3>요소 내용 가져오기</h3>
+        <p>
+          text()는 요소의 텍스트만 가져오고, html()은 HTML 태그도 같이
+          가져옵니다.
+        </p>
+      </div>
+      <button class="btn1">텍스트 가져오기</button>
+      <button class="btn2">HTML 가져오기</button>
+    </div>
+    <hr />
+    <div id="ex03">
+      <p>이름 : <input type="text" id="name" /></p>
+      <button class="btn">입력 내용 가져오기</button>
+    </div>
+    <hr />
+    <div id="ex04">
+      <p>
+        <a href="https://naver.com" id="naver">네이버 이동</a>
+      </p>
+      <button class="btn">href 값 얻기</button>
+    </div>
+    <hr />
+    <div id="ex05">
+      <p class="p1"></p>
+      <p class="p2"></p>
+      <p class="p3"></p>
+      <p>전화번호 :<input type="text" id="phone" /></p>
+      <button class="btn1">텍스트 설정</button>
+      <button class="btn2">텍스트 설정</button>
+      <button class="btn3">HTML 설정</button>
+      <button class="btn4">입력창에 값 설정하기</button>
+    </div>
+    <hr />
+    <div id="ex06">
+      <p>
+        <img src="./img/img01.png" alt="" />
+      </p>
+      <button class="btn">이미지 교체하기</button>
+    </div>
+    <hr />
+    <img src="./img/img01.png" alt="" onmouseover="this.src='./img/img02.png'" />
+    <hr />
+    <div id="ex07">
+      <div class="box"></div>
+        <button class="btn">요소 추가하기</button>
+    </div>
+    <hr />
+    <div id="ex08">
+      <ul id="list">
+        <li>항목1</li>
+        <li>항목2</li>
+        <li>항목3</li>
+      </ul>
+      <button class="btn">항목 추가하기</button>
+    </div>
+    <hr />
+    <div id="ex09">
+      <p id="para" style="background:yellow">기준</p>
+      <button class="btn1">앞에 삽입하기</button>
+      <button class="btn2">뒤에 삽입하기</button>
+    </div>
+    <hr />
+    <div id="ex10">
+      <div class="box" style="background: yellow;">
+        <p>안녕사헤셩</p>
+        <p>반갑습니다</p>
+      </div>
+      <button class="btn">요소 삭제하기</button>
+    </div>
+    <hr>
+    <div id="ex11">
+      <h2>제목 1</h2>
+      <p>단락 1</p>
+      <h2>제목 2</h2>
+      <p>단락 2</p>
+      <button class="btn1">red +</button>
+      <button class="btn2">blue +</button>
+    </div>
+    <div id="ex12">
+      <h2 class="pink">제목1</h2>
+      <p class="green">단락1</p>
+      <h2 class="pink">제목1</h2>
+      <p class="green">단락1</p>
+      <button class="btn">pink 클래스 삭제</button>
+    </div>
+    <div id="ex13">
+      <h2>제목1</h2>
+      <h2>제목2</h2>
+      <button class="btn">css 설정하기</button>
+    </div>
+    <hr>
+    <div id="ex14">
+      <h2 style="background: yellow; font-size: 30px;">제목</h2>
+      <button class="btn">CSS 가져오기</button>
+    </div>
+    <script>
+      // $("#ex01 button").click(function () {
+      //   $("#ex01 p").css('background','yellow')
+      // });
+    </script>
+  </body>
+</html>

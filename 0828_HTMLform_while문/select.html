@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선택자</title>
+  <style>
+    /* 가상클래스 선택자 (의사 클래스 선택자 / 수도클래스 선택자) : 링크가 걸린 문자에 스타일 부여 
+    a:link  링크가 걸린 문자에 속성을 부여하는 선택자
+    a:visited 링크가 클릭하여 갔다가 돌아온 경우의 속성을 부여하는 선택자
+    a:hover 링크가 마우스가 닿았을  경우의 속성을 부여하는 선택자
+    a:active 링크가 글자가 활성화되엇을  경우의 속성을 부여하는 선택자
+    a:focus  링크가 글자가 포커스가 생길   경우의 속성을 부여하는 선택자(tab키)
+   작성 순서 Love & HAte
+    */
+    a {color: dodgerblue; text-decoration: none; text-transform:uppercase;} /* text-transform:capitalize; 첫글자 대문자 변환  text-transform:uppercase; : 대문자 변환 ,lowercase 소문자변횐*/
+    a:hover {color : red;}
+    h1:hover{ background-color: skyblue;}
+    /* 가상요소선택자(의사요소선택자 + 일반구조  선택자) :   */
+    .box {}
+    .box p {background-color: lightgray;
+            text-transform: uppercase;
+          }
+    .box p:first-letter {font-size: 150%;}  /*첫 글자*/
+    .line:first-line { color: green;} /*첫 라인*/
+    .box p:first-child{color: blue;} /*첫 자식*/
+    .box p:last-child {color: orange;} /*마지막 자식*/
+    .box p:nth-child(3) {color: crimson;} /*3번째 자식*/
+    .box p::before {content: "★";} /* 삽입*/
+    .box::after {
+      content: '항목을 선택해주세요!';
+      color: red;
+    }
+    /* <p>::before여름 감기를 조심하세요::after</p> */
+    h2::before {content: '!'}
+    h2::after {content: '-';}
+  </style>
+</head>
+<body>
+  <h1>링크스타일</h1>
+  <ul>
+    <li>
+      <a href="#">company</a>
+    </li>
+    <li>
+      <a href="#">product</a>
+    </li>
+    <li>
+      <a href="#">SERVICE</a>
+    </li>
+    <li>
+      <a href="#">CUSTOMER</a>
+    </li>
+  </ul>
+  <hr>
+  <div class="box">
+    <p>company</p>
+    <p>product</p>
+    <p>SERVICE</p>
+    <p>CUSTOMER</p>
+    <p>Community</p>
+  </div>
+  <p class="line">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sit nisi atque dolorum earum laboriosam, 
+    minus unde, neque voluptate, eos hic libero corporis vel soluta sapiente iure cumque id excepturi?
+  </p>
+  <h2>의사요소선택자</h2>
+</body>
+</html>

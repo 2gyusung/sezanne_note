@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gradient</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    p {
+      margin: 10px;
+      padding: 60px;
+      background: red;
+      /* background: linear-gradient(to top, red, yellow, green); */
+      /* background: linear-gradient(to right,red, yellow, green); */
+      /* background: linear-gradient(red, yellow, green); */
+      /* background: linear-gradient(to bottom right,red, yellow, green); */
+      /* background: linear-gradient(270deg, red, yellow, green); */
+      /* background:yellow linear-gradient(to right, rgba(0,0,255,0), rgba(0,255,255,1)); */
+      /* background: linear-gradient(red, yellow 10%, green 20%); */
+      /* background: repeating-linear-gradient(red, yellow 10%, green 20%); *//*반복*/
+      /* background-image: radial-gradient(red, yellow, green);원형 */
+      /* background-image: radial-gradient(red 5%, yellow 15%, green 60%);원형 */
+      /* background-image: radial-gradient(circle, red , yellow , green );타원형 */
+      background-image: repeating-radial-gradient( red , yellow 25%, green 50%);/*타원형*/
+    }
+    #btn1 {
+      background : linear-gradient(to right, red , yellow , green );
+      padding: 15px;
+      border: none;
+    }
+    #btn2 {
+      background : linear-gradient(to bottom right, red , yellow , green );
+      padding: 15px;
+      border: none;
+    }
+    #btn3 {
+      background:yellow linear-gradient(skyblue 50%,  rgba(0,0,255,0) 50%); 
+      padding: 15px;
+      border: none;
+    }
+    #btn4 {
+      background:yellow linear-gradient(skyblue 50%,  rgba(0,0,255,0) 50%,purple); 
+      padding: 15px;
+      border: none;
+    }
+  </style>
+  <body>
+    <p class="g1">Lorem ipsum dolor sit amet.</p>
+    <p class="g2">Lorem ipsum dolor sit amet.</p>
+    <p class="g3">Lorem ipsum dolor sit amet.</p>
+    <p class="g4">Lorem ipsum dolor sit amet.</p>
+    <p class="g5">Lorem ipsum dolor sit amet.</p>
+    <p class="g6">Lorem ipsum dolor sit amet.</p>
+    <p class="g7">Lorem ipsum dolor sit amet.</p>
+    <p class="g8">Lorem ipsum dolor sit amet.</p>
+    <p class="g9">Lorem ipsum dolor sit amet.</p>
+    <p class="g10">Lorem ipsum dolor sit amet.</p>
+    <hr />
+    <button id="btn1">Click</button>
+    <button id="btn2">Click</button>
+    <button id="btn3">Click</button>
+    <button id="btn4">Click</button>
+  </body>
+</html>

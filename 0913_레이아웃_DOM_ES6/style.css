@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+#style1 {
+
+  background-color: beige;
+  height: 110px;
+}
+#style1::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#style1 div {
+  float: right;
+  width: 100px;
+  height: 100px;
+  border: 5px solid #000;
+  text-align: center;
+  line-height: 100px;
+  width: 300px;
+}
+
+#style1 .box1 {
+  background: yellow;
+}
+#style1 .box2 {
+  background: gray;
+}
+#style1 .box3 {
+  background: orange;
+}
+#style1 .box4 {
+  background: palevioletred;
+}
+
+#style2 {
+  background-color: beige;
+}
+
+#style2 div {
+  width: 100px;
+  height: 100px;
+  border: 5px solid #000;
+  text-align: center;
+  line-height: 100px;
+ 
+}
+#style2 .box1 {
+  float: left;
+  background: yellow;
+}
+#style2 .box2 {
+  float: right;
+  background: gray;
+}
+#style2 .box3 {
+  clear: both;
+  background: orange;
+}
+#style2 .box4 {
+  background: palevioletred;
+}
+
+/* float 해제 방법 */
+/* 1 다음 형제 요소에 clear : both
+   2 부모요소에서 after::content " "; ,
+   display: block; clear:both;}
+  -overflow:auto(단, height 값 지정시 scroll 생길 수 있음
+   -height 값 지정(content 영역은 사용자제)
+   -연쇄적으로 float 사용으로 해제 필요
+
+*/

@@ -1,0 +1,118 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body {
+  font: 12px "돋움", dotum, sans-serif;
+  color: #333;
+}
+hr {
+  margin: 50px 0;
+}
+.inner {
+  width: 1290px;
+  margin: 0 auto;
+  outline: 1px dotted red;
+}
+.clearFix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+header {
+  height: 100px;
+}
+header h1 {
+  float: left;
+  width: 200px;
+  height: 100px;
+  outline: 1px dotted blue;
+  text-align: center;
+  line-height: 100px;
+}
+header nav {
+  float: left;
+  width: 1000px;
+  height: 100px;
+  outline: 1px dotted blue;
+}
+/* 1depth(주메뉴) */
+/* header nav>main {
+
+}
+header nav>main>li {
+
+}
+header nav>main>li>a {
+} */
+header nav > ul {
+  float: right;
+  width: 800px;
+  height: 50px;
+  margin-top: 50px;
+  background: #ccc;
+}
+header nav > ul > li {
+  float: left;
+  width: 25%;
+  outline: 1px dotted red;
+}
+header nav > ul > li > a {
+  display: block;
+  height: 50px;
+  outline: 1px dotted red;
+  font-size: 16px;
+  line-height: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+header nav > ul > li:hover > a {
+  color: green;
+}
+/* 2depth(부메뉴) */
+header nav > ul > li > .sub {
+  background: rgba(225, 225, 225, 0.5);
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100px;
+  z-index: 30;
+}
+header nav > ul > li:hover > .sub {
+  display: block;
+}
+header nav > ul > li > .sub > .inner {
+  padding-left: 400px;
+  box-sizing: border-box;
+}
+header nav > ul > li > .sub > .inner > ul {
+  float: left;
+  width: 25%;
+  outline: 1px dotted green;
+}
+header nav > ul > li > .sub > .inner > ul > li {
+}
+
+
+header nav > ul > li > .sub > .inner > ul > li > a {
+  display: block;
+  padding: 10px 20px;
+}
+header nav > ul > li > .sub > .inner > ul > li a:hover {
+  background: green;
+  color: yellow;
+}
+
+#slide {
+  height: 300px;
+  background: orange;
+}

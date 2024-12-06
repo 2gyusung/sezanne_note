@@ -1,0 +1,15 @@
+cd/ 
+ 
+cd web_class 폴더로 이동
+
+dir/w 폴더 확인
+
+md first_project  폴더 생성
+
+dir/w 폴더 확인
+
+cd first_project 폴더로 이동
+
+code . -r vscode 폴더로 이동
+
+

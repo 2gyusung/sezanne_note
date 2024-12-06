@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      body {
+        font-size: 12px "돋움", dotum, sans-serif;
+        color: #333;
+      }
+      .mydrink {
+        background: palevioletred;
+        border: 3px solid blueviolet;
+        padding: 30px;
+      }
+      .mydrink h1 {
+        padding: 0 0 10px;
+        text-align: center;
+        text-align: center;
+        letter-spacing: 5px;
+      }
+      .clearFix::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      /* .mydrink::after {
+        content: '';
+        display: block;
+        clear: both;
+      } */
+      .mydrink .greentea {
+        background: #dda;
+        width: 47%;
+        margin: 0 auto;
+        padding: 20px;
+        float: left;
+        box-sizing: border-box;
+      }
+      
+      .mydrink .coffee {
+        width: 47%;
+        padding: 20px;
+        float: right;
+        background: #ba7;
+        float: right;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mydrink clearFix">
+      <h1>녹차와 커피</h1>
+      <p class="greentea">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+        consectetur suscipit maxime? Tempore iure possimus optio, ab vitae
+        reprehenderit, doloribus dolore ipsum quos sunt deserunt illum corporis
+        quisquam inventore. Quod.
+      </p>
+      <p class="coffee">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+        consectetur suscipit maxime? Tempore iure possimus optio, ab vitae
+        reprehenderit, doloribus dolore ipsum quos sunt deserunt illum corporis
+        quisquam inventore. Quod.
+      </p>
+    </div>
+  </body>
+</html>

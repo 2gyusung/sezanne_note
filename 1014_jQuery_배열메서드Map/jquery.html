@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>jquery</title>
+  </head>
+  <style>
+   * {
+      margin: 5px;
+   }
+  </style>
+  <!-- download 방식으로 라이브러리 연결 인터넷 연결 없어도 사용가능
+  <script src="./js/jquery-3.7.1.min (1).js"></script>
+  <script>
+    $(document).ready(function(){
+      console.log('jQuery 시작');
+      
+    })
+  </script> -->
+  <body>
+    <header id="header">
+      <div class="logo">로고</div>
+      <div class="util">회원가입</div>
+      <nav id="gnb">
+        <ul>
+          <li>
+            메뉴1
+            <ul>
+              <li>메뉴1-1</li>
+            </ul>
+            <li>메뉴2</li>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div id="visual">
+      <p>비주얼</p>
+    </div>
+    <div id="content">
+      <div class="left">왼쪽</div>
+      <div class="right">
+        <div class="util">오른쪽</div>
+      </div>
+    </div>
+    <div id="banner">배너</div>
+    <footer id="footer">푸터</footer>
+    <!-- CDN 방식 라이브러리 연결 body영역에 작성 안해도 된다 인터넷 연결 시 사용가능 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      // 축약형
+      $(function () {
+        // console.log("jQuery 시작");
+        //  $("선택자").css('속성','값')
+        $("p").css("border","4px solid red")
+        $("#gnb").css("border","4px solid orange")
+        $(".logo").css("border","4px solid yellow")
+        $("#gnb>ul>li").css('border','4px solid green') //자식 선택자
+        $("#gnb ul").css('border','4px solid blue')
+        $("#visual + #content").css('border','4px solid navy')
+        $("#visual ~ #footer").css('border','4px solid purple')
+        $("div.util").css('border','4px solid pink') //종속 선택자
+        $(".left ,.right, #banner").css('border','4px solid gray') //그룹 선택자
+      });
+    </script>
+  </body>
+</html>

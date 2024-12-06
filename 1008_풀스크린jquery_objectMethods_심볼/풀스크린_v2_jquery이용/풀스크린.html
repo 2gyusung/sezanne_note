@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FULL SCREEN</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="inner">
+        <h1>FULL SCREEN</h1>
+      </div>
+    </header>
+    <div id="container">
+      <p>
+        <a href="#">VIEW MORE</a>
+        <a href="#">DOWNLOAD</a>
+      </p>
+      <section>
+        <h2>section1 Title</h2>
+      </section>
+      <section>
+        <h2>section2 Title</h2>
+      </section>
+      <section>
+        <h2>section3 Title</h2>
+      </section>
+    </div>
+    <footer class="inner">
+      <p>
+        <small>&copy 2024 cezanne. All rights reserved.</small>
+      </p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/jquery.backstretch.min.js"></script>
+    <script>
+      // $.backstretch("../img/img.jpg");
+      // $.backstretch(["이미지","이미지"]{duration:시간, fade : 시간});
+      $.backstretch(["./img/img1.jpg","./img/img2.jpg","./img/img3.jpg"],{duration:3500, fade : 50});
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- download 방식 -->
+    <!-- CDN방식 -->
+    <!-- <script>
+      $(document).ready(function(){
+        // 실행문
+        })
+      </script> -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-migrate-1.4.1.min.js"></script>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <script>
+      // stop() : 현재 진행중인 효과를 정지시킴
+      $(function(){
+        $('#rightBtn').click(function(){
+          $('#box1').stop().animate({
+            left:'+=100px'
+          },500);
+        });
+        $('#leftBtn').click(function(){
+          $('#box1').stop().animate({
+            left:'-=100px'
+          },500);
+        })
+      })
+    </script>
+    <style>
+      #box1 {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background: yellow;
+      }
+      span{
+        font-size: 50px;
+        color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box1">박스2</div>
+    <p>
+      <button id="leftBtn">left</button>
+      <button id="rightBtn">right</button>
+    </p>
+    <span class="fa-brands fa-square-facebook"></span>
+  </body>
+</html>

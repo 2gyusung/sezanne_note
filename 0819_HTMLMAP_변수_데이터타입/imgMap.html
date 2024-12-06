@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*타입 선택자*/
+        img {
+            vertical-align: bottom;
+        }
+
+        /*클래스 선택자*/
+        .wrap {
+            width: 800px;
+            margin: 0 auto;
+            outline: 1px dotted red;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <img src="/images/map4_01.png" alt="">
+        <img src="/images/map4_02.png" alt="" usemap="#event1">
+        <map name="event1" id="event1">
+            <!-- <area shape="rect" coords="좌측 상단 x1 y1 우측하단 x1 y2" href="#" alt=""> -->
+            <area shape="rect" coords="339,406,460,437" href="#" alt="">
+        </map>
+        <img src="/images/map4_03.png" alt="" usemap="#event2">
+        <map name="event2" id="event2">
+            <!-- <area shape="rect" coords="좌측 상단 x1 y1 우측하단 x1 y2" href="#" alt=""> -->
+            <area shape="rect" coords="339,406,460,437" href="#" alt="">
+            <area shape="rect" coords="466,327,590,360" href="#" alt="">
+        </map>
+    </div>
+    <hr>
+    <img src="./images/map5.jpg" alt="" usemap="#shop">
+    <map name="shop" id="shop">
+        <!-- <area shape="circle" coords="원의 중심 좌표 x y 반지름 r" href="#" alt=""> -->
+        <area shape="circle" coords="19,28, 13" href="#" alt="">
+        <area shape="circle" coords="289,28, 13" href="#" alt="">
+        <!-- <area shape="poly" coords="꼭지점 x1,y1 x2y2 x3y3" href="#" alt=""> --> 
+        <area shape="poly" coords="72,46, 108,47 ,111,62 94,62 ,92,65,88,62,72,62" href="#" alt="">
+    </map>
+</body>
+</html>

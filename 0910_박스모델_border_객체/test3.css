@@ -1,0 +1,24 @@
+/* ul li a:link {
+  color: green;
+  text-decoration: none;
+}
+ul li a:visited {
+  color: green;
+  text-decoration: none;
+}
+ul li a:hover {
+  color: green;
+  text-decoration: underline;
+}
+ul li a:active {
+  color: green;
+  text-decoration: none;
+} */
+ul li a {
+  color: green;
+  text-decoration: none;
+}
+ul li a:hover {
+  color: green;
+  text-decoration: underline;
+}

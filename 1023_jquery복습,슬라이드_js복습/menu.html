@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <script>
+      $(function () {
+        // $('선택요소').click(function(){})
+        //menu: header .gnb > ul > li:hover > ul
+        $("header .gnb > ul > li").mouseenter(function(){
+          // $(this).children('ul').stop().slideDown()
+          // $(this).find('ul').slideDown()
+          $(this).children('ul').slideDown()
+        })
+        $("header .gnb > ul > li").mouseleave(function(){
+          // $(this).children('ul').stop().slideUp()
+          // $(this).find('ul').slideUp()
+          $(this).children('ul').slideUp()
+        })
+      });
+
+      //p  mouseenter : bg yellow
+      //p mouseleave : bg pink
+      //p  click : bg skyblue
+      //p dbclick : bg -red
+    </script>
+    <style>
+      hr {
+        margin: 50px 0;
+      }
+      /* reset */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        font: 12px "돋움", dotum, sans-serif;
+        color: #333;
+      }
+      #wrap {
+        width: 1200px;
+        margin: 0 auto;
+        outline: 1px solid red;
+      }
+      header {
+        height: 100px;
+        outline: 1px dotted red;
+      }
+      header .logo {
+        float: left;
+        width: 200px;
+        height: 100px;
+        outline: 1px dotted blue;
+      }
+      header .gnb {
+        float: left;
+        width: 1000px;
+        height: 100px;
+        outline: 1px dotted blue;
+      }
+      /* 1depth 주메뉴 */
+      header .gnb > ul {
+        float: right;
+        width: 800px;
+        height: 50px;
+        margin-top: 50px;
+        outline: 1px dotted red;
+      }
+      header .gnb > ul > li {
+        width: 25%;
+        float: left;
+        position: relative;
+      }
+      header .gnb > ul > li > a {
+        outline: 1px dotted blue;
+        display: block;
+        height: 50px;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 50px;
+        text-align: center;
+      }
+      header .gnb > ul > li:hover > a {
+        color: green;
+      }
+      /* 2depth 부메뉴 */
+      header .gnb > ul > li > ul {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 50px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.3);
+      }
+      /* header .gnb > ul > li:hover > ul {
+        display: block;
+      } */
+      header .gnb > ul > li > ul li {
+      }
+      header .gnb > ul > li > ul li a {
+        display: block;
+        padding: 10px 20px;
+        outline: 1px solid red;
+      }
+      header .gnb > ul > li > ul li a:hover {
+        background: green;
+        color: #fff;
+      }
+      #slide {
+        height: 300px;
+        outline: 1px dotted red;
+        background: #ccc;
+      }
+      #container {
+        height: 200px;
+        outline: 1px dotted red;
+      }
+      footer {
+        height: 100px;
+        outline: 1px dotted red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <h1 class="logo"></h1>
+        <nav class="gnb">
+          <ul>
+            <li>
+              <a href="#">MENU01</a>
+              <ul>
+                <li><a href="#">SUB11</a></li>
+                <li><a href="#">SUB12</a></li>
+                <li><a href="#">SUB13</a></li>
+                <li><a href="#">SUB14</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">MENU02</a>
+              <ul>
+                <li><a href="#">SUB21</a></li>
+                <li><a href="#">SUB22</a></li>
+                <li><a href="#">SUB23</a></li>
+                <li><a href="#">SUB24</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">MENU03</a>
+              <ul>
+                <li><a href="#">SUB31</a></li>
+                <li><a href="#">SUB32</a></li>
+                <li><a href="#">SUB33</a></li>
+                <li><a href="#">SUB34</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">MENU04</a>
+              <ul>
+                <li><a href="#">SUB41</a></li>
+                <li><a href="#">SUB42</a></li>
+                <li><a href="#">SUB43</a></li>
+                <li><a href="#">SUB44</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div id="slide"></div>
+      <div id="container"></div>
+      <footer></footer>
+    </div>
+  </body>
+</html>

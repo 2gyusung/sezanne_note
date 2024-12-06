@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./grid-guide.css" />
+    <title>Document</title>
+    <style>
+      hr {
+        margin: 50px 0;
+      }
+      #ex01 .boxA::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      #ex01 .box2 {
+        float: left;
+        width: 50%;
+      }
+      #ex01 .box3 {
+        width: 50%;
+        float: left;
+      }
+
+      #ex02 .boxA::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      #ex02 .box1 {
+        float: left;
+        width: calc(100%/3);
+      }
+      #ex02 .box2 {
+        float: left;
+        width: calc(100%/3);
+      }
+      #ex02 .box3 {
+        float: left;
+        width: calc(100%/3);
+      }
+      #ex02 .box4 {
+        float: left;
+        width: calc(100%/3);
+      }
+      #ex03 .boxA::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      #ex03 .box1 {
+        float: left;
+        width: 25%;
+      }
+      #ex03 .box2 {
+        float: left;
+        width: 25%;
+      }
+      #ex03 .box3 {
+        float: left;
+        width: 25%;
+      }
+      #ex03 .box4 {
+        float: left;
+        width: 25%;
+      }
+      #ex04 .boxA::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      #ex04 .box1 {
+        float: left;
+        width: 50%;
+      }
+      #ex04 .box2 {
+        float: left;
+        width: 50%;
+      }
+      #ex04 .box3 {
+        float: left;
+        width: 50%;
+      }
+      #ex04 .box4 {
+        float: left;
+        width: 50%;
+      }
+      #ex05 .boxA::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      #ex05 .box1 {
+        float: left;
+        width: 50%;
+      }
+      #ex05 .box2 {
+        float: left;
+        width: 25%;
+      }
+      #ex05 .box3 {
+        float: left;
+        width: 25%;
+      }
+      #ex05 .box4 {
+        width: 100%;
+      }
+      #ex06 .boxA::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      #ex06 .box1 {
+        float: left;
+        width: 50%;
+        height: 280px;
+      }
+      #ex06 .box2 {
+        float: left;
+        width: 50%;
+      }
+      #ex06 .box3 {
+        float: left;
+        width: 100%;
+      }
+      #ex07 .boxA::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      #ex07 .box2 {
+        float: left;
+        width: 300px;
+      }
+      #ex07 .box3 {
+        float: left;
+        width: calc(100% - 300px) /*- + 띄어쓰기 이용 하여 작성한다*/
+      }
+      #ex08 .boxA::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      #ex08 .box1 {
+        float: left;
+        width: 25%;
+      }
+      #ex08 .box2 {
+        float: right;
+        width: 25%;
+      }
+      #ex08 .box3 {
+        float: left;
+        width: 25%;
+      }
+      #ex08 .box4 {
+        float: right;
+        width: 25%;
+      }
+  
+    </style>
+  </head>
+  <body>
+    <!-- 고정형레이아웃 -->
+    <!-- 유동형레이아웃 -->
+    <!-- 반응형웹 -->
+    <!-- 적응형웹 -->
+    <div id="ex01">
+      <div class="box1">Box1</div>
+      <div class="boxA">
+        <div class="box2">Box2</div>
+        <div class="box3">Box3</div>
+      </div>
+      <div class="box4">Box4</div>
+    </div>
+    <hr />
+    <div id="ex02">
+      <div class="boxA">
+        <div class="box1">Box1</div>
+        <div class="box2">Box2</div>
+        <div class="box3">Box3</div>
+        <div class="box4">Box4</div>
+      </div>
+    </div>
+    <hr />
+    <div id="ex03">
+      <div class="boxA">
+        <div class="box1">Box1</div>
+        <div class="box2">Box2</div>
+        <div class="box3">Box3</div>
+        <div class="box4">Box4</div>
+      </div>
+    </div>
+    <hr />
+    <div id="ex04">
+      <div class="boxA">
+        <div class="box1">Box1</div>
+        <div class="box2">Box2</div>
+      </div>
+      <div class="boxA">
+        <div class="box3">Box3</div>
+        <div class="box4">Box4</div>
+      </div>
+    </div>
+    <hr />
+    <div id="ex05">
+      <div class="box1">Box1</div>
+      <div class="box2">Box2</div>
+      <div class="box3">Box3</div>
+      <div class="box4">Box4</div>
+    </div>
+    <hr />
+    <div id="ex06">
+      <div class="boxA">
+        <div class="box1">Box1</div>
+        <div class="box2">Box2</div>
+      </div>
+      <div class="box3">Box3</div>
+      <div class="box4">Box4</div>
+    </div>
+    <hr />
+    <div id="ex07">
+      <div class="box1">Box1</div>
+      <div class="boxA">
+        <div class="box2">Box2</div>
+        <div class="box3">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+            consequatur consequuntur ex asperiores, nostrum tenetur possimus
+            quis nisi accusantium doloribus debitis eligendi iusto quia
+            assumenda excepturi autem blanditiis, laborum expedita.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+            consequatur consequuntur ex asperiores, nostrum tenetur possimus
+            quis nisi accusantium doloribus debitis eligendi iusto quia
+            assumenda excepturi autem blanditiis, laborum expedita.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+            consequatur consequuntur ex asperiores, nostrum tenetur possimus
+            quis nisi accusantium doloribus debitis eligendi iusto quia
+            assumenda excepturi autem blanditiis, laborum expedita.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+            consequatur consequuntur ex asperiores, nostrum tenetur possimus
+            quis nisi accusantium doloribus debitis eligendi iusto quia
+            assumenda excepturi autem blanditiis, laborum expedita.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+            consequatur consequuntur ex asperiores, nostrum tenetur possimus
+            quis nisi accusantium doloribus debitis eligendi iusto quia
+            assumenda excepturi autem blanditiis, laborum expedita.
+          </p>
+        </div>
+      </div>
+      <div class="box4">Box4</div>
+    </div>
+    <hr />
+    <div id="ex08">
+      <div class="boxA">
+        <div class="box1">Box1</div>
+        <div class="box2">Box2</div>
+        <div class="box3">Box3</div>
+        <div class="box4">Box4</div>
+      </div>
+    </div>
+  </body>
+</html>

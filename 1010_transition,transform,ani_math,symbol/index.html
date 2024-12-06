@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .wrapper {
+      margin: 0 auto;
+      width: 120px;
+      height: 120px;
+      outline: 1px solid black;
+      position: relative;
+    }
+    .btn {
+      position: absolute;
+      border: 5px solid black;
+      border-radius: 50%;
+      animation: myMove 5s 3;
+    }
+    @keyframes myMove {
+      0% {
+        left: 0;
+        background: #c00;
+      }
+      25% {
+        right: 0;
+        background: #00c;
+      }
+      50% {
+        bottom: 0;
+        right: 0;
+        background: #808;
+      }
+      75% {
+        bottom: 0;
+        left : 0;
+        background: #080;
+      }
+
+      100% {
+        background: #c00;
+      }
+    }
+  </style>
+  <body>
+    <div class="wrapper">
+      <div class="btn"></div>
+    </div>
+  </body>
+</html>

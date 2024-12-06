@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃 잡기</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrap {
+        width: 1200px;
+        margin: 0 auto;
+        outline: 1px solid black;
+      }
+      header {
+        height: 100px;
+        outline: 1px dotted red;
+      }
+      #container {
+        display: flex;
+        background: #ccc;
+      }
+      #container .sideMenu {
+        width: 200px;
+        height: 300px;
+        background: pink;
+      }
+      #container .content {
+        width: 1000px;
+        height: 500px;
+        background: skyblue;
+      }
+      footer {
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header></header>
+      <div id="container">
+        <div class="sideMenu"></div>
+        <div class="content"></div>
+      </div>
+      <footer></footer>
+    </div>
+  </body>
+</html>

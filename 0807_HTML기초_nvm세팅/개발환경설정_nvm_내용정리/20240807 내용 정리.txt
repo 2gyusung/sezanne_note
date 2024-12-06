@@ -1,0 +1,31 @@
+디자인 패턴
+defer 
+alt shif 방향키 아래 
+오버라이딩 : 덮어쓰기
+
+
+
+개발환경
+html css js 변환 해주는 환경 프로그램 : bandler ,		 webpack
+				소 중형 project , 자동화	중 대형 project , 수동
+	
+parcel-bundler 설치 		 
+vscode 터미널 입력 후 npm i -D parcel-bundler 설치후 
+packge.json 설치확인
+https://merrynewday.tistory.com/155
+
+
+
+
+"devDependencies" : 개발 의존성
+
+개발 의존성(devDependencies)은 개발자가 개발할 때만 필요한 패키지의 목록입니다. 
+예를 들어, 테스트 도구, 빌드 도구, 코드 검사 도구 등이 포함됩니다. 
+이러한 패키지는 프로덕션에는 필요하지 않은 경우가 많습니다.
+
+의존성이란 클래스의 변경이나 다른 클래스에서 영향 줄 수 있는 가능성
+의존성이 높으면 유지보수 및 테스트가 어려워지므로
+의존성을 적절하게 관리하고, 의존성이 최소화된 코드를 작성하는것이 매우 중요함!
+
+npm run dev
+
