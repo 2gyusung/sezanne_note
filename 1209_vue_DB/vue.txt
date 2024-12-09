@@ -1,0 +1,3 @@
+객체 구조화 분해 할당
+
+npm i -D sass sass-loader

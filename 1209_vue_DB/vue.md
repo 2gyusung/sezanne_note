@@ -1,4 +1,4 @@
-
+```
 처음 진행시
 0. node.js
 
@@ -19,7 +19,7 @@
 
 vue create . 현재 폴더에서 진행
 
-7 vue3
+7 vue3 버젼 확인 후
 
 
 dir/ w
@@ -27,4 +27,5 @@ dir/ w
 cd first_vue
 
 
-code . -r
+8 code . -r
+```
