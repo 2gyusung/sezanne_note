@@ -27,6 +27,11 @@ mysql> show tables;
 mysql> desc student;
 ```
 
+- 오토 
+  ```sql
+  INT AUTO_INCREMENT PRIMARY KEY
+  ```
+
 #  limt 3명만 출력 ,   debut_date 내림차순
 
 ```sql
