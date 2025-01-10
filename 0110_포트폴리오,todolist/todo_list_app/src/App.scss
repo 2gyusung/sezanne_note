@@ -1,0 +1,112 @@
+.active {
+  text-decoration: line-through;
+  color: red;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 50px;
+  border: 1px solid gray;
+}
+
+.Header {
+  h1 {
+    color: #1f93ff;
+    font-size: 40px;
+    margin-top: 20px;
+  }
+  h3 {
+    font-size: 25px;
+  }
+}
+.TodoEditor {
+  h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .editor {
+    display: flex;
+    gap: 10px;
+  }
+  input {
+    flex: 1;
+    box-sizing: border-box;
+    border: 1px solid rgb(220,220,220);
+    padding: 15px;
+    &:focus{
+      outline: none;
+      border: 1px solid #1f93ff;
+    }
+  }
+  button {
+    cursor: pointer;
+    width: 80px;
+    border: none;
+    background-color: #1f93ff;
+    color: #fff;
+    border-radius: 5px;
+    transition: .5s;
+    &:hover {
+      background-color: royalblue;
+      color: #fff;
+    }
+  }
+}
+
+.TodoList {
+  h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .searchbar {
+    width: 100%;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid rgb(220,220,220);
+    box-sizing: border-box;
+    padding: 15px 0;
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid #1f93ff;
+    }
+
+  }
+  .list_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.TodoListItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom:20px;
+  border-bottom: 1px solid rgb(240,240,240);
+  .checkbox_col {
+    width: 20px;
+  }
+  .title_col {
+    flex: 1;
+  }
+  .date_col {
+    font-weight: 14px;
+    color: gray;
+  }
+  .btn_col {
+    button {
+      cursor: pointer;
+      color: gray;
+      font-size: 14px;
+      border: none;
+      border-radius: 5px;
+      padding: 5px;
+    }
+  }
+
+}
