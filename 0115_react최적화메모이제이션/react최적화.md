@@ -1,0 +1,70 @@
+# useMemo, react.memo, useCallback 차이점
+
+## 1. **useMemo**
+
+### 역할
+`useMemo`는 계산된 값을 **메모이제이션**(Memoization)하여 불필요한 재계산을 방지합니다.
+
+### 사용 예시
+```jsx
+const computedValue = useMemo(() => {
+  return heavyComputation(input);
+}, [input]);
+```
+
+### 주요 포인트
+- 복잡한 연산이나 계산 비용이 큰 작업의 결과를 **재사용**.
+- 의존성 배열(Dependency Array) 내 값이 변경될 때만 다시 계산.
+
+---
+
+## 2. **react.memo**
+
+### 역할
+`react.memo`는 컴포넌트를 **메모이제이션**하여 불필요한 **재렌더링**을 방지합니다.
+
+### 사용 예시
+```jsx
+const MyComponent = React.memo(({ value }) => {
+  console.log('Rendered!');
+  return <div>{value}</div>;
+});
+```
+
+### 주요 포인트
+- 부모 컴포넌트가 **리렌더링**되어도, props가 변하지 않으면 자식 컴포넌트의 렌더링을 **건너뜀**.
+- React.memo는 **props 비교**를 통해 렌더링 여부를 결정.
+
+---
+
+## 3. **useCallback**
+
+### 역할
+`useCallback`은 함수 자체를 **메모이제이션**하여 불필요한 **함수 재생성**을 방지합니다.
+
+### 사용 예시
+```jsx
+const handleClick = useCallback(() => {
+  console.log('Clicked!');
+}, []);
+```
+
+### 주요 포인트
+- 컴포넌트가 리렌더링될 때마다 동일한 함수 객체를 유지.
+- 자식 컴포넌트에 함수를 props로 전달할 때 유용 (특히 `react.memo`와 함께 사용).
+
+---
+
+## 주요 차이점 요약
+
+| Hook/기능       | 주 용도                     | 메모이제이션 대상         | 주 사용 사례                     |
+|-----------------|----------------------------|-------------------------|------------------------------|
+| **useMemo**     | 값 계산 성능 최적화           | 계산된 값                | 복잡한 연산 결과 재사용           |
+| **react.memo**  | 컴포넌트 렌더링 성능 최적화    | 전체 컴포넌트            | props가 변하지 않으면 재렌더링 방지 |
+| **useCallback** | 함수 재생성 방지              | 함수 객체                | props로 함수 전달 시 최적화       |
+
+### 언제 사용할까?
+- **useMemo**: 연산 비용이 높은 계산을 캐싱하고 싶을 때.
+- **react.memo**: 불필요한 자식 컴포넌트 렌더링을 막고 싶을 때.
+- **useCallback**: 함수를 props로 전달하는 경우, 함수 재생성을 막고 싶을 때.
+
