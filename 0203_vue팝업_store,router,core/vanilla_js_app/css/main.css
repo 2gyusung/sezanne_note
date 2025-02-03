@@ -1,0 +1,10 @@
+body {
+  background-color: #ececec;
+  height: 3000px;
+}
+header {
+  position: fixed;
+  width: 100%;
+  background-color: cadetblue;
+  color: #fff;
+}
