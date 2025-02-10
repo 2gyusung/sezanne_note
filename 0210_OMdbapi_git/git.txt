@@ -1,0 +1,16 @@
+.parcel-cache
+dist
+.node_modules
+.DS_Store
+.vscode
+
+git init
+git add .
+git status
+git remote add origin https://github.com/2gyusung/remove-movie-app.git
+git remote -v
+git branch -m main
+git branch
+
+git commit -m "remove movie app"
+git push origin main
