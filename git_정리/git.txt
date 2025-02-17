@@ -1,0 +1,6 @@
+git add .
+git commit -m "all projects"
+git branch -m main
+git remote add origin https://github.com/2gyusung/project_test.git
+git remote -v
+git push origin main
